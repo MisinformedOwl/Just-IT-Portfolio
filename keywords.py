@@ -12,7 +12,6 @@ class findKWords:
             tokens[t].lower()   #Decapitalise
             tokens[t].lstrip()  #Remove white space on the left
             tokens[t].rstrip()  #Remove white space on the right
-            print(tokens[t])
             if len(tokens[t]) <= 1:
                 continue
             if tokens[t][-2:] == "\n":

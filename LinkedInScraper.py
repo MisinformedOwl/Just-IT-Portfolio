@@ -13,6 +13,27 @@ content = {}
 
 jobNames = ["Data Analyst", "Software Engineer", "Programmer", "Data Scientist"]
 
+def setupSalary(button) -> int:
+    daily = False
+    text = button.text
+    text = text.replace(text[0], "") #Remove whatever currency marker there is.
+    text = text.replace("K", "000") # Transform the representation of thousands into the actual number.
+    
+    #Check if it's daily earnings
+    if text.split(" ")[-1] == "daily":
+        text.replace(" daily", "")
+        daily = True
+    else:
+        text = text.replace(f"/{text.split("/")[-1]}", "")
+    
+    text = text.split(" - ")
+    text = [int(text[0]), int(text[1])]
+
+    if daily == True: # Looked up the average amount of days a data analyst works and used that to even out the daily value to be comparable to yearly.
+        text = text*260
+    
+    return text[0] + int(text[1] - text[0])
+
 def Login():
     print("Waiting for page to load before logging in")
     sleep(6)
@@ -41,7 +62,8 @@ config.read("config.ini")
 ops = Options()
 ops.add_argument("--headless")
 
-driver = wd.Firefox(options=ops)
+driver = wd.Firefox()
+#driver = wd.Firefox(options=ops)
 driver.get("https://www.linkedin.com/login")
 
 driver = Login()
@@ -55,14 +77,14 @@ sleep(3)
 page = 1
 
 print("Creating dataframe")
-frame = pd.DataFrame(columns=["NameOfJob", "Location", "JobType", "Salary", "Skills"])
+frame = pd.DataFrame(columns=["NameOfJob", "Location", "JobType", "Salary", "Skills", "WorkType", "Duration"])
 
 for job in jobNames:
     #Search in the search bar.
     navigation = driver.find_element(By.XPATH, "//input[starts-with(@id, 'jobs-search-box-keyword-id-ember')]")
     navigation.send_keys(job)
     navigation.send_keys(Keys.RETURN)
-    sleep(2)
+    sleep(3)
     while page < 10:
         page+=1
         scrollbar = driver.find_elements(By.TAG_NAME, "ul")[3]
@@ -89,11 +111,18 @@ for job in jobNames:
 
             #Type
             content.update({"JobType" : [job]})
-            
+
             #Salary
-            salary = driver.find_elements(By.XPATH, "//button[@class='artdeco-button artdeco-button--secondary artdeco-button--muted']//Strong")[0] #-= This needs to be cleaned up so it holds the extra information. Back to front
-            content.update({"Salary": [salary.text]})
-            del salary
+            buttons = driver.find_elements(By.XPATH, "//button[@class='artdeco-button artdeco-button--secondary artdeco-button--muted']//Strong") #-= This needs to be cleaned up so it holds the extra information. Back to front
+            stages = ["Duration", "WorkType", "Salary"]
+            buttons.reverse()
+            for button, stage in zip(buttons, stages):
+                if stage == "Salary":
+                    print("SALARY DETECTED")
+                    content.update({stage: setupSalary(button)})
+                content.update({stage: [button.text]})
+            del buttons
+            del stages
 
             #Skills
             jobDesc = driver.find_element(By.ID, "job-details")
@@ -112,7 +141,7 @@ for job in jobNames:
             #Being able to insert was depricated in 1.6. What is the point man.
             newframe = pd.DataFrame(content)
             frame = pd.concat([frame, newframe], ignore_index=True)
-            print(frame.head())
+            print(frame.head(25))
             del content
             
             if pressed("q"):
@@ -129,5 +158,3 @@ for job in jobNames:
         break
     
     sleep(1)
-
-#%%
