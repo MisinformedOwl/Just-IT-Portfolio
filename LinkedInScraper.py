@@ -13,6 +13,8 @@ content = {}
 
 jobNames = ["Data Analyst", "Software Engineer", "Programmer", "Data Scientist"]
 
+#==============================================================================================================
+
 def setupSalary(button) -> int:
     daily = False
     text = button.text
@@ -26,13 +28,17 @@ def setupSalary(button) -> int:
     else:
         text = text.replace(f"/{text.split("/")[-1]}", "")
     
+    print(f"Daily: {daily}: {text}")
+
     text = text.split(" - ")
+    print(text)
     text = [int(text[0]), int(text[1])]
+    print(text)
 
     if daily == True: # Looked up the average amount of days a data analyst works and used that to even out the daily value to be comparable to yearly.
         text = text*260
     
-    return text[0] + int(text[1] - text[0])
+    return text[0] + int(text[1] - text[0])/2
 
 def Login():
     print("Waiting for page to load before logging in")
@@ -53,6 +59,8 @@ def Login():
     
     return driver
 
+#============================================================================================================
+
 #%% Config
 config = configparser.RawConfigParser()
 config.read("config.ini")
@@ -62,8 +70,11 @@ config.read("config.ini")
 ops = Options()
 ops.add_argument("--headless")
 
-driver = wd.Firefox()
-#driver = wd.Firefox(options=ops)
+if config['Settings']['Debug']:
+    print("Launching in debug mode.")
+    driver = wd.Firefox()
+else:
+    driver = wd.Firefox(options=ops)
 driver.get("https://www.linkedin.com/login")
 
 driver = Login()
@@ -120,6 +131,8 @@ for job in jobNames:
                 if stage == "Salary":
                     print("SALARY DETECTED")
                     content.update({stage: setupSalary(button)})
+                    break
+
                 content.update({stage: [button.text]})
             del buttons
             del stages
