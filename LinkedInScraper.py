@@ -7,7 +7,6 @@ from time import sleep
 from keyboard import is_pressed as pressed
 import pandas as pd
 from keywords import findKWords as keywords
-import sys
 
 content = {}
 
@@ -27,13 +26,9 @@ def setupSalary(button) -> int:
         daily = True
     else:
         text = text.replace(f"/{text.split("/")[-1]}", "")
-    
-    print(f"Daily: {daily}: {text}")
 
     text = text.split(" - ")
-    print(text)
     text = [int(text[0]), int(text[1])]
-    print(text)
 
     if daily == True: # Looked up the average amount of days a data analyst works and used that to even out the daily value to be comparable to yearly.
         text = text*260
@@ -70,7 +65,7 @@ config.read("config.ini")
 ops = Options()
 ops.add_argument("--headless")
 
-if config['Settings']['Debug']:
+if config['Settings']['Debug'] == "True":
     print("Launching in debug mode.")
     driver = wd.Firefox()
 else:
@@ -115,9 +110,9 @@ for job in jobNames:
             del name
 
             #Location
-            loc = driver.find_element(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']//span[@class='tvm__text tvm__text--low-emphasis']")
-            loc = loc.find_elements(By.XPATH, "//span[contains(@class, 'tvm__text tvm__text--low-emphasis')]")[0]
-            content.update({"Location": [loc.text]})
+            loc = driver.find_element(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']")
+            loc = loc.text.split(", ")
+            content.update({"Location": [loc[0]]})
             del loc
 
             #Type
