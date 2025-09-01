@@ -5,6 +5,7 @@ from selenium.webdriver.firefox.options import Options
 import configparser
 from time import sleep
 from keyboard import is_pressed as pressed
+from keyboard import wait
 import pandas as pd
 import os
 from keywords import findKWords as keywords
@@ -45,16 +46,23 @@ def Login():
     search = driver.find_element(By.ID, "password")
     search.send_keys(config["Linkedin details"]["Pass"])
     search.send_keys(Keys.RETURN)
-    sleep(5)
+    sleep(8)
+
+    while len(driver.find_elements(By.XPATH, "//div[starts-with(@id, 'loader-wrapper')]")) < 1:
+        print("Waiting for page to load...")
+        sleep(2)
     
     try:
         search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
         print("No captcha")
     except Exception:
+        with open("html source Error.txt", "w") as file:
+            file.write(driver.page_source)
         search = driver.find_element(By.ID, "input__email_verification_pin")
-        code = input("Input given code: ")
+        wait("q")
         search.send_keys(code)
         search.send_keys(Keys.RETURN)
+        sleep(5)
     
     return driver
 
@@ -68,12 +76,13 @@ config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
 ops = Options()
 ops.add_argument("--headless")
-
+ops.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0")
+service = wd.FirefoxService(executable_path="/usr/local/bin/geckodriver")
 if config['Settings']['Debug'] == "True":
     print("Launching in debug mode.")
     driver = wd.Firefox()
 else:
-    driver = wd.Firefox(options=ops)
+    driver = wd.Firefox(service=service, options=ops)
 driver.get("https://www.linkedin.com/login")
 
 driver = Login()
