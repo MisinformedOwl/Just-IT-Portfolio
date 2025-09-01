@@ -1,4 +1,5 @@
-Scraper/__pycache__
+scraper/__pycache__
+scraper/config.ini
 README.MD
 README.Docker.MD
 ErrorDesc.txt

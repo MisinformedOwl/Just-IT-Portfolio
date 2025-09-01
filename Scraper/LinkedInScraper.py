@@ -45,14 +45,16 @@ def Login():
     search = driver.find_element(By.ID, "password")
     search.send_keys(config["Linkedin details"]["Pass"])
     search.send_keys(Keys.RETURN)
-    sleep(7)
+    sleep(5)
     
     try:
         search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
         print("No captcha")
     except Exception:
-        print("Error logging in.")
-        os.exit(0)
+        search = driver.find_element(By.ID, "input__email_verification_pin")
+        code = input("Input given code: ")
+        search.send_keys(code)
+        search.send_keys(Keys.RETURN)
     
     return driver
 
@@ -76,11 +78,11 @@ driver.get("https://www.linkedin.com/login")
 
 driver = Login()
 
-sleep(2)
+sleep(4)
 
 driver.get("https://www.linkedin.com/jobs/collections/recommended/")
 
-sleep(3)
+sleep(4)
 
 page = 1
 
