@@ -1,0 +1,1 @@
+Python,R,SQL,machine learning,TensorFlow,PyTorch,scikit-learn,AWS,Azure,MLOps,AI,Natural Language Processing,NLP,numpy,scipy,Spark,Large Language Model,Docker,PostgreSQL,MySQL,CI/CD,Agile,Github,Gitlab,TypeScript,React,Power BI,Tableau,C,C++,C#,Web Development,ASP.NET,CSS,HTML,HTML5,ML,Degree,Masters
