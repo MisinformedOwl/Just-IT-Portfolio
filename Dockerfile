@@ -1,34 +1,22 @@
 # syntax=docker/dockerfile:1
-
-# Comments are provided throughout this file to help you get started.
-# If you need more help, visit the Dockerfile reference guide at
-# https://docs.docker.com/go/dockerfile-reference/
-
 ARG PYTHON_VERSION=3.12.10
 FROM python:${PYTHON_VERSION}-slim as base
-
-# Prevents Python from writing pyc files.
 ENV PYTHONDONTWRITEBYTECODE=1
-
-# Keeps Python from buffering stdout and stderr to avoid situations where
-# the application crashes without emitting any logs due to buffering.
 ENV PYTHONUNBUFFERED=1
-
-WORKDIR /ScraperApp
-
-# Download dependencies as a separate step to take advantage of Docker's caching.
-# Leverage a cache mount to /root/.cache/pip to speed up subsequent builds.
-# Leverage a bind mount to requirements.txt to avoid having to copy them into
-# into this layer.
-RUN --mount=type=cache,target=/root/.cache/pip \
-    --mount=type=bind,source=requirements.txt,target=requirements.txt \
-    python -m pip install -r requirements.txt
-
-# Switch to the non-privileged user to run the application.
-USER appuser
-
-# Copy the source code into the container.
+WORKDIR /app
+ARG UID=10001
+RUN apt-get update -y \
+    && apt-get install --no-install-recommends -y wget ca-certificates firefox-esr \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz && \
+    tar -zxf geckodriver-v0.36.0-linux64.tar.gz -C /usr/local/bin && \
+    chmod +x /usr/local/bin/geckodriver && \
+    rm geckodriver-v0.36.0-linux64.tar.gz
+RUN adduser --disabled-password --gecos "" --home "/app" --shell "/sbin/nologin" --no-create-home --uid "${UID}" appuser
+RUN --mount=type=cache,target=/root/.cache/pip --mount=type=bind,source=requirements.txt,target=requirements.txt python -m pip install -r requirements.txt
 COPY . .
-
-# Run the application.
-CMD ["python", "Scraper/LinkedInScraper"]
+RUN mkdir -p /app/.cache/selenium && chown -R appuser:appuser /app
+USER appuser
+ENV XDG_CACHE_HOME=/app/.cache
+CMD ["python", "/app/scraper/LinkedInScraper.py"]

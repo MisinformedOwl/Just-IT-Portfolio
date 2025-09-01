@@ -45,13 +45,14 @@ def Login():
     search = driver.find_element(By.ID, "password")
     search.send_keys(config["Linkedin details"]["Pass"])
     search.send_keys(Keys.RETURN)
-    sleep(3)
+    sleep(7)
     
     try:
         search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
         print("No captcha")
     except Exception:
-        input("Waiting for clearance")
+        print("Error logging in.")
+        os.exit(0)
     
     return driver
 
