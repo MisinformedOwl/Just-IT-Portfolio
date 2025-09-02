@@ -48,19 +48,16 @@ def Login():
     search.send_keys(Keys.RETURN)
     sleep(6)
 
-    while driver.find_element(By.ID, "loader-wrapper") != None:
-        print("Waiting for page to load...")
-        sleep(2)
-    
-    sleep(2)
+    if driver.find_element(By.ID, "loader-wrapper") != None:
+        print("Issue came up, waiting on clearance (Q)")
+        wait("q")
 
     try:
         search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
-        print("No captcha")
+        print("No Issues")
     except Exception:
         with open("html source Error.txt", "w") as file:
             file.write(driver.page_source)
-        input("Forcing crash")
     
     return driver
 
