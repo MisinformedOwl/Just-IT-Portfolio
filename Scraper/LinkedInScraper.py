@@ -46,23 +46,21 @@ def Login():
     search = driver.find_element(By.ID, "password")
     search.send_keys(config["Linkedin details"]["Pass"])
     search.send_keys(Keys.RETURN)
-    sleep(8)
+    sleep(6)
 
-    while len(driver.find_elements(By.XPATH, "//div[starts-with(@id, 'loader-wrapper')]")) < 1:
+    while driver.find_element(By.ID, "loader-wrapper") != None:
         print("Waiting for page to load...")
         sleep(2)
     
+    sleep(2)
+
     try:
         search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
         print("No captcha")
     except Exception:
         with open("html source Error.txt", "w") as file:
             file.write(driver.page_source)
-        search = driver.find_element(By.ID, "input__email_verification_pin")
-        wait("q")
-        search.send_keys(code)
-        search.send_keys(Keys.RETURN)
-        sleep(5)
+        input("Forcing crash")
     
     return driver
 

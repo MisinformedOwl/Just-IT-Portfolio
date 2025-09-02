@@ -6,13 +6,9 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 ARG UID=10001
 RUN apt-get update -y \
-    && apt-get install --no-install-recommends -y wget ca-certificates firefox-esr \
+    && apt-get install --no-install-recommends -y ca-certificates firefox-esr \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
-RUN wget https://github.com/mozilla/geckodriver/releases/download/v0.36.0/geckodriver-v0.36.0-linux64.tar.gz && \
-    tar -zxf geckodriver-v0.36.0-linux64.tar.gz -C /usr/local/bin && \
-    chmod +x /usr/local/bin/geckodriver && \
-    rm geckodriver-v0.36.0-linux64.tar.gz
 RUN adduser --disabled-password --gecos "" --home "/app" --shell "/sbin/nologin" --no-create-home --uid "${UID}" appuser
 RUN --mount=type=cache,target=/root/.cache/pip --mount=type=bind,source=requirements.txt,target=requirements.txt python -m pip install -r requirements.txt
 COPY . .
