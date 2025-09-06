@@ -1,0 +1,6 @@
+venv/
+__pycache__/
+*.pyc
+.git/
+.env
+geckodriver.log  # Optional, if not needed in container

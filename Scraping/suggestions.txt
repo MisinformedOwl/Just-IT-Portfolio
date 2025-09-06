@@ -1,0 +1,9 @@
+Go through sites to look human.
+
+Separate functionality for good quality code. also dont forget comments. docstring for explaining whats going on. comments for explaining why you made a choice.
+
+Keep reusing the same browser, don't do that.
+
+Get the URL to find uniqueness.
+
+Ben lang startups
