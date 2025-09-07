@@ -1,3 +1,2 @@
 *.ini
-data/
-Plan.txt
+.ignore

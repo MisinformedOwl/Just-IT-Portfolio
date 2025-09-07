@@ -2,6 +2,7 @@ Do thorough testing.
 And start inputting data into csv as a baseline.
 improve code.
 Try and add test cases?
+Fix ignore file.
 
 Next steps
 Upload to azure, and get it running on azure. (May need to setup config)
