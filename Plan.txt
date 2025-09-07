@@ -1,0 +1,11 @@
+Do thorough testing. 
+And start inputting data into csv as a baseline.
+improve code.
+Try and add test cases?
+
+Next steps
+Upload to azure, and get it running on azure. (May need to setup config)
+Setup daily running and figure out a way to halt it for a day if failed.
+
+After fully setup
+After that is the easy part of get the data and put it on power BI.
