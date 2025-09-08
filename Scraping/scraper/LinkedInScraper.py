@@ -22,10 +22,11 @@ def setupSalary(button) -> int:
     As an example, linkedin salaries are displayed as £40k/yr - £45k/yr
     This should be a number for comparison aswell as using it for mathematical formulas in power BI
 
-    parameters:
+    ### parameters:
         Button: The html content which holds the salary data
 
-    returns: The processed salary in the form of a integer.
+    ### Returns
+        The processed salary in the form of a integer.
     """
     daily = False
     text = button.text
@@ -52,10 +53,11 @@ def inputLogginDetails(driver):
     This is where the user is logged in.
     Currently i am using my own account details which is stored in a config file.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used for navigation
 
-    Returns: The driver
+    ### Returns
+        The driver
     """
     config = configparser.RawConfigParser()
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
@@ -76,10 +78,11 @@ def checkSuccessfulLogin(driver):
     This checks to see if the user has successfully logged in. If unsuccessful. 
     Stores the html file for examination.
 
-    parameters:
+    ### Parameters
         driver: The selenium driver used for navigation
     
-    Returns: the driver, or None if failed.
+    ### Returns
+        The driver, or None if failed.
     """
     try:
         search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
@@ -95,10 +98,11 @@ def login(driver):
     This is the hub where loggin in occours. Firstly, it inputs the details into the login page, then checks to see if it was successful.
     IF it was not successful, this function will return None.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used for navigation
     
-    Returns: The driver, or None if failed.
+    ### Returns
+    # The driver, or None if failed.
     """
     print("Waiting for page to load before logging in")
     sleep(6)
@@ -114,7 +118,8 @@ def setupDevice():
     This sets the basic configuration settings of the driver
     Including setting it to headless, and making sure the browser is recognised by Linked In to avoid being flagged for botting.
 
-    Returns: The selenium driver fully configured.
+    ### Returns
+        The selenium driver fully configured.
     """
     config = configparser.RawConfigParser()
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
@@ -136,10 +141,11 @@ def navigateToJobs(driver):
     """
     This function is responcible for logging in and getting into position to scrape the data
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used for navigation
     
-    Returns: The driver
+    ### Returns
+        The driver
     """
     driver.get("https://www.linkedin.com/login")
     driver = login(driver)
@@ -161,10 +167,11 @@ def collectName(driver, content: dict) -> dict:
     This function is designed to collect the title of the job
     and put it into the content dictionary
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used in navigation
     
-    returns: a dictionary with the newly added content
+    ### Returns
+        A dictionary with the newly added content
     """
     name = driver.find_element(By.XPATH, f"//a[starts-with(@id, 'ember') and contains(@class, 'ember-view')]")
     content.update({"NameOfJob": [name.text]})
@@ -175,10 +182,11 @@ def collectBusiness(driver, content: dict) -> dict:
     This fucntion collects the business name
     and inserts it into the dictionary.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used in navigation
     
-    returns: a dictionary with the newly added content
+    ### Returns
+        A dictionary with the newly added content
     """
     name = driver.find_elements(By.XPATH, f"//div[@class='t-14' and @tabindex='-1']//a")[1]
     content.update({"NameOfBusiness" : [name.text]})
@@ -189,10 +197,11 @@ def collectLocation(driver, content: dict) -> dict:
     This function collects the location of the job
     it also splits the data so that it collects the city in the UK.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used in navigation
     
-    returns: a dictionary with the newly added content
+    ### Returns
+        A dictionary with the newly added content
     """
     loc = driver.find_element(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']")
     loc = loc.text.split(", ")
@@ -203,10 +212,11 @@ def collectJobType(job, content: dict) -> dict:
     """
     This fucntion inputs the job type which is being searched for into the dictionary.
 
-    Parameters:
+    ### Parameters
         job (string): the current job type being searched for
     
-    returns: a dictionary with the newly added content
+    ###Returns
+        A dictionary with the newly added content
     """
     content.update({"JobType" : [job]})
     return content
@@ -217,10 +227,11 @@ def collectSkills(driver, content: dict) -> dict:
     If there was an issue with this job description during processing.
     It saves it in a file that gets overwritten to save space as an example to be examined.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used in navigation
     
-    returns: a dictionary with the newly added content
+    ### Returns
+        A dictionary with the newly added content
     """
     jobDesc = driver.find_element(By.ID, "job-details")
     kw = keywords()
@@ -246,10 +257,11 @@ def collectkeyDetails(driver, content: dict) -> dict:
 
     If the salary is detected it is sent for processing in setupSalary.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used in navigation
     
-    returns: a dictionary with the newly added content
+    ### Returns
+        a dictionary with the newly added content
     """
     buttons = driver.find_elements(By.XPATH, "//button[@class='artdeco-button artdeco-button--secondary artdeco-button--muted']//Strong")
     stages = ["Duration", "WorkType", "Salary"]
@@ -267,22 +279,30 @@ def collectJobCode(driver, content: dict) -> dict:
     """
     This function collects the URL of the job, to use as a unique identifier for the database.
     It also needs to strip the url of it's usless content and just grab the "Currentjob" code.
+
+    ### Parameters
+        driver: The selenium web driver used to navigate the page.
+        content: The dictionary of content to be added to the dataframe.
+    
+    ### Returns
+        The content dictionary with more content
     """
     url = driver.current_url.split("=")[1]
     url = url.split("&")[0]
     content.update({"URL": url})
     return content
 
-def insertDataIntoFrame(content):
+def insertDataIntoFrame(frame, content):
     """
     This function manages inserting the data into the pandas dataframe.
     By first creating a new frame to transform the data from dictionary to dataframe.
     It then uses concat as the original method of appending was depricated.
 
-    Parameters:
+    ### Parameters
         content: The fully completed content to be inserted
 
-    Returns: the updated pandas dataframe.
+    ### Returns
+        The updated pandas dataframe.\
     """
     newframe = pd.DataFrame(content)
     frame = pd.concat([frame, newframe], ignore_index=True)
@@ -297,7 +317,7 @@ def scrapeJobs(driver) -> pd.DataFrame:
     When the end of the page is finished, it selects the next page. Waits for it to load, and does it again.
     This is done for 10 pages per job. Until it's finally inserted into the database.
 
-    Parameters:
+    ### Parameters
         driver: The selenium driver used to navigate
     """
 
@@ -333,7 +353,7 @@ def scrapeJobs(driver) -> pd.DataFrame:
                 sleep(1)
 
                 #Being able to insert was depricated in 1.6. What is the point man.
-                frame = insertDataIntoFrame(content)
+                frame = insertDataIntoFrame(frame, content)
                 del content
         
         try: # If it reaches the end, move onto next job type

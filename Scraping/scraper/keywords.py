@@ -21,7 +21,12 @@ class findKWords:
 
     def removePunctuation(self, tokens: list, index: int):
         """
-        This removes punctuation from the token to they 
+        This removes punctuation from the token.
+        This is so that there can be direct comparison between the token and the keyword set.
+
+        ### Parameters
+            tokens: A list of tokens which will be compared.
+            index: the current index in the tokens list to be cleaned
         """
         if tokens[index][-2:] == "\n":
                 tokens = tokens[index][:-1]
@@ -35,10 +40,11 @@ class findKWords:
         This function goes through all collected tokens and cleans them so theres no...
         Punctuation, capital letters, white spaces.
         
-        Parameters:
-            tokens (list[str]): The tokens to be cleansed.
+        ### Parameters
+            tokens: The tokens to be cleansed.
         
-        Returns: List of cleaned tokens
+        ### Returns
+            List of cleaned tokens
         """
         for t in range(len(tokens)):
             if len(tokens[t]) < 1 or tokens[t] == "\n":
@@ -60,7 +66,8 @@ class findKWords:
         """
         Gets the keywords from the file and splits them by the delimeter ,
 
-        Returns: List of key words/phrases.
+        ### Returns
+            List of key words/phrases.
         """
         with open(os.path.join(os.path.dirname(__file__), "keywords.txt"), "r") as file:
             words = file.readline().lower().split(",")
@@ -71,6 +78,12 @@ class findKWords:
         """
         Main detection script. Sends the data into cleaning after being split.
         Then goes through the list of tokens given the n-gram range of 3 currently.
+
+        ### Parameters
+            words: The job description to be checked for key words
+        
+        ### Returns
+            A list of key words which were detected
         """
         tokens = words.split(" ")
         tokens = self.cleanData(tokens)
