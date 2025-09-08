@@ -156,7 +156,7 @@ def navigateToJobs(driver):
 
     return driver
 
-def collectName(driver):
+def collectName(driver, content: dict) -> dict:
     """
     This function is designed to collect the title of the job
     and put it into the content dictionary
@@ -170,7 +170,7 @@ def collectName(driver):
     content.update({"NameOfJob": [name.text]})
     return content
 
-def collectBusiness(driver):
+def collectBusiness(driver, content: dict) -> dict:
     """
     This fucntion collects the business name
     and inserts it into the dictionary.
@@ -184,7 +184,7 @@ def collectBusiness(driver):
     content.update({"NameOfBusiness" : [name.text]})
     return content
 
-def collectLocation(driver):
+def collectLocation(driver, content: dict) -> dict:
     """
     This function collects the location of the job
     it also splits the data so that it collects the city in the UK.
@@ -199,7 +199,7 @@ def collectLocation(driver):
     content.update({"Location": [loc[0]]})
     return content
 
-def collectJobType(job):
+def collectJobType(job, content: dict) -> dict:
     """
     This fucntion inputs the job type which is being searched for into the dictionary.
 
@@ -211,7 +211,7 @@ def collectJobType(job):
     content.update({"JobType" : [job]})
     return content
 
-def collectSkills(driver):
+def collectSkills(driver, content: dict) -> dict:
     """
     This function collects the job description then sends it to an external script which i have made.
     If there was an issue with this job description during processing.
@@ -234,7 +234,7 @@ def collectSkills(driver):
 
     return content
 
-def collectkeyDetails(driver):
+def collectkeyDetails(driver, content: dict) -> dict:
     """
     On linked in the salary is bundled with 3 other pieces of information.
     The work duration (full-time)
@@ -263,19 +263,32 @@ def collectkeyDetails(driver):
         content.update({stage: [button.text]})
     return content
 
-def insertDataIntoFrame():
+def collectJobCode(driver, content: dict) -> dict:
+    """
+    This function collects the URL of the job, to use as a unique identifier for the database.
+    It also needs to strip the url of it's usless content and just grab the "Currentjob" code.
+    """
+    url = driver.current_url.split("=")[1]
+    url = url.split("&")[0]
+    content.update({"URL": url})
+    return content
+
+def insertDataIntoFrame(content):
     """
     This function manages inserting the data into the pandas dataframe.
     By first creating a new frame to transform the data from dictionary to dataframe.
     It then uses concat as the original method of appending was depricated.
 
-    returns: the updated pandas dataframe.
+    Parameters:
+        content: The fully completed content to be inserted
+
+    Returns: the updated pandas dataframe.
     """
     newframe = pd.DataFrame(content)
     frame = pd.concat([frame, newframe], ignore_index=True)
     return frame
 
-def scrapeJobs(driver):
+def scrapeJobs(driver) -> pd.DataFrame:
     """
     This is the core script responcible for initially creating the dataframe and navigating over the jobs page.
     It then goes through every job in the list and collects the data and puts it into a dictionary,
@@ -309,18 +322,18 @@ def scrapeJobs(driver):
                 sleep(1.4)
                 content = dict()
 
-                content = collectName(driver)
-                content = collectBusiness(driver)
-                content = collectLocation(driver)
-                content = collectJobType(job)
-                content = collectkeyDetails(driver)
-                content = collectSkills(driver)
-                content.update({"URL", driver.current_url})
+                content = collectName(      driver, content)
+                content = collectBusiness(  driver, content)
+                content = collectLocation(  driver, content)
+                content = collectJobType(      job, content)
+                content = collectkeyDetails(driver, content)
+                content = collectSkills(    driver, content)
+                content = collectJobCode(   driver, content)
 
                 sleep(1)
 
                 #Being able to insert was depricated in 1.6. What is the point man.
-                frame = insertDataIntoFrame()
+                frame = insertDataIntoFrame(content)
                 del content
         
         try: # If it reaches the end, move onto next job type
@@ -333,8 +346,14 @@ def scrapeJobs(driver):
 
 #============================================================================================================
 
+def tempCSVfileAdd(frame):
+    """
+    A temporary solution for saving the data as a csv file.
+    """
+    frame.to_csv("data.csv",index=False)
+
 if __name__ == "__main__":
     driver = setupDevice()
     driver = navigateToJobs(driver)
     frame = scrapeJobs(driver)
-    #Add database insertion here.
+    tempCSVfileAdd(frame)
