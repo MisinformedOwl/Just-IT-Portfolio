@@ -8,6 +8,7 @@ from keyboard import is_pressed as pressed
 import pandas as pd
 import os
 from keywords import findKWords as keywords
+from databaseConn import databaseConn
 
 content = {}
 

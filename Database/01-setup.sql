@@ -26,18 +26,18 @@ DROP DATABASE IF EXISTS LinkedInScrape;
 CREATE DATABASE LinkedInScrape DEFAULT CHARACTER SET utf8mb4;
 USE LinkedInScrape;
 
-
 DROP TABLE IF EXISTS `Job`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Job` (
 	`JobID` int NOT NULL AUTO_INCREMENT,
-    `Name` Char(30) NOT NULL DEFAULT '',
-    `Business` CHAR(30) NOT NULL DEFAULT '',
-    `Location` char(30) NOT NULL DEFAULT '',
+    `Name` VARCHAR(30) NOT NULL DEFAULT '',
+    `Business` VARCHAR(30) NOT NULL DEFAULT '',
+    `Location` VARCHAR(30) NOT NULL DEFAULT '',
 	`Salary` int NOT NULL DEFAULT 0,
-    `WorkType` char(10) NOT NULL DEFAULT '',
-    `Duration` char(10) NOT NULL DEFAULT '',
+    `JobType` VARCHAR(30) NOT NULL DEFAULT '',
+    `WorkType` varchar(15) NOT NULL DEFAULT '',
+    `Duration` varchar(15) NOT NULL DEFAULT '',
     `URL` CHAR(10) NOT NULL, /* A unique identifier for the purposes of finding duplicates */
     primary key(`JobID`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
