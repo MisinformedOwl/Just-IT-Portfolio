@@ -12,7 +12,9 @@ if __name__ == "__main__":
             skills = skillFile.readline().split(",")
         
         file.write("START TRANSACTION;\n") # Start transaction as autocommit is 0.
+
         for skill in skills:
-            skill = skill.strip()
+            skill = skill.strip() # Required to remove \n from the end.
             file.write(f"INSERT INTO `Skills` (Skill) VALUES ('{skill}');\n")
+        
         file.write("COMMIT;\n")

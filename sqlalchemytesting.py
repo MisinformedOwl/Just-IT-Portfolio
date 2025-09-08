@@ -14,7 +14,8 @@ def get_connection():
     """
     Created the engine to interact with the database.
 
-    Returns: The engine to interact with database.
+    ### Returns
+        The engine to interact with database.
     """
     return create_engine(url=f"mysql+pymysql://{user}:{password}@{host}:3307/{database}")
 
@@ -41,7 +42,7 @@ def insertJob(conn,row):
     Thius function is responcible for inserting the data into the job table.
     Using what I have been told is industry standard methods.
 
-    Parameters:
+    ### Parameters
         conn: The database connection which is sent commands.
         row: The current row in the dataframe which is being inserted.
     """
@@ -67,7 +68,7 @@ def insertSkillLink(conn, row, id):
     This is responsible for inserting the data into the linking table.
     This is ran after job insertion in order to get the job id.
 
-    Parameters:
+    ### Parameters
         conn: the connection to the database which is sent commands.
         row: The current row being inserted.
         id: The job ID in the database.
@@ -103,7 +104,7 @@ def insertRows(conn,frame):
     Firstly, we will just insert the data for the Job table.
     This is because we need the jobID to be able to populate the linking table.
 
-    Parameters:
+    ### Parameters
         frame: The pandas dataframe containing a sample dataset.
     """
     for row in frame.itertuples(index=False): # Apparently this is industry standard
@@ -121,7 +122,7 @@ def testInsertJobs(conn):
     it then begins the transaction and runs the insertion functions.
     Finally closing and commiting the data once finished.
 
-    Parameters:
+    ### Parameters
         conn: The connection to the database which is sent commands.
     """
 
