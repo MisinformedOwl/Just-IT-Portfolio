@@ -1,5 +1,3 @@
-And start inputting data into csv as a baseline.
-Try and add test cases?
 add loggers
 
 Next steps
