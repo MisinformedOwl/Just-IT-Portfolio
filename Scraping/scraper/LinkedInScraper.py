@@ -10,6 +10,8 @@ import os
 from keywords import findKWords as keywords
 from databaseConn import databaseConn
 
+#==============================================================================================================
+
 content = {}
 
 jobNames = ["Data Analyst", "Software Engineer", "Data Scientist"]
@@ -325,7 +327,7 @@ def scrapeJobs(driver) -> pd.DataFrame:
     frame = pd.DataFrame(columns=["NameOfJob", "NameOfBusiness", "Location", "JobType", "Salary", "Skills", "WorkType", "Duration", "URL"])
 
     for job in jobNames:
-        page = 1
+        page = 0
         #Search in the search bar.
         navigation = driver.find_element(By.XPATH, "//input[starts-with(@id, 'jobs-search-box-keyword-id-ember')]")
         navigation.send_keys(job)
@@ -366,7 +368,7 @@ def scrapeJobs(driver) -> pd.DataFrame:
 
 #============================================================================================================
 
-def tempCSVfileAdd(frame):
+def emergencyCSVfileAdd(frame):
     """
     A temporary solution for saving the data as a csv file.
     """
@@ -376,4 +378,9 @@ if __name__ == "__main__":
     driver = setupDevice()
     driver = navigateToJobs(driver)
     frame = scrapeJobs(driver)
-    tempCSVfileAdd(frame)
+    try:
+        conn = databaseConn()
+        conn.sendData(frame)
+    except Exception as ex: #Incase something totally unforeseen happens, no data is lost.
+        print(f"The exceptional happened: {ex}")
+        emergencyCSVfileAdd(frame)

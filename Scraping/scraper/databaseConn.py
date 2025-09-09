@@ -3,12 +3,18 @@ import pandas as pd
 import datetime
 
 class databaseConn:
+    """
+    This class is responcible for connecting to, 
+    and interacting with the database once the data has been collected.
+    """
 
     host = 'localhost'
     user = "myuser"
     password = "mypassword"
     database = "mydb"
     connected = False
+
+    #===============================Insertion===========================================
 
     def __init__(self):
         """
@@ -32,22 +38,69 @@ class databaseConn:
         """
         return create_engine(url=f"mysql+pymysql://{self.user}:{self.password}@{self.host}:3307/{self.database}")
     
-    def sendCommands(self, conn, data:pd.DataFrame):
+    def insertJob(self, conn,row):
         """
-        This script is designed to start and end the transaction.
+        This function is responcible for inserting the data into the job table.
+        Using what I have been told is industry standard methods.
 
         ### Parameters
-            conn: The connection to the database which is used to send SQL commands.
-            data: The dataframe containing the collected content.
+            conn: The database connection which is sent commands.
+            row: The current row in the dataframe which is being inserted.
         """
-        print("Starting transaction...")
-        conn.execute(text("START TRANSACTION;"))
+        jobInsertion = text("""
+        INSERT INTO Job (Name, Business, Location, Salary, JobType, WorkType, Duration, URL) 
+        VALUES (:name, :business, :location, :salary, :jobtype, :worktype, :duration, :url);
+        """)
 
-        for index, row in data.iterrows():
-            pass # To be added when i have sql transaction code locked in.
+        conn.execute(jobInsertion, 
+            {
+            "name":     row.NameOfJob, \
+            "business": row.NameOfBusiness, \
+            "location": row.Location, \
+            "salary":   row.Salary, \
+            "jobtype":  row.JobType, \
+            "worktype": row.WorkType, \
+            "duration": row.Duration, \
+            "url":      row.URL
+            })
 
-        print("Commiting to database...")
-        conn.execute(text("COMMIT;"))
+    def insertSkillLink(self,conn, row, id):
+        """
+        This is responsible for inserting the data into the linking table.
+        This is ran after job insertion in order to get the job id.
+
+        ### Parameters
+            conn: the connection to the database which is sent commands.
+            row: The current row being inserted.
+            id: The job ID in the database.
+        """
+
+        skillInsert = text(
+        """
+        INSERT INTO SkillsLink (JobID, SkillID) VALUES ( :jobid , :skill );
+        """
+        )
+
+        skillSelectID = text(
+        """
+        SELECT SkillID FROM Skills
+        WHERE Skill = :skill;
+        """
+        )
+
+        for skill in row.Skills:
+            conn.execute(
+                skillInsert,
+                {
+                    "jobid": id,
+                    "skill": conn.execute(
+                        skillSelectID,
+                        {"skill": skill}
+                    ).scalar()
+                }
+            )
+
+    #==============================Prepping=============================================
 
     def clearDuplicates(self, conn, data:pd.DataFrame) -> pd.DataFrame:
         """
@@ -64,14 +117,55 @@ class databaseConn:
         """
         rowsToDrop = []
         for index, row in data.iterrows():
-            res = conn.execute(text(f"SELECT count(1) FROM Job\
-                                    WHERE URL = {row["URL"]}"))
+            findCommand = text(
+            """
+            SELECT count(1) FROM Job
+            WHERE URL = :url;
+            """
+            )
+            res = conn.execute(findCommand, {
+                "url" : row.URL
+            })
             if res.scalar() == 1: #Collecting indexs of suplicates in the database
                 rowsToDrop.append(index)
         
+        print(f"Dropping {len(rowsToDrop)} duplicates from the dataframe.")
         data.drop(rowsToDrop,inplace=True)
+        print(f"{data.shape[0]} inserts remain.")
 
         return data
+
+    def insertRows(self, conn, frame):
+        """
+        Firstly, we will just insert the data for the Job table.
+        This is because we need the jobID to be able to populate the linking table.
+
+        ### Parameters
+            conn: The engine usedto send commands to the SQl server.
+            frame: The pandas dataframe containing a sample dataset.
+        """
+        for row in frame.itertuples(index=False):
+            self.insertJob(conn,row)
+
+            jobID = conn.execute(text("SELECT LAST_INSERT_ID();")).scalar()
+
+            self.insertSkillLink(conn, row, jobID)
+
+    def sendCommands(self, conn, data:pd.DataFrame):
+        """
+        This script is designed to start and end the transaction.
+
+        ### Parameters
+            conn: The connection to the database which is used to send SQL commands.
+            data: The dataframe containing the collected content.
+        """
+        print("Starting transaction...")
+        conn.execute(text("START TRANSACTION;"))
+
+        self.insertRows(conn, data)
+
+        print("Commiting to database...")
+        conn.execute(text("COMMIT;"))
 
     def sendData(self, data: pd.DataFrame):
         """
@@ -91,6 +185,8 @@ class databaseConn:
         conn.execute(text("USE LinkedInScrape;"))
 
         self.clearDuplicates(conn, data)
+        if data.shape[0] == 0:
+            print("All data collected were duplicates.")
         self.sendCommands(conn, data)
 
     def writeToCSV(self, data):

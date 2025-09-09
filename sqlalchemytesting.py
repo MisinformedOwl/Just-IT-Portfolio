@@ -39,7 +39,7 @@ def executeTestCommands(conn):
 
 def insertJob(conn,row):
     """
-    Thius function is responcible for inserting the data into the job table.
+    This function is responcible for inserting the data into the job table.
     Using what I have been told is industry standard methods.
 
     ### Parameters

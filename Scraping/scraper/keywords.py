@@ -47,20 +47,21 @@ class findKWords:
             List of cleaned tokens
         """
         for t in range(len(tokens)):
-            if len(tokens[t]) < 1 or tokens[t] == "\n":
+            if len(tokens[t]) <= 1 or tokens[t] == "\n":
                 continue
+            splitTokens = tokens[t].split("\n")
+            if len(splitTokens) > 1:
+                del tokens[t]
+                for token in range(len(splitTokens)-1,-1,-1):
+                    if len(splitTokens[token]) > 0:
+                        tokens.insert(t, splitTokens[token])
 
-            tokens[t].lower()   #Decapitalise
-            tokens[t].lstrip()  #Remove white space on the left
-            tokens[t].rstrip()  #Remove white space on the right
-
-            if len(tokens[t]) <= 1:
-                continue
+            tokens[t] = tokens[t].lower()   #Decapitalise
+            tokens[t] = tokens[t].lstrip()  #Remove white space on the left
+            tokens[t] = tokens[t].rstrip()  #Remove white space on the right
 
             self.removePunctuation(tokens, t)
-
         return tokens
-
 
     def getKeyWords(self) -> set:
         """
@@ -72,7 +73,7 @@ class findKWords:
         with open(os.path.join(os.path.dirname(__file__), "keywords.txt"), "r") as file:
             words = file.readline().lower().split(",")
             words[-1] = words[-1][:-1] # Removes /n from the end of the set of words.
-        return words
+        return set(words)
 
     def detect(self, words) -> list:
         """
@@ -88,17 +89,67 @@ class findKWords:
         tokens = words.split(" ")
         tokens = self.cleanData(tokens)
         keywordsFound = set()
+        print(tokens)
         for x in range(1,len(tokens)+1):
             for y in range(self.nGram):
-
                 key = " ".join(tokens[x:x+y])
+                if key[0:4] == "mach":
+                    print(len(key))
                 if key in self.kWords:
+                    if key[0:4] == "mach":
+                        print("seen?")
                     keywordsFound.add(key)
         
         return list(keywordsFound)
 
-#This is used in testing.
-#data = """"""
+#This is used in manual testing.
 
-#kw = findKWords()
-#print(kw.detect(data))
+data = """
+
+About the job
+
+Graduate Software Developer – AI & Machine Learning
+
+
+Location: Remote (UK-based applicants preferred)
+
+
+Contract: Full-Time, Permanent
+
+
+The Role
+
+We’re offering an exciting opportunity for a recent graduate eager to explore the fast-moving world of artificial intelligence and natural language technologies. This role is ideal for someone looking to gain hands-on experience with Large Language Models (LLMs) and help bring intelligent features into real-world applications.
+
+
+Responsibilities
+
+    Develop and integrate AI-powered functionality into digital platforms and tools.
+    Work with APIs from leading LLM providers to create solutions such as chat interfaces, automation workflows, or text analytics.
+    Contribute to prototypes, testing cycles, and the improvement of AI-driven features.
+    Research the latest trends in generative AI and share findings with the team.
+    Produce clear, well-structured, and maintainable code.
+
+
+What You’ll Need
+
+    A degree in Computer Science, Software Engineering, or a related discipline.
+    Programming knowledge in Python, JavaScript, or a comparable language.
+    Some exposure to AI libraries or APIs (e.g. Hugging Face, OpenAI, LangChain).
+    A solid grasp of how LLMs can be applied in practice.
+    Strong problem-solving skills and enthusiasm for continuous learning.
+
+
+Bonus Skills
+
+    Experience using Git, building RESTful APIs, or working with cloud platforms.
+    Academic or personal projects demonstrating interest in AI or generative technologies.
+
+
+What’s on Offer
+
+This is a chance to start your career in a rapidly growing area of technology, with the opportunity to work on innovative projects, learn from experienced developers, and grow your technical skills in a supportive environment.
+"""
+
+kw = findKWords()
+print(kw.detect(data))
