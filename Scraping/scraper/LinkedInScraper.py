@@ -1,5 +1,6 @@
 from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
+from selenium.common.exceptions import StaleElementReferenceException
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.options import Options
 import configparser
@@ -327,20 +328,31 @@ def scrapeJobs(driver) -> pd.DataFrame:
     frame = pd.DataFrame(columns=["NameOfJob", "NameOfBusiness", "Location", "JobType", "Salary", "Skills", "WorkType", "Duration", "URL"])
 
     for job in jobNames:
-        page = 0
+        page = 1
         #Search in the search bar.
-        navigation = driver.find_element(By.XPATH, "//input[starts-with(@id, 'jobs-search-box-keyword-id-ember')]")
-        navigation.send_keys(job)
-        navigation.send_keys(Keys.RETURN)
+        try:
+            navigation = driver.find_element(By.XPATH, "//input[starts-with(@id, 'jobs-search-box-keyword-id-ember')]")
+            navigation.send_keys(job)
+            navigation.send_keys(Keys.RETURN)
+        except:
+            print("CRITICAL ERROR: Unable to search for job type.")
+            quit()
         sleep(3)
         while page < 10:
             page+=1
-            scrollbar = driver.find_elements(By.TAG_NAME, "ul")[3]
-            scrollbar = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
+            try:
+                scrollbar = driver.find_elements(By.TAG_NAME, "ul")[3]
+                scrollbar = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
+            except Exception as ex:
+                print("CRITICAL ERROR: Unable to locate scrollbar for jobs.")
             ammount = len(scrollbar)
             print(f"There are {ammount} of jobs displayed")
             for s in range(ammount):
-                scrollbar[s].click()
+                try:
+                    scrollbar[s].click()
+                except StaleElementReferenceException as ex:
+                    print(f"Attempting to interact with a job that is uninteractable. Continuing with next job.")
+                    continue
                 sleep(1.4)
                 content = dict()
 
@@ -360,7 +372,8 @@ def scrapeJobs(driver) -> pd.DataFrame:
         
         try: # If it reaches the end, move onto next job type
             driver.find_element(By.XPATH, f"//button[@class='jobs-search-pagination__indicator-button ' and @aria-label='Page {page}']").click()
-        except Exception:
+        except Exception as ex:
+            print(f"{ex}")
             break
         
         sleep(1)

@@ -10,7 +10,7 @@ class findKWords:
     """
 
     kWords = set()
-    punctuation = set([".", ",", ";", ":", "@", "'", "#", "~", "{", "}", "[", "]", "-", "_", "!", "*", "^", "(", ")", "&", "%", '"', "\n"])
+    punctuation = set([".", ",", ";", ":", "@", "'", "#", "~", "{", "}", "[", "]", "-", "_", "!", "*", "^", "(", ")", "&", "%", '"', "\n", "?", "|", "\\", "£", "$"])
     nGram = 3
 
     def __init__(self):
@@ -19,21 +19,34 @@ class findKWords:
         """
         self.kWords = self.getKeyWords()
 
-    def removePunctuation(self, tokens: list, index: int):
+    def removePunctuation(self,tokens: list[str]) -> list[str]:
         """
-        This removes punctuation from the token.
-        This is so that there can be direct comparison between the token and the keyword set.
+        This function is responcible for removing \n from the center of some tokens.
+        Example of why this was made: 'Learning\n\n\nLocation:'
+        I would send in the token itself. However i need to manipualte the list itself during runtime.
 
         ### Parameters
-            tokens: A list of tokens which will be compared.
-            index: the current index in the tokens list to be cleaned
+            tokens: A list of tokenised strings
+        
+        ### Returns
+            The tokens with a new set of cleaned tokens..
         """
-        if tokens[index][-2:] == "\n":
-                tokens = tokens[index][:-1]
-        if tokens[index][0] in self.punctuation:
-            tokens[index] = tokens[index][1:]
-        if tokens[index][-1] in self.punctuation:
-            tokens[index] =tokens[index][:-1]  #If theres a comma or a full stop at the end remove it.
+        cleaned_tokens = []
+
+        for token in tokens:
+            if token in self.kWords:
+                cleaned_tokens.append(token)
+                continue
+            #Create new token that is clean of punctuation to be split via ' '
+            cleaned = ''.join(c if 'a' <= c <= 'z' \
+                                else ' ' \
+                                for c in token.lower())
+            
+            #Remove the '' parts by checking if part has any characters
+            split_parts = [part for part in cleaned.split(" ") if part]
+            cleaned_tokens.extend(split_parts)
+
+        return cleaned_tokens
 
     def cleanData(self, tokens: list[str]) -> list:
         """
@@ -46,21 +59,24 @@ class findKWords:
         ### Returns
             List of cleaned tokens
         """
-        for t in range(len(tokens)):
+        t = 0 # If i used 0 it would get caught by the guard clause and never exit in some bits of data.
+        while t < len(tokens):
             if len(tokens[t]) <= 1 or tokens[t] == "\n":
-                continue
-            splitTokens = tokens[t].split("\n")
-            if len(splitTokens) > 1:
                 del tokens[t]
-                for token in range(len(splitTokens)-1,-1,-1):
-                    if len(splitTokens[token]) > 0:
-                        tokens.insert(t, splitTokens[token])
+                continue
+            
+            #At the end of paragraphs there tends to be alot of new lines attached to the word.
+            while tokens[t][-1] == "\n":
+                tokens[t] = tokens[t][:-1]
 
             tokens[t] = tokens[t].lower()   #Decapitalise
             tokens[t] = tokens[t].lstrip()  #Remove white space on the left
             tokens[t] = tokens[t].rstrip()  #Remove white space on the right
 
-            self.removePunctuation(tokens, t)
+            t+=1
+        
+        tokens = self.removePunctuation(tokens)
+
         return tokens
 
     def getKeyWords(self) -> set:
@@ -89,67 +105,11 @@ class findKWords:
         tokens = words.split(" ")
         tokens = self.cleanData(tokens)
         keywordsFound = set()
-        print(tokens)
         for x in range(1,len(tokens)+1):
             for y in range(self.nGram):
                 key = " ".join(tokens[x:x+y])
-                if key[0:4] == "mach":
-                    print(len(key))
                 if key in self.kWords:
-                    if key[0:4] == "mach":
-                        print("seen?")
                     keywordsFound.add(key)
         
         return list(keywordsFound)
 
-#This is used in manual testing.
-
-data = """
-
-About the job
-
-Graduate Software Developer – AI & Machine Learning
-
-
-Location: Remote (UK-based applicants preferred)
-
-
-Contract: Full-Time, Permanent
-
-
-The Role
-
-We’re offering an exciting opportunity for a recent graduate eager to explore the fast-moving world of artificial intelligence and natural language technologies. This role is ideal for someone looking to gain hands-on experience with Large Language Models (LLMs) and help bring intelligent features into real-world applications.
-
-
-Responsibilities
-
-    Develop and integrate AI-powered functionality into digital platforms and tools.
-    Work with APIs from leading LLM providers to create solutions such as chat interfaces, automation workflows, or text analytics.
-    Contribute to prototypes, testing cycles, and the improvement of AI-driven features.
-    Research the latest trends in generative AI and share findings with the team.
-    Produce clear, well-structured, and maintainable code.
-
-
-What You’ll Need
-
-    A degree in Computer Science, Software Engineering, or a related discipline.
-    Programming knowledge in Python, JavaScript, or a comparable language.
-    Some exposure to AI libraries or APIs (e.g. Hugging Face, OpenAI, LangChain).
-    A solid grasp of how LLMs can be applied in practice.
-    Strong problem-solving skills and enthusiasm for continuous learning.
-
-
-Bonus Skills
-
-    Experience using Git, building RESTful APIs, or working with cloud platforms.
-    Academic or personal projects demonstrating interest in AI or generative technologies.
-
-
-What’s on Offer
-
-This is a chance to start your career in a rapidly growing area of technology, with the opportunity to work on innovative projects, learn from experienced developers, and grow your technical skills in a supportive environment.
-"""
-
-kw = findKWords()
-print(kw.detect(data))
