@@ -1,2 +1,4 @@
 **/config.ini
-**/test.py
+Scraping/scraper/test.py
+**.log
+temp

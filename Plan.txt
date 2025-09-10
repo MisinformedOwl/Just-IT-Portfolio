@@ -1,6 +1,3 @@
-add loggers
-You seriously need to break down the searcher script.
-
 Next steps
 Upload to azure, and get it running on azure. (May need to setup config)
 Setup daily running and figure out a way to halt it for a day if failed.

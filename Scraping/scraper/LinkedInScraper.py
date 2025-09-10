@@ -8,17 +8,135 @@ from time import sleep
 from keyboard import is_pressed as pressed
 import pandas as pd
 import os
-from keywords import findKWords as keywords
+from keywords import findKWords
 from databaseConn import databaseConn
 from ScrapeExceptions import AttemptFails, NullIndex
+import logging
 
-#==============================================================================================================
+#============================================Logger============================================================
 
-content = {}
+logging.basicConfig(level=logging.DEBUG, 
+                    format='%(asctime)s [%(level)s] - %(message)s',
+                    filename="Logs.log")
+logger = logging.getLogger("Scraper")
 
-jobNames = ["Data Analyst", "Software Engineer", "Data Scientist"]
+#======================================Selenium Navigation=====================================================
 
-#==============================================================================================================
+def inputLogginDetails(driver):
+    """
+    This is where the user is logged in.
+    Currently i am using my own account details which is stored in a config file.
+
+    ### Parameters
+        driver: The selenium driver used for navigation
+
+    ### Returns
+        The driver
+    """
+    config = configparser.RawConfigParser()
+    config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+
+    sleep(5)
+    logger.info("Starting login.")
+
+    search = driver.find_element(By.ID, "username")
+    search.send_keys(config["Linkedin details"]["Name"])
+    search = driver.find_element(By.ID, "password")
+    search.send_keys(config["Linkedin details"]["Pass"])
+    search.send_keys(Keys.RETURN)
+    sleep(6)
+    return driver
+
+def checkSuccessfulLogin(driver):
+    """
+    This checks to see if the user has successfully logged in. If unsuccessful. 
+    Stores the html file for examination.
+
+    ### Parameters
+        driver: The selenium driver used for navigation
+    
+    ### Returns
+        The driver, or None if failed.
+    """
+    try:
+        search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
+        logger.info("No Issues logging in")
+        return driver
+    except Exception:
+        with open("html source Error.txt", "w") as file:
+            file.write(driver.page_source)
+        return None
+
+def login(driver):
+    """
+    This is the hub where loggin in occours. Firstly, it inputs the details into the login page, then checks to see if it was successful.
+    IF it was not successful, this function will return None.
+
+    ### Parameters
+        driver: The selenium driver used for navigation
+    
+    ### Returns
+        The driver, or None if failed.
+    """
+    logger.info("Waiting for page to load before logging in")
+    sleep(6)
+
+    driver = inputLogginDetails(driver)
+
+    driver = checkSuccessfulLogin(driver)
+    
+    return driver
+
+def setupDevice():
+    """
+    This sets the basic configuration settings of the driver
+    Including setting it to headless, and making sure the browser is recognised by Linked In to avoid being flagged for botting.
+
+    ### Returns
+        The selenium driver fully configured.
+    """
+    config = configparser.RawConfigParser()
+    config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
+
+    ops = Options()
+    ops.add_argument("--headless")
+    ops.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0")
+    service = wd.FirefoxService(executable_path="/usr/local/bin/geckodriver")
+
+    if config['Settings']['Debug'] == "True":
+        logger.debug("Launching in debug mode.")
+        driver = wd.Firefox()
+    else:
+        driver = wd.Firefox(service=service, options=ops)
+    
+    return driver
+
+def navigateToJobs(driver):
+    """
+    This function is responcible for logging in and getting into position to scrape the data
+
+    ### Parameters
+        driver: The selenium driver used for navigation
+    
+    ### Returns
+        The driver
+    """
+    driver.get("https://www.linkedin.com/login")
+    driver = login(driver)
+
+    if driver == None:
+        logger.critical("Unsuccessful login. Cancelling todays operations to avoid account flagging.")
+        quit()
+
+    driver.get("https://www.linkedin.com/login")
+    sleep(4)
+
+    driver.get("https://www.linkedin.com/jobs/collections/recommended/")
+    sleep(4)
+
+    return driver
+
+#======================================Content Collection=======================================================
 
 def setupSalary(text:str) -> int:
     """
@@ -66,120 +184,6 @@ def setupSalary(text:str) -> int:
     else:
         return text[0]
 
-def inputLogginDetails(driver):
-    """
-    This is where the user is logged in.
-    Currently i am using my own account details which is stored in a config file.
-
-    ### Parameters
-        driver: The selenium driver used for navigation
-
-    ### Returns
-        The driver
-    """
-    config = configparser.RawConfigParser()
-    config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
-
-    sleep(5)
-    print("Starting login.")
-
-    search = driver.find_element(By.ID, "username")
-    search.send_keys(config["Linkedin details"]["Name"])
-    search = driver.find_element(By.ID, "password")
-    search.send_keys(config["Linkedin details"]["Pass"])
-    search.send_keys(Keys.RETURN)
-    sleep(6)
-    return driver
-
-def checkSuccessfulLogin(driver):
-    """
-    This checks to see if the user has successfully logged in. If unsuccessful. 
-    Stores the html file for examination.
-
-    ### Parameters
-        driver: The selenium driver used for navigation
-    
-    ### Returns
-        The driver, or None if failed.
-    """
-    try:
-        search = driver.find_element(By.XPATH, "//a[starts-with(@id, 'ember')]")
-        print("No Issues")
-        return driver
-    except Exception:
-        with open("html source Error.txt", "w") as file:
-            file.write(driver.page_source)
-        return None
-
-def login(driver):
-    """
-    This is the hub where loggin in occours. Firstly, it inputs the details into the login page, then checks to see if it was successful.
-    IF it was not successful, this function will return None.
-
-    ### Parameters
-        driver: The selenium driver used for navigation
-    
-    ### Returns
-        The driver, or None if failed.
-    """
-    print("Waiting for page to load before logging in")
-    sleep(6)
-
-    driver = inputLogginDetails(driver)
-
-    driver = checkSuccessfulLogin(driver)
-    
-    return driver
-
-def setupDevice():
-    """
-    This sets the basic configuration settings of the driver
-    Including setting it to headless, and making sure the browser is recognised by Linked In to avoid being flagged for botting.
-
-    ### Returns
-        The selenium driver fully configured.
-    """
-    config = configparser.RawConfigParser()
-    config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
-
-    ops = Options()
-    ops.add_argument("--headless")
-    ops.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0")
-    service = wd.FirefoxService(executable_path="/usr/local/bin/geckodriver")
-
-    if config['Settings']['Debug'] == "True":
-        print("Launching in debug mode.")
-        driver = wd.Firefox()
-    else:
-        driver = wd.Firefox(service=service, options=ops)
-    
-    return driver
-
-def navigateToJobs(driver):
-    """
-    This function is responcible for logging in and getting into position to scrape the data
-
-    ### Parameters
-        driver: The selenium driver used for navigation
-    
-    ### Returns
-        The driver
-    """
-    driver.get("https://www.linkedin.com/login")
-    driver = login(driver)
-
-    if driver == None:
-        print("Unsuccessful login. Cancelling todays operations to avoid account flagging.")
-        quit()
-
-    driver.get("https://www.linkedin.com/login")
-    sleep(4)
-
-    driver.get("https://www.linkedin.com/jobs/collections/recommended/")
-    sleep(4)
-
-    return driver
-
 def collectName(driver, content: dict) -> dict:
     """
     This function is designed to collect the title of the job
@@ -223,8 +227,8 @@ def collectLocation(driver, content: dict) -> dict:
     ### Returns
         A dictionary with the newly added content
     """
-    loc = driver.find_element(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']")
-    loc = loc.text.split(" ")
+    loc = driver.find_elements(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']//span[@class, 'tvm__text tvm__text--low-emphasis']")[0]
+    loc = loc.text.split(", ")
     loc = loc[0]
     if ord(loc[-1].lower()) <= ord("a") or ord(loc[-1].lower()) >= ord("z"):
         loc = loc[:-1] # If there is a character at the end, remove it.
@@ -257,12 +261,11 @@ def collectSkills(driver, content: dict) -> dict:
         A dictionary with the newly added content
     """
     jobDesc = driver.find_element(By.ID, "job-details")
-    kw = keywords()
     try: # In the event that a description causes an error, write it in an error file so it can be tested directly in keywords.py
-        skills = kw.detect(jobDesc.text)
+        skills = keyWords.detect(jobDesc.text)
         content.update({"Skills" : [skills]})
     except Exception as ex:
-        print(f"Problem with job description, saving it to file for examination: {ex}")
+        logger.warning(f"Problem with job description, saving it to file for examination: {ex}")
         with open("ErrorDesc.txt", "w") as file:
             file.write(jobDesc.text)
 
@@ -321,6 +324,8 @@ def collectJobCode(driver, content: dict) -> dict:
     content.update({"URL": url})
     return content
 
+#=======================================Looking Over Jobs=====================================================
+
 def insertDataIntoFrame(frame, content):
     """
     This function manages inserting the data into the pandas dataframe.
@@ -360,16 +365,15 @@ def scrollJobs(driver, scrollitems:list, scrollbar, index):
         except StaleElementReferenceException as ex:
             raise NullIndex("Null index discovered", index)
         except IndexError:
-            print("Reaching for jobs that dont exist. Moving to next page...")
+            logger.warning("Reaching for jobs that dont exist. Moving to next page...")
             moveOn = True
             raise IndexError
         except Exception as ex:
-            print(f"Unexpected exception occoured: {ex}")
+            logger.warning(f"Unexpected exception occoured: {ex}")
             raise Exception
     if attempts >= 5:
         raise AttemptFails("Ran out of attempts", attempts)
     
-
 def scrapeJobs(driver) -> pd.DataFrame:
     """
     This is the core script responcible for initially creating the dataframe and navigating over the jobs page.
@@ -382,8 +386,8 @@ def scrapeJobs(driver) -> pd.DataFrame:
     ### Parameters
         driver: The selenium driver used to navigate
     """
-
-    print("Creating dataframe")
+    jobNames = ["Data Analyst", "Software Engineer", "Data Scientist"]
+    logger.info("Creating dataframe")
     frame = pd.DataFrame(columns=["NameOfJob", "NameOfBusiness", "Location", "JobType", "Salary", "Skills", "WorkType", "Duration", "URL"])
 
     for job in jobNames:
@@ -395,35 +399,36 @@ def scrapeJobs(driver) -> pd.DataFrame:
             navigation.send_keys(job)
             navigation.send_keys(Keys.RETURN)
         except:
-            print("CRITICAL ERROR: Unable to search for job type.")
+            logger.critical("Unable to search in search bar")
             quit()
-        print(f"Collecting from {job}")
+        logger.info(f"Collecting from {job}")
         sleep(3)
         while page <= 2:
-            print(f"Page {page}")
+            logger.info(f"Page {page}")
             page+=1
             try:
                 scrollbar = driver.find_element(By.CLASS_NAME, "scaffold-layout__list ")
                 scrollitems = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
             except Exception as ex:
-                print("CRITICAL ERROR: Unable to locate scrollbar for jobs.")
+                logger.critical("Unable to locate scrollbar for jobs.")
+                quit()
             amount = len(scrollitems)
-            print(f"There are {amount} of jobs displayed")
+            logger.info(f"There are {amount} of jobs displayed")
             if amount > 25:
-                print("There are anomalous results.")
+                logger.warning("There are anomalous results.")
             for s in range(amount):
                 try:
                     scrollJobs(driver,scrollitems, scrollbar, s)
                 except IndexError as ex:
                     break
                 except AttemptFails as attempts:
-                    print(f"Ran out of attempts to find stale element after {attempts.attempts} attempts")
+                    logger.warning(f"Ran out of attempts to find stale element after {attempts.attempts} attempts")
                     break
                 except NullIndex as nullindex:
-                    print(f"Found an anomalous result moving onto the next...")
+                    logger.warning(f"Found an anomalous result moving onto the next...")
                     continue
                 except Exception as ex:
-                    print(f"Unexpected error caught: {ex}")
+                    logger.critical(f"Unexpected error caught: {ex}")
 
                 sleep(1)
                 content = dict()
@@ -445,19 +450,29 @@ def scrapeJobs(driver) -> pd.DataFrame:
             try: # If it reaches the end, move onto next job type
                 driver.find_element(By.XPATH, f"//button[@class='jobs-search-pagination__indicator-button ' and @aria-label='Page {page}']").click()
             except Exception as ex:
-                print(f"{ex}")
+                logger.critical(f"Problem with selecting new page: {ex}")
                 break
         
         sleep(1)
     return frame
 
-#============================================================================================================
+#=================================Data Insertion & Main=======================================================
 
-def emergencyCSVfileAdd(frame):
+def emergencyCSVfileAdd(conn, frame):
     """
     A temporary solution for saving the data as a csv file.
     """
-    frame.to_csv("data.csv",index=False)
+    logger.info("Data loaded into csv file")
+    conn.writeToCSV(frame)
+
+
+try:
+    keyWords = findKWords()
+except FileNotFoundError as ex:
+    quit()
+except Exception as ex:
+    logger.critical(f"Unknown error occoured: {ex}")
+    quit()
 
 if __name__ == "__main__":
     driver = setupDevice()
@@ -467,5 +482,5 @@ if __name__ == "__main__":
         conn = databaseConn()
         conn.sendData(frame)
     except Exception as ex: #Incase something totally unforeseen happens, no data is lost.
-        print(f"The exceptional happened: {ex}")
-        emergencyCSVfileAdd(frame)
+        logger.warning(f"An issue occoured when uploading to the database.")
+        emergencyCSVfileAdd(conn, frame)

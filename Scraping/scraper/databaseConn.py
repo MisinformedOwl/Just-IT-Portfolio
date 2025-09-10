@@ -1,6 +1,7 @@
 from sqlalchemy import create_engine, text
 import pandas as pd
 import datetime
+import logging
 
 class databaseConn:
     """
@@ -24,10 +25,15 @@ class databaseConn:
         """
         try:
             self.engine = self.get_connection()
-            print("Successfully connected to database")
+            self.logger.info("Successfully connected to database")
             self.connected = True
         except Exception as ex:
-            print(f"There was an error connecting, data will be sent to CSV file instead: {ex}")
+            self.logger.warning(f"There was an error connecting, data will be sent to CSV file instead: {ex}")
+        
+        logging.basicConfig(level=logging.DEBUG, 
+                    format='%(asctime)s [%(level)s] - %(message)s',
+                    filename="Logs.log")
+        self.logger = logging.getLogger("databaseConn")
 
     def get_connection(self):
         """
@@ -38,7 +44,7 @@ class databaseConn:
         """
         return create_engine(url=f"mysql+pymysql://{self.user}:{self.password}@{self.host}:3307/{self.database}")
     
-    def insertJob(self, conn,row):
+    def insertJob(self, conn, row):
         """
         This function is responcible for inserting the data into the job table.
         Using what I have been told is industry standard methods.
@@ -64,7 +70,7 @@ class databaseConn:
             "url":      row.URL
             })
 
-    def insertSkillLink(self,conn, row, id):
+    def insertSkillLink(self,conn, row, id:int):
         """
         This is responsible for inserting the data into the linking table.
         This is ran after job insertion in order to get the job id.
@@ -129,13 +135,13 @@ class databaseConn:
             if res.scalar() == 1: #Collecting indexs of suplicates in the database
                 rowsToDrop.append(index)
         
-        print(f"Dropping {len(rowsToDrop)} duplicates from the dataframe.")
+        self.logger.info(f"Dropping {len(rowsToDrop)} duplicates from the dataframe.")
         data.drop(rowsToDrop,inplace=True)
-        print(f"{data.shape[0]} inserts remain.")
+        self.logger.info(f"{data.shape[0]} inserts remain.")
 
         return data
 
-    def insertRows(self, conn, frame):
+    def insertRows(self, conn, frame:pd.DataFrame):
         """
         Firstly, we will just insert the data for the Job table.
         This is because we need the jobID to be able to populate the linking table.
@@ -159,12 +165,12 @@ class databaseConn:
             conn: The connection to the database which is used to send SQL commands.
             data: The dataframe containing the collected content.
         """
-        print("Starting transaction...")
+        self.logger.info("Starting transaction...")
         conn.execute(text("START TRANSACTION;"))
 
         self.insertRows(conn, data)
 
-        print("Commiting to database...")
+        self.logger.info("Commiting to database...")
         conn.execute(text("COMMIT;"))
 
     def sendData(self, data: pd.DataFrame):
@@ -181,19 +187,23 @@ class databaseConn:
             return
         
         conn = self.engine.connect()
-        print("Using database LinkedInScrape")
         conn.execute(text("USE LinkedInScrape;"))
+        self.logger.info("Using database LinkedInScrape")
 
         self.clearDuplicates(conn, data)
         if data.shape[0] == 0:
-            print("All data collected were duplicates.")
+            self.logger.warning("All data collected were duplicates.")
         self.sendCommands(conn, data)
 
-    def writeToCSV(self, data):
+    def writeToCSV(self, data:pd.DataFrame):
         """
         In the event the SQl server is unreachable the data is then stored in a CSV file so it is not lost and can be inserted at a later date.
 
         ### Parameters
             data: The dataframe of content.
         """
-        data.to_csv(f"CollectedData {datetime.datetime.now().strftime("%Y/%m/%d")}.csv", index=False)
+        try:
+            data.to_csv(f"CollectedData {datetime.datetime.now().strftime("%Y/%m/%d")}.csv", index=False)
+        except Exception as ex:
+            self.logger.critical("CSV BACKUP FAILED. DATA LOST.")
+            self.logger.critical(ex)

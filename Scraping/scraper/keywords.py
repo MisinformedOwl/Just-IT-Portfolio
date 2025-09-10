@@ -1,4 +1,5 @@
 import os
+import logging
 
 class findKWords:
     """
@@ -16,8 +17,13 @@ class findKWords:
     def __init__(self):
         """
         Simply start off my setting the current list of keywords from file.
+        Also initialises the logger for key words.
         """
         self.kWords = self.getKeyWords()
+        logging.basicConfig(level=logging.DEBUG, 
+                    format='%(asctime)s [%(level)s] - %(message)s',
+                    filename="Logs.log")
+        self.logger = logging.getLogger("findKeyWords")
 
     def removePunctuation(self,tokens: list[str]) -> list[str]:
         """
@@ -86,9 +92,13 @@ class findKWords:
         ### Returns
             List of key words/phrases.
         """
-        with open(os.path.join(os.path.dirname(__file__), "keywords.txt"), "r") as file:
-            words = file.readline().lower().split(",")
-            words[-1] = words[-1][:-1] # Removes /n from the end of the set of words.
+        try:
+            with open(os.path.join(os.path.dirname(__file__), "keywords.txt"), "r") as file:
+                words = file.readline().lower().split(",")
+                words[-1] = words[-1][:-1] # Removes /n from the end of the set of words.
+        except FileNotFoundError as ex:
+            self.logger.critical("NO KEY WORDS FOUND")
+            raise FileNotFoundError
         return set(words)
 
     def detect(self, words) -> list:
@@ -104,6 +114,7 @@ class findKWords:
         """
         tokens = words.split(" ")
         tokens = self.cleanData(tokens)
+        self.logger.info("Successfully cleaned Job Description.")
         keywordsFound = set()
         for x in range(1,len(tokens)+1):
             for y in range(self.nGram):
@@ -111,6 +122,11 @@ class findKWords:
                 if key in self.kWords:
                     keywordsFound.add(key)
         
+        if len(keywordsFound) == 0:
+            self.logger.warning("0 Skills found in job")
+        else:
+            self.logger.info(f"Finished finding key words. Found {len(keywords)}")
+
         return list(keywordsFound)
 
 #This is used in testing erroneous job descriptions.
