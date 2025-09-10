@@ -193,7 +193,7 @@ def collectName(driver, content: dict) -> dict:
     """
     name = driver.find_element(By.XPATH, f"//a[starts-with(@id, 'ember') and contains(@class, 'ember-view')]")
     nametext = name.text.replace("\n", " ")
-    content.update({"NameOfJob": [nametext]})
+    content.update({"NameOfJob": [nametext[:50]]})
     return content
 
 def collectBusiness(driver, content: dict) -> dict:
@@ -209,7 +209,7 @@ def collectBusiness(driver, content: dict) -> dict:
     """
     name = driver.find_elements(By.XPATH, f"//div[@class='t-14' and @tabindex='-1']//a")[1]
     nametext = name.text.replace("\n", " ")
-    content.update({"NameOfBusiness" : [nametext]})
+    content.update({"NameOfBusiness" : [nametext[:50]]})
     return content
 
 def collectLocation(driver, content: dict) -> dict:
@@ -224,8 +224,11 @@ def collectLocation(driver, content: dict) -> dict:
         A dictionary with the newly added content
     """
     loc = driver.find_element(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']")
-    loc = loc.text.split(", ")
-    content.update({"Location": [loc[0]]})
+    loc = loc.text.split(" ")
+    loc = loc[0]
+    if ord(loc[-1].lower()) <= ord("a") or ord(loc[-1].lower()) >= ord("z"):
+        loc = loc[:-1] # If there is a character at the end, remove it.
+    content.update({"Location": [loc]})
     return content
 
 def collectJobType(job, content: dict) -> dict:
@@ -355,7 +358,7 @@ def scrollJobs(driver, scrollitems:list, scrollbar, index):
             scrollitems[index].click()
             break
         except StaleElementReferenceException as ex:
-            raise NullIndex
+            raise NullIndex("Null index discovered", index)
         except IndexError:
             print("Reaching for jobs that dont exist. Moving to next page...")
             moveOn = True
