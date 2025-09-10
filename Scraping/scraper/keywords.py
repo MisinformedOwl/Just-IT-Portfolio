@@ -66,7 +66,7 @@ class findKWords:
                 continue
             
             #At the end of paragraphs there tends to be alot of new lines attached to the word.
-            while tokens[t][-1] == "\n":
+            while len(tokens[t]) > 0 and tokens[t][-1] == "\n":
                 tokens[t] = tokens[t][:-1]
 
             tokens[t] = tokens[t].lower()   #Decapitalise
@@ -113,3 +113,8 @@ class findKWords:
         
         return list(keywordsFound)
 
+#This is used in testing erroneous job descriptions.
+#data = """"""
+
+#kwords = findKWords()
+#print(kwords.detect(data))

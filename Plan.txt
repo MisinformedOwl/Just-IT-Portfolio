@@ -1,4 +1,5 @@
 add loggers
+You seriously need to break down the searcher script.
 
 Next steps
 Upload to azure, and get it running on azure. (May need to setup config)

@@ -10,6 +10,7 @@ import pandas as pd
 import os
 from keywords import findKWords as keywords
 from databaseConn import databaseConn
+from ScrapeExceptions import AttemptFails, NullIndex
 
 #==============================================================================================================
 
@@ -19,37 +20,51 @@ jobNames = ["Data Analyst", "Software Engineer", "Data Scientist"]
 
 #==============================================================================================================
 
-def setupSalary(button) -> int:
+def setupSalary(text:str) -> int:
     """
     This function is responcible for processing the salary information
     As an example, linkedin salaries are displayed as £40k/yr - £45k/yr
     This should be a number for comparison aswell as using it for mathematical formulas in power BI
 
     ### parameters:
-        Button: The html content which holds the salary data
+        text: The salary of the job as displayed.
 
     ### Returns
         The processed salary in the form of a integer.
     """
     daily = False
-    text = button.text
     text = text.replace(text[0], "") #Remove whatever currency marker there is.
     text = text.replace("K", "000") # Transform the representation of thousands into the actual number.
     
     #Check if it's daily earnings
-    if text.split(" ")[-1] == "daily":
-        text.replace(" daily", "")
-        daily = True
-    else:
-        text = text.replace(f"/{text.split("/")[-1]}", "")
 
     text = text.split(" - ")
-    text = [int(text[0]), int(text[1])]
+
+    for t in range(len(text)):
+        if text[t].split(" ")[-1] == "daily":
+            text[t] = text[t].replace(" daily", "")
+            daily = True
+        else:
+            text[t] = text[t].replace(f"/{text[t].split("/")[-1]}", "")
+
+    #Check for any .5's
+    for t in range(len(text)):
+        if text[t].__contains__("."):
+            text[t] = text[t].replace(".", "")
+            text[t] = text[t][:-1]
+
+    if len(text) > 1:
+        text = [int(text[0]), int(text[1])]
+    else:
+        text = [int(text[0])]
 
     if daily == True: # Looked up the average amount of days a data analyst works and used that to even out the daily value to be comparable to yearly.
         text = text*260
     
-    return text[0] + int(text[1] - text[0])/2
+    if len(text) > 1:
+        return text[0] + int(text[1] - text[0])/2
+    else:
+        return text[0]
 
 def inputLogginDetails(driver):
     """
@@ -105,7 +120,7 @@ def login(driver):
         driver: The selenium driver used for navigation
     
     ### Returns
-    # The driver, or None if failed.
+        The driver, or None if failed.
     """
     print("Waiting for page to load before logging in")
     sleep(6)
@@ -177,7 +192,8 @@ def collectName(driver, content: dict) -> dict:
         A dictionary with the newly added content
     """
     name = driver.find_element(By.XPATH, f"//a[starts-with(@id, 'ember') and contains(@class, 'ember-view')]")
-    content.update({"NameOfJob": [name.text]})
+    nametext = name.text.replace("\n", " ")
+    content.update({"NameOfJob": [nametext]})
     return content
 
 def collectBusiness(driver, content: dict) -> dict:
@@ -192,7 +208,8 @@ def collectBusiness(driver, content: dict) -> dict:
         A dictionary with the newly added content
     """
     name = driver.find_elements(By.XPATH, f"//div[@class='t-14' and @tabindex='-1']//a")[1]
-    content.update({"NameOfBusiness" : [name.text]})
+    nametext = name.text.replace("\n", " ")
+    content.update({"NameOfBusiness" : [nametext]})
     return content
 
 def collectLocation(driver, content: dict) -> dict:
@@ -267,15 +284,21 @@ def collectkeyDetails(driver, content: dict) -> dict:
         a dictionary with the newly added content
     """
     buttons = driver.find_elements(By.XPATH, "//button[@class='artdeco-button artdeco-button--secondary artdeco-button--muted']//Strong")
+    if buttons[-1].text[-5:].lower() == "match": # Sometimes it shows skills match on new accounts that have not been calibrated to
+        buttons = buttons[:-1]
     stages = ["Duration", "WorkType", "Salary"]
     buttons.reverse()
+
     for button, stage in zip(buttons, stages):
         if stage == "Salary":
-            print("SALARY DETECTED")
-            content.update({stage: setupSalary(button)})
+            content.update({stage: [setupSalary(button.text)]})
             break
 
         content.update({stage: [button.text]})
+    if len(buttons) == 1: # Only Duration
+        content.update({"WorkType" : [""], "Salary" : [0]})
+    elif len(buttons) == 2: # Missing Salary
+        content.update({"Salary" : [0]})
     return content
 
 def collectJobCode(driver, content: dict) -> dict:
@@ -311,6 +334,39 @@ def insertDataIntoFrame(frame, content):
     frame = pd.concat([frame, newframe], ignore_index=True)
     return frame
 
+def scrollJobs(driver, scrollitems:list, scrollbar, index):
+    """
+    This function is desgiend to manage scrolling jobs.
+    Originally it was part of the main script,
+    however due to the errors attempting to be caught here.
+    I need to escape 2 loops, therefore throwing exceptions back up the chain is the best solution here.
+
+    ### Parameters:
+        driver: The selenium driver for navigation
+        scollitems: A list of jobs in the form of html elements
+        scrollbar: The container containing the jobs
+        index: The current scroll index
+    """
+    attempts = 0
+    while attempts < 5:
+        try:
+            driver.execute_script("arguments[0].scrollTop += 500;", scrollbar)
+            sleep(0.5)
+            scrollitems[index].click()
+            break
+        except StaleElementReferenceException as ex:
+            raise NullIndex
+        except IndexError:
+            print("Reaching for jobs that dont exist. Moving to next page...")
+            moveOn = True
+            raise IndexError
+        except Exception as ex:
+            print(f"Unexpected exception occoured: {ex}")
+            raise Exception
+    if attempts >= 5:
+        raise AttemptFails("Ran out of attempts", attempts)
+    
+
 def scrapeJobs(driver) -> pd.DataFrame:
     """
     This is the core script responcible for initially creating the dataframe and navigating over the jobs page.
@@ -332,28 +388,41 @@ def scrapeJobs(driver) -> pd.DataFrame:
         #Search in the search bar.
         try:
             navigation = driver.find_element(By.XPATH, "//input[starts-with(@id, 'jobs-search-box-keyword-id-ember')]")
+            navigation.clear()
             navigation.send_keys(job)
             navigation.send_keys(Keys.RETURN)
         except:
             print("CRITICAL ERROR: Unable to search for job type.")
             quit()
+        print(f"Collecting from {job}")
         sleep(3)
-        while page < 10:
+        while page <= 2:
+            print(f"Page {page}")
             page+=1
             try:
-                scrollbar = driver.find_elements(By.TAG_NAME, "ul")[3]
-                scrollbar = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
+                scrollbar = driver.find_element(By.CLASS_NAME, "scaffold-layout__list ")
+                scrollitems = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
             except Exception as ex:
                 print("CRITICAL ERROR: Unable to locate scrollbar for jobs.")
-            ammount = len(scrollbar)
-            print(f"There are {ammount} of jobs displayed")
-            for s in range(ammount):
+            amount = len(scrollitems)
+            print(f"There are {amount} of jobs displayed")
+            if amount > 25:
+                print("There are anomalous results.")
+            for s in range(amount):
                 try:
-                    scrollbar[s].click()
-                except StaleElementReferenceException as ex:
-                    print(f"Attempting to interact with a job that is uninteractable. Continuing with next job.")
+                    scrollJobs(driver,scrollitems, scrollbar, s)
+                except IndexError as ex:
+                    break
+                except AttemptFails as attempts:
+                    print(f"Ran out of attempts to find stale element after {attempts.attempts} attempts")
+                    break
+                except NullIndex as nullindex:
+                    print(f"Found an anomalous result moving onto the next...")
                     continue
-                sleep(1.4)
+                except Exception as ex:
+                    print(f"Unexpected error caught: {ex}")
+
+                sleep(1)
                 content = dict()
 
                 content = collectName(      driver, content)
@@ -370,11 +439,11 @@ def scrapeJobs(driver) -> pd.DataFrame:
                 frame = insertDataIntoFrame(frame, content)
                 del content
         
-        try: # If it reaches the end, move onto next job type
-            driver.find_element(By.XPATH, f"//button[@class='jobs-search-pagination__indicator-button ' and @aria-label='Page {page}']").click()
-        except Exception as ex:
-            print(f"{ex}")
-            break
+            try: # If it reaches the end, move onto next job type
+                driver.find_element(By.XPATH, f"//button[@class='jobs-search-pagination__indicator-button ' and @aria-label='Page {page}']").click()
+            except Exception as ex:
+                print(f"{ex}")
+                break
         
         sleep(1)
     return frame
