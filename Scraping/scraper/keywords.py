@@ -20,8 +20,8 @@ class findKWords:
         Also initialises the logger for key words.
         """
         self.kWords = self.getKeyWords()
-        logging.basicConfig(level=logging.DEBUG, 
-                    format='%(asctime)s [%(level)s] - %(message)s',
+        logging.basicConfig(level=logging.INFO, 
+                    format='%(asctime)s [%(levelname)s] - %(name)s - %(message)s',
                     filename="Logs.log")
         self.logger = logging.getLogger("findKeyWords")
 

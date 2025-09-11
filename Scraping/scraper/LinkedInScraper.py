@@ -14,11 +14,12 @@ from keywords import findKWords
 from databaseConn import databaseConn
 from ScrapeExceptions import AttemptFails, NullIndex
 import logging
+from random import random
 
 #============================================Logger============================================================
 
-logging.basicConfig(level=logging.DEBUG, 
-                    format='%(asctime)s [%(levelname)s] - %(message)s',
+logging.basicConfig(level=logging.INFO, 
+                    format='%(asctime)s [%(levelname)s] - %(name)s - %(message)s',
                     filename="Logs.log")
 logger = logging.getLogger("Scraper")
 
@@ -27,7 +28,7 @@ logger = logging.getLogger("Scraper")
 def generateCookies(driver: wd):
     logger.info("Navigating youtube")
     driver.get('https://www.youtube.com/')
-    sleep(3)
+    sleep(4)
     try:
         dialog = driver.find_element(By.ID, "dialog")
         dialog.find_elements(By.CLASS_NAME, "yt-spec-touch-feedback-shape__fill")[3].click()
@@ -38,19 +39,23 @@ def generateCookies(driver: wd):
         logger.critical(f"Unexpected error: {ex}")
         driver.quit()
         quit()
-    sleep(1.5)
+    sleep(2)
     try:
         driver.find_element(By.ID, "guide-button").click()
-        sleep(1)
-        items = driver.find_elements(By.XPATH, "//div[@id='items']//ytd-guide-entry-renderer")
-        items.find_element(By.ID, "endpoint")[3].click()
-        del items
+        sleep(2)
+        driver.find_element(By.XPATH, "//div[@id='items']//ytd-guide-entry-renderer").click()
     except NoSuchElementException as ex:
         logger.warning("No such element detected: Could not locate guide button, navigating using youtube gaming link instead. www.youtube.com/gaming")
         driver.get("www.youtube.com/gaming")
         sleep(3)
     except Exception as ex:
         logger.critical(f"Unexpected error: {ex}")
+        driver.quit()
+        quit()
+    
+    sleep(5)
+
+    driver.quit()
     quit()
 
 def inputLogginDetails(driver):
@@ -134,14 +139,12 @@ def setupDevice():
     service = wd.FirefoxService()
 
     if config['Settings'].getboolean("Debug"):
-        logger.debug("Launching in debug mode.")
+        logger.info("Launching in debug mode.")
     else:
-        logger.debug("Launched in production mode.")
+        logger.info("Launched in production mode.")
         ops.add_argument("--headless")
     
     driver = wd.Firefox(service=service, options=ops)
-    
-    print(type(driver))
 
     return driver
 
@@ -511,13 +514,17 @@ except Exception as ex:
     quit()
 
 if __name__ == "__main__":
-    driver = setupDevice()
-    driver = generateCookies(driver)
-    driver = navigateToJobs(driver)
-    frame = scrapeJobs(driver)
+    try:
+        driver = setupDevice()
+        #driver = generateCookies(driver)
+        driver = navigateToJobs(driver)
+        frame = scrapeJobs(driver)
+    except Exception as ex:
+        logger.critical(ex)
     try:
         conn = databaseConn()
         conn.sendData(frame)
+        logger.info("Successfully added data to database!")
     except Exception as ex: #Incase something totally unforeseen happens, no data is lost.
         logger.warning(f"An issue occoured when uploading to the database.")
         emergencyCSVfileAdd(conn, frame)

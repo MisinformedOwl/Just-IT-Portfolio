@@ -23,17 +23,17 @@ class databaseConn:
         If it fails the connected flag will remain set to false.
         When it comes to inputting the data, if the flag is false it will eb send to a CSV instead.
         """
+        logging.basicConfig(level=logging.DEBUG, 
+                    format='%(asctime)s [%(levelname)s] - %(message)s',
+                    filename="Logs.log")
+        self.logger = logging.getLogger("databaseConn")
+
         try:
             self.engine = self.get_connection()
             self.logger.info("Successfully connected to database")
             self.connected = True
         except Exception as ex:
             self.logger.warning(f"There was an error connecting, data will be sent to CSV file instead: {ex}")
-        
-        logging.basicConfig(level=logging.DEBUG, 
-                    format='%(asctime)s [%(levelname)s] - %(message)s',
-                    filename="Logs.log")
-        self.logger = logging.getLogger("databaseConn")
 
     def get_connection(self):
         """
