@@ -1,11 +1,13 @@
 from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
-from selenium.common.exceptions import StaleElementReferenceException
+from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
 from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options
+
+
 import configparser
 from time import sleep
-from keyboard import is_pressed as pressed
 import pandas as pd
 import os
 from keywords import findKWords
@@ -16,11 +18,40 @@ import logging
 #============================================Logger============================================================
 
 logging.basicConfig(level=logging.DEBUG, 
-                    format='%(asctime)s [%(level)s] - %(message)s',
+                    format='%(asctime)s [%(levelname)s] - %(message)s',
                     filename="Logs.log")
 logger = logging.getLogger("Scraper")
 
 #======================================Selenium Navigation=====================================================
+
+def generateCookies(driver: wd):
+    logger.info("Navigating youtube")
+    driver.get('https://www.youtube.com/')
+    sleep(3)
+    try:
+        dialog = driver.find_element(By.ID, "dialog")
+        dialog.find_elements(By.CLASS_NAME, "yt-spec-touch-feedback-shape__fill")[3].click()
+        del dialog
+    except NoSuchElementException as ex:
+        logger.warning("No such element detected: Dialog box in youtube didn't appear. Continuing as it it's not there...")
+    except Exception as ex:
+        logger.critical(f"Unexpected error: {ex}")
+        driver.quit()
+        quit()
+    sleep(1.5)
+    try:
+        driver.find_element(By.ID, "guide-button").click()
+        sleep(1)
+        items = driver.find_elements(By.XPATH, "//div[@id='items']//ytd-guide-entry-renderer")
+        items.find_element(By.ID, "endpoint")[3].click()
+        del items
+    except NoSuchElementException as ex:
+        logger.warning("No such element detected: Could not locate guide button, navigating using youtube gaming link instead. www.youtube.com/gaming")
+        driver.get("www.youtube.com/gaming")
+        sleep(3)
+    except Exception as ex:
+        logger.critical(f"Unexpected error: {ex}")
+    quit()
 
 def inputLogginDetails(driver):
     """
@@ -99,16 +130,19 @@ def setupDevice():
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
     ops = Options()
-    ops.add_argument("--headless")
     ops.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0")
-    service = wd.FirefoxService(executable_path="/usr/local/bin/geckodriver")
+    service = wd.FirefoxService()
 
-    if config['Settings']['Debug'] == "True":
+    if config['Settings'].getboolean("Debug"):
         logger.debug("Launching in debug mode.")
-        driver = wd.Firefox()
     else:
-        driver = wd.Firefox(service=service, options=ops)
+        logger.debug("Launched in production mode.")
+        ops.add_argument("--headless")
     
+    driver = wd.Firefox(service=service, options=ops)
+    
+    print(type(driver))
+
     return driver
 
 def navigateToJobs(driver):
@@ -197,7 +231,7 @@ def collectName(driver, content: dict) -> dict:
     """
     name = driver.find_element(By.XPATH, f"//a[starts-with(@id, 'ember') and contains(@class, 'ember-view')]")
     nametext = name.text.replace("\n", " ")
-    content.update({"NameOfJob": [nametext[:50]]})
+    content.update({"NameOfJob": [nametext[:50]]}) # 50 is the column limit
     return content
 
 def collectBusiness(driver, content: dict) -> dict:
@@ -227,7 +261,10 @@ def collectLocation(driver, content: dict) -> dict:
     ### Returns
         A dictionary with the newly added content
     """
-    loc = driver.find_elements(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']//span[@class, 'tvm__text tvm__text--low-emphasis']")[0]
+    try:
+        loc = driver.find_elements(By.XPATH, "//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__primary-description-container']//span[@class='tvm__text tvm__text--low-emphasis']")[0]
+    except Exception as ex:
+        logger.critical(f"This critical error occoured when looking for a location: {ex}")
     loc = loc.text.split(", ")
     loc = loc[0]
     if ord(loc[-1].lower()) <= ord("a") or ord(loc[-1].lower()) >= ord("z"):
@@ -465,7 +502,6 @@ def emergencyCSVfileAdd(conn, frame):
     logger.info("Data loaded into csv file")
     conn.writeToCSV(frame)
 
-
 try:
     keyWords = findKWords()
 except FileNotFoundError as ex:
@@ -476,6 +512,7 @@ except Exception as ex:
 
 if __name__ == "__main__":
     driver = setupDevice()
+    driver = generateCookies(driver)
     driver = navigateToJobs(driver)
     frame = scrapeJobs(driver)
     try:

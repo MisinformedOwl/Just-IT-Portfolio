@@ -31,7 +31,7 @@ class databaseConn:
             self.logger.warning(f"There was an error connecting, data will be sent to CSV file instead: {ex}")
         
         logging.basicConfig(level=logging.DEBUG, 
-                    format='%(asctime)s [%(level)s] - %(message)s',
+                    format='%(asctime)s [%(levelname)s] - %(message)s',
                     filename="Logs.log")
         self.logger = logging.getLogger("databaseConn")
 
@@ -121,6 +121,10 @@ class databaseConn:
         ### Returns
             The dataframe with it's duplicates cleared.
         """
+        rowscurrently = data.shape[0]
+        data.drop_duplicates(subset=['URL'], inplace=True)
+        self.logger.info(f"Dropped {rowscurrently-data.shape[0]}")
+        
         rowsToDrop = []
         for index, row in data.iterrows():
             findCommand = text(
