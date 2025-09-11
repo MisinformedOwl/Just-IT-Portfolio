@@ -25,39 +25,6 @@ logger = logging.getLogger("Scraper")
 
 #======================================Selenium Navigation=====================================================
 
-def generateCookies(driver: wd):
-    logger.info("Navigating youtube")
-    driver.get('https://www.youtube.com/')
-    sleep(4)
-    try:
-        dialog = driver.find_element(By.ID, "dialog")
-        dialog.find_elements(By.CLASS_NAME, "yt-spec-touch-feedback-shape__fill")[3].click()
-        del dialog
-    except NoSuchElementException as ex:
-        logger.warning("No such element detected: Dialog box in youtube didn't appear. Continuing as it it's not there...")
-    except Exception as ex:
-        logger.critical(f"Unexpected error: {ex}")
-        driver.quit()
-        quit()
-    sleep(2)
-    try:
-        driver.find_element(By.ID, "guide-button").click()
-        sleep(2)
-        driver.find_element(By.XPATH, "//div[@id='items']//ytd-guide-entry-renderer").click()
-    except NoSuchElementException as ex:
-        logger.warning("No such element detected: Could not locate guide button, navigating using youtube gaming link instead. www.youtube.com/gaming")
-        driver.get("www.youtube.com/gaming")
-        sleep(3)
-    except Exception as ex:
-        logger.critical(f"Unexpected error: {ex}")
-        driver.quit()
-        quit()
-    
-    sleep(5)
-
-    driver.quit()
-    quit()
-
 def inputLogginDetails(driver):
     """
     This is where the user is logged in.
@@ -163,6 +130,7 @@ def navigateToJobs(driver):
 
     if driver == None:
         logger.critical("Unsuccessful login. Cancelling todays operations to avoid account flagging.")
+        driver.quit()
         quit()
 
     driver.get("https://www.linkedin.com/login")
@@ -440,6 +408,7 @@ def scrapeJobs(driver) -> pd.DataFrame:
             navigation.send_keys(Keys.RETURN)
         except:
             logger.critical("Unable to search in search bar")
+            driver.quit()
             quit()
         logger.info(f"Collecting from {job}")
         sleep(3)
@@ -449,9 +418,13 @@ def scrapeJobs(driver) -> pd.DataFrame:
             try:
                 scrollbar = driver.find_element(By.CLASS_NAME, "scaffold-layout__list ")
                 scrollitems = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
-            except Exception as ex:
+            except NoSuchElementException as ex:
                 logger.critical("Unable to locate scrollbar for jobs.")
+                driver.quit()
                 quit()
+            except Exception as ex:
+                logger.critical(f"Unknown critical error: {ex}")
+            
             amount = len(scrollitems)
             logger.info(f"There are {amount} of jobs displayed")
             if amount > 25:
@@ -502,12 +475,17 @@ def emergencyCSVfileAdd(conn, frame):
     """
     A temporary solution for saving the data as a csv file.
     """
-    logger.info("Data loaded into csv file")
-    conn.writeToCSV(frame)
+    try:
+        logger.info("Data loaded into csv file")
+        conn.writeToCSV(frame)
+    except Exception as ex:
+        logger.critical("Total failure to input data.")
+        raise AttemptFails
 
 try:
     keyWords = findKWords()
 except FileNotFoundError as ex:
+    logger.critical("Key words file was not found. Please create a new one or ensure it's in the correct location next to keywords.py")
     quit()
 except Exception as ex:
     logger.critical(f"Unknown error occoured: {ex}")
@@ -525,6 +503,9 @@ if __name__ == "__main__":
         conn = databaseConn()
         conn.sendData(frame)
         logger.info("Successfully added data to database!")
+    except AttemptFails as ex:
+        driver.quit()
+        quit()
     except Exception as ex: #Incase something totally unforeseen happens, no data is lost.
         logger.warning(f"An issue occoured when uploading to the database.")
         emergencyCSVfileAdd(conn, frame)
