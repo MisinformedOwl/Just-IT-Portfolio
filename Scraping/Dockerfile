@@ -6,7 +6,12 @@ ENV PYTHONUNBUFFERED=1
 WORKDIR /app
 ARG UID=10001
 RUN apt-get update -y \
-    && apt-get install --no-install-recommends -y ca-certificates firefox-esr \
+    && apt-get install --no-install-recommends -y ca-certificates firefox-esr wget \
+    && wget -q https://github.com/mozilla/geckodriver/releases/download/v0.35.0/geckodriver-v0.35.0-linux64.tar.gz \
+    && tar -xzf geckodriver-v0.35.0-linux64.tar.gz -C /usr/local/bin \
+    && chmod +x /usr/local/bin/geckodriver \
+    && rm geckodriver-v0.35.0-linux64.tar.gz \
+    && apt-get remove -y wget \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
 RUN adduser --disabled-password --gecos "" --home "/app" --shell "/sbin/nologin" --no-create-home --uid "${UID}" appuser
