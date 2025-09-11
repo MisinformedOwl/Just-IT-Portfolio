@@ -509,3 +509,5 @@ if __name__ == "__main__":
     except Exception as ex: #Incase something totally unforeseen happens, no data is lost.
         logger.warning(f"An issue occoured when uploading to the database.")
         emergencyCSVfileAdd(conn, frame)
+    driver.quit()
+    quit()
