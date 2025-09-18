@@ -1,6 +1,7 @@
 from selenium import webdriver as wd
 from selenium.webdriver.common.by import By
 from selenium.common.exceptions import StaleElementReferenceException, NoSuchElementException
+from selenium.webdriver.common.action_chains import ActionChains
 from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.firefox.service import Service as FirefoxService
 from selenium.webdriver.firefox.options import Options
@@ -39,7 +40,7 @@ def inputLogginDetails(driver):
     config = configparser.RawConfigParser()
     config.read(os.path.join(os.path.dirname(__file__), "config.ini"))
 
-    sleep(5)
+    sleep(4+random()*2)
     logger.info("Starting login.")
 
     search = driver.find_element(By.ID, "username")
@@ -47,7 +48,7 @@ def inputLogginDetails(driver):
     search = driver.find_element(By.ID, "password")
     search.send_keys(config["Linkedin details"]["Pass"])
     search.send_keys(Keys.RETURN)
-    sleep(6)
+    sleep(5+random()*2)
     return driver
 
 def checkSuccessfulLogin(driver):
@@ -82,7 +83,9 @@ def login(driver):
         The driver, or None if failed.
     """
     logger.info("Waiting for page to load before logging in")
-    sleep(6)
+    actions = ActionChains(driver)
+    actions.send_keys(Keys.F12).perform()
+    sleep(5+random()*2)
 
     driver = inputLogginDetails(driver)
 
@@ -103,14 +106,30 @@ def setupDevice():
 
     ops = Options()
     ops.set_preference("general.useragent.override", "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:142.0) Gecko/20100101 Firefox/142.0")
-    service = wd.FirefoxService()
 
     if config['Settings'].getboolean("Debug"):
+        service = FirefoxService()
         logger.info("Launching in debug mode.")
     else:
+        try:
+            service = FirefoxService('/usr/local/bin/geckodriver')
+        except Exception as ex:
+            print(f"ERRROROR: {ex}")
+        ops.add_argument('--headless')
+        ops.add_argument('--no-sandbox')
+        ops.add_argument('--disable-dev-shm-usage')
+        ops.add_argument('--disable-gpu')
+        ops.add_argument('--width=1920')
+        ops.add_argument('--height=1080')
+        ops.add_argument('--user-agent=Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0')
+        ops.set_preference('dom.webdriver.enabled', False)
+        ops.set_preference('useAutomationExtension', False)
+        ops.set_preference("marionette.enabled", False)
         logger.info("Launched in production mode.")
-        ops.add_argument("--headless")
-    
+
+    service.log_path = "geckodriver.log"
+    service.log_level = "INFO"
+
     driver = wd.Firefox(service=service, options=ops)
 
     return driver
@@ -134,10 +153,10 @@ def navigateToJobs(driver):
         quit()
 
     driver.get("https://www.linkedin.com/login")
-    sleep(4)
+    sleep(3+random()*2)
 
     driver.get("https://www.linkedin.com/jobs/collections/recommended/")
-    sleep(4)
+    sleep(3+random()*2)
 
     return driver
 
@@ -156,6 +175,7 @@ def setupSalary(text:str) -> int:
         The processed salary in the form of a integer.
     """
     daily = False
+    monthly = False
     text = text.replace(text[0], "") #Remove whatever currency marker there is.
     text = text.replace("K", "000") # Transform the representation of thousands into the actual number.
     
@@ -167,11 +187,16 @@ def setupSalary(text:str) -> int:
         if text[t].split(" ")[-1] == "daily":
             text[t] = text[t].replace(" daily", "")
             daily = True
+        
+        elif text[t].split(" ")[-1] == "monthly":
+            text[t] = text[t].replace(" monthly", "")
+            daily = True
         else:
             text[t] = text[t].replace(f"/{text[t].split("/")[-1]}", "")
 
     #Check for any .5's
     for t in range(len(text)):
+        text[t].replace(",","")
         if text[t].__contains__("."):
             text[t] = text[t].replace(".", "")
             text[t] = text[t][:-1]
@@ -181,8 +206,10 @@ def setupSalary(text:str) -> int:
     else:
         text = [int(text[0])]
 
-    if daily == True: # Looked up the average amount of days a data analyst works and used that to even out the daily value to be comparable to yearly.
+    if daily: # Looked up the average amount of days a data analyst works and used that to even out the daily value to be comparable to yearly.
         text = text*260
+    elif monthly:
+        text = text*12
     
     if len(text) > 1:
         return text[0] + int(text[1] - text[0])/2
@@ -200,9 +227,10 @@ def collectName(driver, content: dict) -> dict:
     ### Returns
         A dictionary with the newly added content
     """
-    name = driver.find_element(By.XPATH, f"//a[starts-with(@id, 'ember') and contains(@class, 'ember-view')]")
-    nametext = name.text.replace("\n", " ")
-    content.update({"NameOfJob": [nametext[:50]]}) # 50 is the column limit
+
+    name = driver.find_element(By.XPATH, f"//div[@class='t-14' and @tabindex='-1']//h1[@class='t-24 t-bold inline']")
+    print(name.text)
+    content.update({"NameOfJob": [name.text[:50]]}) # 50 is the column limit
     return content
 
 def collectBusiness(driver, content: dict) -> dict:
@@ -216,8 +244,9 @@ def collectBusiness(driver, content: dict) -> dict:
     ### Returns
         A dictionary with the newly added content
     """
-    name = driver.find_elements(By.XPATH, f"//div[@class='t-14' and @tabindex='-1']//a")[1]
+    name = driver.find_elements(By.XPATH, f"//div[@class='t-14' and @tabindex='-1']//div[@class='job-details-jobs-unified-top-card__company-name']")[0]
     nametext = name.text.replace("\n", " ")
+    print(nametext[:50])
     content.update({"NameOfBusiness" : [nametext[:50]]})
     return content
 
@@ -238,9 +267,8 @@ def collectLocation(driver, content: dict) -> dict:
         logger.critical(f"This critical error occoured when looking for a location: {ex}")
     loc = loc.text.split(", ")
     loc = loc[0]
-    if ord(loc[-1].lower()) <= ord("a") or ord(loc[-1].lower()) >= ord("z"):
-        loc = loc[:-1] # If there is a character at the end, remove it.
     content.update({"Location": [loc]})
+    print(f"location: {loc}")
     return content
 
 def collectJobType(job, content: dict) -> dict:
@@ -298,21 +326,27 @@ def collectkeyDetails(driver, content: dict) -> dict:
         a dictionary with the newly added content
     """
     buttons = driver.find_elements(By.XPATH, "//button[@class='artdeco-button artdeco-button--secondary artdeco-button--muted']//Strong")
+
+    if len(buttons) == 0: # I cant believe i've found one that doesn'thave any buttons...
+        content.update({"WorkType" : ["empty"], "Salary" : [0], "Duration" : ["Non specified"]})
+        return content
+
     if buttons[-1].text[-5:].lower() == "match": # Sometimes it shows skills match on new accounts that have not been calibrated to
         buttons = buttons[:-1]
     stages = ["Duration", "WorkType", "Salary"]
     buttons.reverse()
 
     for button, stage in zip(buttons, stages):
-        if stage == "Salary":
+        if stage == "Salary" or button.text[0] == "£" or button.text[0] == "$":
             content.update({stage: [setupSalary(button.text)]})
             break
-
         content.update({stage: [button.text]})
+
     if len(buttons) == 1: # Only Duration
-        content.update({"WorkType" : [""], "Salary" : [0]})
+        content.update({"WorkType" : ["empty"], "Salary" : [0]}) # Need to use empty to prevent crashes when uploading to database.
     elif len(buttons) == 2: # Missing Salary
         content.update({"Salary" : [0]})
+    
     return content
 
 def collectJobCode(driver, content: dict) -> dict:
@@ -329,6 +363,7 @@ def collectJobCode(driver, content: dict) -> dict:
     """
     url = driver.current_url.split("=")[1]
     url = url.split("&")[0]
+    print(url)
     content.update({"URL": url})
     return content
 
@@ -363,24 +398,19 @@ def scrollJobs(driver, scrollitems:list, scrollbar, index):
         scrollbar: The container containing the jobs
         index: The current scroll index
     """
-    attempts = 0
-    while attempts < 5:
-        try:
-            driver.execute_script("arguments[0].scrollTop += 500;", scrollbar)
-            sleep(0.5)
-            scrollitems[index].click()
-            break
-        except StaleElementReferenceException as ex:
-            raise NullIndex("Null index discovered", index)
-        except IndexError:
-            logger.warning("Reaching for jobs that dont exist. Moving to next page...")
-            moveOn = True
-            raise IndexError
-        except Exception as ex:
-            logger.warning(f"Unexpected exception occoured: {ex}")
-            raise Exception
-    if attempts >= 5:
-        raise AttemptFails("Ran out of attempts", attempts)
+    try:
+        driver.execute_script("arguments[0].scrollIntoView();", scrollitems[index])
+        sleep(0.5+random()*2)
+        scrollitems[index].click()
+    except StaleElementReferenceException as ex:
+        raise NullIndex("Null index discovered", index)
+    except IndexError:
+        logger.warning("Reaching for jobs that dont exist. Moving to next page...")
+        moveOn = True
+        raise IndexError
+    except Exception as ex:
+        logger.warning(f"Unexpected exception occoured: {ex}")
+        raise Exception
     
 def scrapeJobs(driver) -> pd.DataFrame:
     """
@@ -394,7 +424,7 @@ def scrapeJobs(driver) -> pd.DataFrame:
     ### Parameters
         driver: The selenium driver used to navigate
     """
-    jobNames = ["Data Analyst", "Software Engineer", "Data Scientist"]
+    jobNames = ["Data Analyst", "Software Engineer", "Data Scientist", "Machine Learning Engineer"]
     logger.info("Creating dataframe")
     frame = pd.DataFrame(columns=["NameOfJob", "NameOfBusiness", "Location", "JobType", "Salary", "Skills", "WorkType", "Duration", "URL"])
 
@@ -411,8 +441,9 @@ def scrapeJobs(driver) -> pd.DataFrame:
             driver.quit()
             quit()
         logger.info(f"Collecting from {job}")
-        sleep(3)
-        while page <= 2:
+        sleep(2+random()*2)
+        totalJobs = 0
+        while page <= 9:
             logger.info(f"Page {page}")
             page+=1
             try:
@@ -426,11 +457,14 @@ def scrapeJobs(driver) -> pd.DataFrame:
                 logger.critical(f"Unknown critical error: {ex}")
             
             amount = len(scrollitems)
+            totalJobs += amount
             logger.info(f"There are {amount} of jobs displayed")
             if amount > 25:
                 logger.warning("There are anomalous results.")
             for s in range(amount):
                 try:
+                    scrollbar = driver.find_element(By.CLASS_NAME, "scaffold-layout__list ")
+                    scrollitems = scrollbar.find_elements(By.XPATH, f"//li[starts-with(@id, 'ember')]")
                     scrollJobs(driver,scrollitems, scrollbar, s)
                 except IndexError as ex:
                     break
@@ -443,30 +477,38 @@ def scrapeJobs(driver) -> pd.DataFrame:
                 except Exception as ex:
                     logger.critical(f"Unexpected error caught: {ex}")
 
-                sleep(1)
+                sleep(1+random()*2)
                 content = dict()
 
+                content = collectJobCode(   driver, content)
                 content = collectName(      driver, content)
                 content = collectBusiness(  driver, content)
                 content = collectLocation(  driver, content)
                 content = collectJobType(      job, content)
                 content = collectkeyDetails(driver, content)
                 content = collectSkills(    driver, content)
-                content = collectJobCode(   driver, content)
 
-                sleep(1)
+                sleep(1+random()*2)
 
                 #Being able to insert was depricated in 1.6. What is the point man.
                 frame = insertDataIntoFrame(frame, content)
                 del content
         
             try: # If it reaches the end, move onto next job type
+                scrollbar = driver.find_element(By.CLASS_NAME, "scaffold-layout__list ")
+                scrollbar = scrollbar.find_elements(By.TAG_NAME, "div")[0]
+                driver.execute_script("arguments[0].scrollTop = arguments[0].scrollHeight", scrollbar)
                 driver.find_element(By.XPATH, f"//button[@class='jobs-search-pagination__indicator-button ' and @aria-label='Page {page}']").click()
             except Exception as ex:
-                logger.critical(f"Problem with selecting new page: {ex}")
-                break
+                logger.warning(f"Problem with selecting new page: {ex}")
+                logger.warning(f"Going by link instead...")
+                try:
+                    driver.get(f"https://www.linkedin.com/jobs/search/?keywords={job}&origin=JOB_SEARCH_PAGE_KEYWORD_AUTOCOMPLETE&refresh=true&start={totalJobs+2}") #+2 to ensure im in the next page.
+                    sleep(2+random()*2)
+                except Exception as ex:
+                    logger.critical(f"A new error occoured when going through the link... {ex}")
         
-        sleep(1)
+        sleep(1+random()*2)
     return frame
 
 #=================================Data Insertion & Main=======================================================
@@ -491,14 +533,11 @@ except Exception as ex:
     logger.critical(f"Unknown error occoured: {ex}")
     quit()
 
+
 if __name__ == "__main__":
-    try:
-        driver = setupDevice()
-        #driver = generateCookies(driver)
-        driver = navigateToJobs(driver)
-        frame = scrapeJobs(driver)
-    except Exception as ex:
-        logger.critical(ex)
+    driver = setupDevice()
+    driver = navigateToJobs(driver)
+    frame = scrapeJobs(driver)
     try:
         conn = databaseConn()
         conn.sendData(frame)

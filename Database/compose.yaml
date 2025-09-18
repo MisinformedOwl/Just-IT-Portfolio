@@ -6,7 +6,7 @@ services:
       - "3307:3306"
     environment:
       - MYSQL_ROOT_PASSWORD=rootpass
-      - MYSQL_DATABASE=mydb
+      - MYSQL_DATABASE=LinkedInScrape
       - MYSQL_USER=myuser
       - MYSQL_PASSWORD=mypassword
     volumes:

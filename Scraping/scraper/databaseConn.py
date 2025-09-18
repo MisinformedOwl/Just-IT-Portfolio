@@ -12,7 +12,7 @@ class databaseConn:
     host = 'localhost'
     user = "myuser"
     password = "mypassword"
-    database = "mydb"
+    database = "LinkedInScrape"
     connected = False
 
     #===============================Insertion===========================================
@@ -94,7 +94,17 @@ class databaseConn:
         """
         )
 
-        for skill in row.Skills:
+        SkillSet = row.Skills # row value cannot be set.
+
+        if type(row.Skills) == str:
+            if row.Skills == "[]":
+                return
+            SkillSet = self.listifySkills(row.Skills)
+
+        if SkillSet[0] == '':
+            return
+
+        for skill in SkillSet:
             conn.execute(
                 skillInsert,
                 {
@@ -144,6 +154,17 @@ class databaseConn:
         self.logger.info(f"{data.shape[0]} inserts remain.")
 
         return data
+
+    def listifySkills(self, skills:str) -> list:
+        """
+        This turns the skills list into an actual list when using sample.csv
+        """
+        skills = skills[1:-1] # Remove []
+
+        skills = skills.replace("'","")
+        skills = skills.split(", ")
+
+        return skills
 
     def insertRows(self, conn, frame:pd.DataFrame):
         """
@@ -207,7 +228,6 @@ class databaseConn:
             data: The dataframe of content.
         """
         try:
-            data.to_csv(f"CollectedData {datetime.datetime.now().strftime("%Y/%m/%d")}.csv", index=False)
+            data.to_csv(f"CollectedData.csv")
         except Exception as ex:
-            self.logger.critical("CSV BACKUP FAILED. DATA LOST.")
-            self.logger.critical(ex)
+            self.logger.critical(f"CSV BACKUP FAILED. DATA LOST: {ex}")

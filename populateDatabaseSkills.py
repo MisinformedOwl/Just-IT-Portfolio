@@ -8,7 +8,7 @@ if __name__ == "__main__":
         file.writelines(["USE `LinkedInScrape`;\n\n"])
         
         skills = []
-        with open("Port/scraper/keywords.txt", "r") as skillFile:
+        with open("Scraping/scraper/keywords.txt", "r") as skillFile:
             skills = skillFile.readline().split(",")
         
         file.write("START TRANSACTION;\n") # Start transaction as autocommit is 0.

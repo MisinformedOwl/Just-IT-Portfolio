@@ -31,9 +31,9 @@ DROP TABLE IF EXISTS `Job`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `Job` (
 	`JobID` int NOT NULL AUTO_INCREMENT,
-    `Name` VARCHAR(50) NOT NULL DEFAULT '',
-    `Business` VARCHAR(50) NOT NULL DEFAULT '',
-    `Location` VARCHAR(30) NOT NULL DEFAULT '',
+    `Name` VARCHAR(80) NOT NULL DEFAULT '',
+    `Business` VARCHAR(80) NOT NULL DEFAULT '',
+    `Location` VARCHAR(70) NOT NULL DEFAULT '',
 	`Salary` int NOT NULL DEFAULT 0,
     `JobType` VARCHAR(30) NOT NULL DEFAULT '',
     `WorkType` varchar(15) NOT NULL DEFAULT '',

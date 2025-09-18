@@ -1,0 +1,876 @@
+,NameOfJob,NameOfBusiness,Location,JobType,Salary,Skills,WorkType,Duration,URL
+0,Data Analyst,Mapyx Limited,Newcastle Upon Tyne,Data Analyst,0,"['power bi', 'bi', 'analytical', 'data analysis', 'degree']",Hybrid,Full-time,4296984380
+1,Data Analyst/Business Intelligence (BI) Specialist,Northumbria Healthcare NHS Foundation Trust,Newcastle Upon Tyne,Data Analyst,0,"['bi', 'power bi', 'data analysis', 'azure', 'sql', 'innovation', 'degree', 'collaboration']",empty,Full-time,4296985393
+2,Senior Data Analyst,NHS,Newcastle Upon Tyne,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'analytical', 'agile', 'sql', 'data visualisation', 'degree']",empty,Full-time,4297041096
+3,Business Intelligence Developer,NCFE,Newcastle Upon Tyne,Data Analyst,0,"['power bi', 'bi', 'passion', 'analytical', 'excel', 'sql', 'c']",Hybrid,Contract,4300780668
+4,Junior Data Consultant,targetjobs UK,Newcastle Upon Tyne,Data Analyst,0,"['passion', 'machine learning', 'data visualisation', 'innovation', 'python', 'collaboration']",empty,Full-time,4293866643
+5,Business Intelligence Analyst,Northumbria Police,Newcastle Upon Tyne,Data Analyst,50300.0,"['ai', 'analytical', 'data analysis', 'agile', 'data visualisation', 'collaboration']",Hybrid,Full-time,4297745642
+6,Junior Data Consultant,Sparta Global,Newcastle Upon Tyne,Data Analyst,0,"['passion', 'machine learning', 'data visualisation', 'innovation', 'python', 'collaboration']",empty,Full-time,4281956108
+7,Category Analyst,Greggs,Newcastle Upon Tyne,Data Analyst,28000,"['power bi', 'ai', 'passion', 'bi', 'analytical', 'r', 'excel', 'python', 'degree']",Hybrid,Full-time,4299536265
+8,Data Analyst and Research Assistant,Northumbria Police,Newcastle Upon Tyne,Data Analyst,30200.0,"['ai', 'analytical', 'data analysis', 'agile', 'excel', 'collaboration']",Hybrid,Full-time,4295801089
+9,Fraud Statistician - Data Analyst Senior,Worldpay,Gateshead,Data Analyst,0,['data analysis'],Hybrid,Full-time,4298903573
+10,BI Developer,Sage,Newcastle Upon Tyne,Data Analyst,0,"['bi', 'ai', 'power bi', 'analytical', 'machine learning', 'azure', 'agile', 'aws', 'gitlab', 'sql', 'github']",Hybrid,Full-time,4275367253
+11,Digital Product Analyst – Digital Ordering,Greggs,Newcastle Upon Tyne,Data Analyst,30000,"['passion', 'data analysis', 'azure', 'agile', 'excel']",On-site,Full-time,4296751133
+12,Data Test Analyst,Sage,Newcastle Upon Tyne,Data Analyst,0,"['analytical', 'agile', 'sql', 'collaboration']",Hybrid,Full-time,4291876205
+13,Business Intelligence Analyst,Careers Plus,Newcastle Upon Tyne,Data Analyst,50500.0,"['analytical', 'data analysis', 'agile', 'data visualisation', 'collaboration']",Hybrid,Full-time,4298782017
+14,Graduate Risk Analyst,Oliver Bernard,Newcastle Upon Tyne,Data Analyst,0,"['data analysis', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4286719493
+15,Data Operations Executive,TotalEnergies,Newcastle Upon Tyne,Data Analyst,24000,['excel'],On-site,Contract,4292153873
+16,Data Engineer (12 Month FTC),Norton Rose Fulbright,Newcastle Upon Tyne,Data Analyst,0,"['spark', 'ai', 'bi', 'analytical', 'data analysis', 'azure', 'r', 'sql', 'ml', 'python', 'degree', 'collaboration']",Hybrid,Full-time,4302013266
+17,Geospatial Developer & Data Engineer,SLR Consulting,Newcastle Upon Tyne,Data Analyst,0,"['python', 'collaboration']",On-site,Full-time,4301160694
+18,Sportsbook Senior Trading Analyst,LeoVegas Group,Newcastle Upon Tyne,Data Analyst,0,"['bi', 'tableau', 'data analysis', 'analytical', 'agile', 'excel', 'sql', 'innovation', 'degree', 'collaboration']",Hybrid,Full-time,4299142786
+19,Administrator,TotalEnergies,Newcastle Upon Tyne,Data Analyst,24000,['excel'],On-site,Contract,4292171455
+20,Online Data Analyst,TELUS Digital,Newcastle Upon Tyne,Data Analyst,0,"['ai', 'passion', 'machine learning']",Remote,Contract,4288693025
+21,Digital Business Analyst,Recruit with Purpose,Newcastle Upon Tyne,Data Analyst,42750.0,"['data analysis', 'agile', 'analytical']",Hybrid,Full-time,4298238684
+22,Safer Gambling Analyst,LeoVegas Group,Newcastle Upon Tyne,Data Analyst,0,"['analytical', 'agile']",On-site,Full-time,4286663843
+23,Procurement Data Analyst,Arup,Newcastle Upon Tyne,Data Analyst,0,"['power bi', 'bi', 'tableau', 'analytical', 'excel', 'data visualisation', 'innovation', 'sql', 'collaboration']",Hybrid,Full-time,4283352867
+24,Conduct Risk Junior Consultant (Analyst) - Risk Co,EY,Newcastle Upon Tyne,Data Analyst,0,"['ambitious', 'analytical', 'ai']",Hybrid,Full-time,4299059474
+25,Graduate Data Scientist,WHSmith,London Area,Data Analyst,0,"['power bi', 'bi', 'passion', 'analytical', 'tableau', 'machine learning', 'ambitious', 'r', 'sql', 'innovation', 'data visualisation', 'python', 'degree']",Hybrid,Full-time,4301236893
+26,Data Specialist Summer Internship,Moody's Corporation,Salford,Data Analyst,0,"['ai', 'analytical', 'excel', 'degree', 'collaboration']",empty,Internship,4299326949
+27,Business Intelligence Analyst,Northumbria Police,Newcastle Upon Tyne,Data Analyst,50300.0,"['ai', 'analytical', 'data analysis', 'agile', 'data visualisation', 'collaboration']",Hybrid,Full-time,4297745642
+28,Graduate Data Analyst - FTC,targetjobs UK,Manchester,Data Analyst,0,"['power bi', 'bi', 'analytical', 'data analysis', 'excel', 'innovation', 'degree', 'collaboration']",On-site,Full-time,4284889323
+29,Data Analyst Apprentice,EMCOR UK,Cheltenham,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'r', 'excel', 'data visualisation', 'innovation', 'sql', 'python', 'c']",On-site,Full-time,4299211044
+30,Information Analyst,NHS Ayrshire & Arran,Glasgow,Data Analyst,0,['analytical'],Hybrid,Full-time,4297094886
+31,Data Analyst (Marketing),The Wonder Agency,Leeds,Data Analyst,0,"['power bi', 'bi', 'passion', 'analytical', 'tableau', 'ambitious', 'r', 'pandas', 'numpy', 'sql', 'python', 'data visualisation', 'degree']",Hybrid,Full-time,4297538254
+32,Data Analyst,The Stephenworks,Sheffield,Data Analyst,0,['python'],empty,Full-time,4286250120
+33,Data Analyst,The Stephenworks,Sheffield,Data Analyst,0,['python'],empty,Full-time,4286250120
+34,AI/ML Intern,WillHire,United Kingdom,Data Analyst,0,"['bi', 'ai', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299536699
+35,AI/ML Intern,WillHire,United Kingdom,Data Analyst,0,"['bi', 'ai', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299536699
+36,Food Science_Data Analyst Internship,targetjobs UK,Sheffield,Data Analyst,0,"['ai', 'data analysis', 'innovation']",On-site,Internship,4226838278
+37,Food Science_Data Analyst Internship,targetjobs UK,Sheffield,Data Analyst,0,"['ai', 'data analysis', 'innovation']",On-site,Internship,4226838278
+38,Graduate Data Analyst,Nexus,United Kingdom,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'tableau', 'analytical', 'excel', 'sql', 'degree']",Remote,Part-time,4300062826
+39,Graduate Data Analyst,Nexus,United Kingdom,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'tableau', 'analytical', 'excel', 'sql', 'degree']",Remote,Part-time,4300062826
+40,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+41,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+42,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+43,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+44,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+45,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+46,Data Analyst,TryHackMe,European Union,Data Analyst,0,"['tableau', 'machine learning', 'analytical', 'sql']",Remote,Full-time,4291965572
+47,Data Scientist,Outcomes First Group,Bolton,Data Analyst,0,"['power bi', 'bi', 'ai', 'analytical', 'llm', 'machine learning', 'azure', 'relational databases', 'r', 'sql', 'innovation', 'python']",Hybrid,Contract,4295866845
+48,Market Data Analyst,Swansea University / Prifysgol Abertawe,Wales,Data Analyst,0,"['power bi', 'bi', 'data visualisation']",On-site,Full-time,4300514263
+49,Data Analyst,Wayflyer,London,Data Analyst,0,"['tableau', 'ambitious', 'sql', 'data visualisation', 'python', 'degree', 'collaboration']",Remote,Full-time,4296412813
+50,Data and AI Graduate,targetjobs UK,Middlesbrough,Data Analyst,0,"['ai', 'analytical', 'machine learning', 'relational databases', 'pytorch', 'mlops', 'ml', 'pandas', 'azure', 'tensorflow', 'innovation', 'power bi', 'bi', 'nlp', 'python', 'agile', 'sql', 'numpy', 'degree']",On-site,Full-time,4285205040
+51,Junior Data Scientist,Verisk,London,Data Analyst,0,"['passion', 'machine learning', 'sql', 'innovation', 'python', 'degree']",Hybrid,Full-time,4296435254
+52,Information Analyst,NHS Scotland,Glasgow,Data Analyst,0,['analytical'],Hybrid,Full-time,4298833577
+53,Data Scientist,Deliveroo,London,Data Analyst,0,"['passion', 'analytical', 'problem solver', 'machine learning', 'sql', 'python']",empty,Full-time,4220977704
+54,Data Scientist,Butternut Box | B Corp,London,Data Analyst,0,"['bi', 'passion', 'sql', 'python']",Hybrid,Full-time,4299773783
+55,Data Scientist,Cint,London,Data Analyst,0,"['spark', 'analytical', 'machine learning', 'sql', 'innovation', 'python', 'degree', 'collaboration']",Remote,Full-time,4282189218
+56,Performance Data Analyst,Chelsea Football Club,Cobham,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'r', 'sql', 'data visualisation', 'innovation', 'python', 'degree', 'collaboration']",On-site,Full-time,4294430671
+57,Data Scientist,BSI,Cambridge,Data Analyst,0,"['ai', 'azure', 'aws', 'r', 'sql', 'innovation', 'python', 'collaboration']",Hybrid,Full-time,4288071515
+58,Graduate Data Scientist,Shift Technology,London,Data Analyst,0,"['ai', 'machine learning', 'c#', 'sql', 'innovation', 'degree']",empty,Full-time,4300049266
+59,Agentic Data Analyst Intern - Global Revenue Opera,Seagate Technology,United Kingdom,Data Analyst,0,"['ai', 'passion', 'analytical', 'c++', 'machine learning', 'postgresql', 'llm', 'excel', 'sql', 'ml', 'python', 'degree']",Remote,Internship,4295714905
+60,Quantitative Trading Analyst Intern,DRW,London,Data Analyst,0,"['passion', 'analytical', 'machine learning', 'innovation', 'python']",On-site,Internship,4266280684
+61,Associate Data Scientist,Government Digital Service,England,Data Analyst,47700.0,"['ai', 'analytical', 'llm', 'azure', 'matplotlib', 'agile', 'aws', 'data visualisation', 'innovation', 'pandas', 'python', 'numpy', 'github', 'ml', 'nlp', 'sql', 'collaboration']",Hybrid,Full-time,4297778407
+62,Data Scientist,Printed.com,Cramlington,Data Analyst,55000.0,"['ai', 'machine learning', 'aws', 'pytorch', 'r', 'tensorflow', 'sql', 'ml', 'python']",Hybrid,Full-time,4284075674
+63,Data Analyst and Research Assistant,Northumbria Police,Newcastle Upon Tyne,Data Analyst,30200.0,"['ai', 'analytical', 'data analysis', 'agile', 'excel', 'collaboration']",Hybrid,Full-time,4295801089
+64,Data Analyst,STRABAG UK,Manchester,Data Analyst,0,"['bi', 'ambitious', 'azure', 'power bi']",Hybrid,Full-time,4301751315
+65,Analyst (8689),Adult Learning,Norwich,Data Analyst,0,"['power bi', 'passion', 'bi']",Hybrid,Full-time,4299179370
+66,Data Analyst (Retrofit),Xterna ,Manchester,Data Analyst,0,"['power bi', 'bi', 'passion', 'tableau', 'data analysis', 'ai', 'excel', 'sql']",Hybrid,Full-time,4301714998
+67,"Data Scientist, Internship, United Kingdom - BCG X",Boston Consulting Group (BCG),London,Data Analyst,0,"['spark', 'ai', 'passion', 'machine learning', 'python', 'degree']",empty,Internship,4152197269
+68,Junior Data Analyst,All Response Media,London,Data Analyst,0,"['passion', 'r', 'excel', 'sql', 'innovation', 'python', 'collaboration']",Hybrid,Full-time,4295376347
+69,Data Scientist,Alpine Formula One Team,Enstone,Data Analyst,0,"['passion', 'machine learning', 'azure', 'pytorch', 'docker', 'pandas', 'numpy', 'github', 'python', 'c', 'degree', 'collaboration']",empty,Full-time,4301367451
+70,Data Scientist,Bright Purple,Edinburgh,Data Analyst,67500.0,"['machine learning', 'azure', 'agile', 'pytorch', 'tensorflow', 'github', 'sql', 'python', 'c', 'degree', 'collaboration']",Hybrid,Full-time,4297439171
+71,Digital Product Analyst – Digital Ordering,Greggs,Newcastle Upon Tyne,Data Analyst,30000,"['passion', 'data analysis', 'azure', 'agile', 'excel']",On-site,Full-time,4296751133
+72,Data Analyst - DE,Eucalyptus,London,Data Analyst,0,"['bi', 'analytical', 'sql', 'python', 'collaboration']",Hybrid,Full-time,4295680840
+73,Data Scientist II - Platform Developer Experience,Spotify,London,Data Analyst,0,"['bi', 'ai', 'tableau', 'data analysis', 'sql', 'innovation', 'python']",empty,Full-time,4297566330
+74,Business Intelligence Analyst,Hutchison Ports (UK),Felixstowe,Data Analyst,64000,"['power bi', 'bi', 'data analysis', 'sql', 'innovation']",On-site,Full-time,4295557649
+75,Data Analyst,Mapyx Limited,Newcastle Upon Tyne,Data Analyst,0,"['power bi', 'bi', 'analytical', 'data analysis', 'degree']",Hybrid,Full-time,4296984380
+76,Data Analyst,The University of Law,United Kingdom,Data Analyst,0,"['passion', 'analytical', 'sql', 'innovation']",empty,Contract,4295978708
+77,Data Analyst,RealityMine,Manchester,Data Analyst,0,"['bi', 'analytical', 'data analysis', 'sql', 'python']",Hybrid,Full-time,4294830490
+78,Data Analyst/Business Intelligence (BI) Specialist,Northumbria Healthcare NHS Foundation Trust,Newcastle Upon Tyne,Data Analyst,0,"['bi', 'power bi', 'data analysis', 'azure', 'sql', 'innovation', 'degree', 'collaboration']",empty,Full-time,4296985393
+79,Graduate Data Analyst,GRAYCE,Doncaster,Data Analyst,25000,"['power bi', 'bi', 'passion', 'analytical', 'problem solver', 'data analysis', 'tableau', 'ambitious', 'r', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4275582117
+80,Data Analyst,INOVERSE GROUPE,Exeter,Data Analyst,0,"['postgresql', 'data analysis', 'sql', 'innovation', 'python']",empty,Full-time,4299493428
+81,Data Analyst,Neos Global Search,Warrington,Data Analyst,32500.0,"['excel', 'sql']",Hybrid,Full-time,4301760662
+82,Data Scientist,Creditsafe,Cardiff,Data Analyst,0,"['passion', 'data analysis', 'analytical', 'machine learning', 'aws', 'innovation', 'ml', 'python', 'degree', 'collaboration']",On-site,Full-time,4292163403
+83,Data Scientist,Creditsafe,Cardiff,Data Analyst,0,"['passion', 'data analysis', 'analytical', 'machine learning', 'aws', 'innovation', 'ml', 'python', 'degree', 'collaboration']",On-site,Full-time,4292163403
+84,Data Scientist,Cint,London,Data Analyst,0,"['spark', 'data analysis', 'analytical', 'machine learning', 'sql', 'innovation', 'python', 'degree', 'collaboration']",Remote,Full-time,4299767308
+85,Data Analyst (Digital Transformation) Apprentice,ABP UK,Birmingham,Data Analyst,0,"['passion', 'data analysis', 'analytical', 'innovation']",On-site,Full-time,4300708410
+86,"Statistical Analyst (Stirling, Entry Level)",Medpace,Stirling,Data Analyst,0,"['passion', 'degree', 'collaboration']",On-site,Full-time,4116235807
+87,Intelligence & Data Specialist,British Horseracing Authority,London Area,Data Analyst,40000,[],Hybrid,Contract,4297843119
+88,Junior BI Analyst,TransPerfect,London Area,Data Analyst,0,"['bi', 'relational databases', 'tableau', 'degree']",Hybrid,Full-time,4268577870
+89,Data Analyst – SAS & SQL,Natobotics ,Edinburgh,Data Analyst,0,"['bi', 'data analysis', 'analytical', 'relational databases', 'sql']",On-site,Contract,4299321463
+90,BHSCT_Band 5 Data Analyst,Belfast Health and Social Care Trust,Belfast,Data Analyst,0,[],On-site,Full-time,4296239805
+91,Data Test Analyst,Sage,Newcastle Upon Tyne,Data Analyst,0,"['analytical', 'agile', 'sql', 'collaboration']",Hybrid,Full-time,4291876205
+92,Business Intelligence Associate,SPORTFIVE,Altrincham,Data Analyst,0,"['excel', 'analytical', 'degree', 'data visualisation']",Hybrid,Full-time,4293840479
+93,Data Analyst Project Intern (TikTok Shop - User Gr,TikTok,London,Data Analyst,0,"['analytical', 'data analysis', 'sql', 'python', 'degree']",empty,Internship,4291351235
+94,Supporter Data & Insight Executive,The King's Trust,London,Data Analyst,0,[],Hybrid,Full-time,4299406750
+95,"Programming, Statistics & Data Science (Multiple R",GSK,London,Data Analyst,0,"['data analysis', 'machine learning', 'ambitious', 'agile', 'innovation', 'python', 'degree', 'masters']",On-site,Full-time,4300826423
+96,Dementia Data and Intelligence Officer,Alzheimer's Society,United Kingdom,Data Analyst,32750.0,"['power bi', 'bi', 'data analysis', 'r', 'data visualisation', 'sql', 'python', 'collaboration']",Remote,Full-time,4291124399
+97,Summer Internship – Data Science Researcher,BAE Systems,Chelmsford,Data Analyst,0,"['ai', 'degree', 'nlp', 'innovation']",Hybrid,Internship,4300818605
+98,Rev-celerator Graduate Programme 2026: Data Scient,Revolut,United Kingdom,Data Analyst,0,"['analytical', 'machine learning', 'sql', 'ml', 'python']",Remote,Full-time,4237003111
+99,Data Scientist,Southern Water,Brighton,Data Analyst,0,"['ai', 'analytical', 'machine learning', 'azure', 'python']",Hybrid,Full-time,4215851933
+100,Data Scientist,easyJet,Luton,Data Analyst,0,"['ai', 'analytical', 'machine learning', 'agile', 'sql', 'innovation', 'data visualisation', 'python', 'degree']",Hybrid,Full-time,4288987669
+101,Graduate Data Analyst,GRAYCE,Rotherham,Data Analyst,25000,"['power bi', 'bi', 'passion', 'analytical', 'problem solver', 'data analysis', 'tableau', 'ambitious', 'r', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4286655651
+102,Data Analyst,Vp plc,Harrogate,Data Analyst,33600.0,"['tableau', 'analytical', 'excel', 'sql', 'data visualisation', 'python']",Hybrid,Full-time,4298707618
+103,Data Scientist,StackAdapt,London,Data Analyst,0,"['ai', 'machine learning', 'ml', 'innovation', 'degree', 'masters']",Remote,Full-time,4296341649
+104,"NEACO Data Analyst (Part Time, Fixed Term)",Cambridge Service Alliance,Cambridge,Data Analyst,0,[],On-site,Part-time,4300099752
+105,Data Analyst,NielsenIQ,Stockport,Data Analyst,0,"['analytical', 'relational databases', 'innovation', 'degree', 'collaboration']",Hybrid,Full-time,4297189396
+106,Data Scientist,RealityMine,Manchester,Data Analyst,0,"['analytical', 'machine learning', 'aws', 'sql', 'innovation', 'ml', 'python', 'collaboration']",Hybrid,Full-time,4280853255
+107,Data Scientist,Hastings Direct,London,Data Analyst,0,"['python', 'sql', 'machine learning', 'ml']",Hybrid,Full-time,4301278804
+108,Data Scientist,Hastings Direct,London,Data Analyst,0,"['python', 'sql', 'machine learning', 'ml']",Hybrid,Full-time,4301278804
+109,2026 Data Science Analyst - Summer Internship - Gl,JPMorganChase,Greater London,Data Analyst,0,"['spark', 'analytical', 'machine learning', 'agile', 'aws', 'pytorch', 'r', 'sql', 'python', 'degree']",On-site,Full-time,4294396758
+110,2026 Data Science Analyst - Summer Internship - Gl,JPMorganChase,Greater London,Data Analyst,0,"['spark', 'analytical', 'machine learning', 'agile', 'aws', 'pytorch', 'r', 'sql', 'python', 'degree']",On-site,Full-time,4294396758
+111,People Data and Insight Analyst,RSA,England,Data Analyst,0,"['power bi', 'bi', 'analytical', 'tableau', 'data visualisation']",Hybrid,Full-time,4298186028
+112,People Data and Insight Analyst,RSA,England,Data Analyst,0,"['power bi', 'bi', 'analytical', 'tableau', 'data visualisation']",Hybrid,Full-time,4298186028
+113,Loans Administrator and Data Analyst,BNY,Manchester,Data Analyst,0,"['ai', 'excel']",On-site,Full-time,4301780748
+114,Loans Administrator and Data Analyst,BNY,Manchester,Data Analyst,0,"['ai', 'excel']",On-site,Full-time,4301780748
+115,Trainee Investment Data Analyst,Golden Hiring,London Area,Data Analyst,0,"['passion', 'analytical', 'ambitious', 'excel', 'sql', 'data visualisation', 'python']",On-site,Full-time,4300914136
+116,Trainee Investment Data Analyst,Golden Hiring,London Area,Data Analyst,0,"['passion', 'analytical', 'ambitious', 'excel', 'sql', 'data visualisation', 'python']",On-site,Full-time,4300914136
+117,Defence Intelligence (DI) - Socio-Cultural Analyst,UK Ministry of Defence,London,Data Analyst,0,"['html', 'analytical', 'degree', 'collaboration']",On-site,Full-time,4297907568
+118,Defence Intelligence (DI) - Socio-Cultural Analyst,UK Ministry of Defence,London,Data Analyst,0,"['html', 'analytical', 'degree', 'collaboration']",On-site,Full-time,4297907568
+119,Register Your Interest: Technology,Winton,London,Data Analyst,0,['ambitious'],On-site,Full-time,3955837187
+120,Register Your Interest: Technology,Winton,London,Data Analyst,0,['ambitious'],On-site,Full-time,3955837187
+121,2026 Sector Data Analyst Summer Intern,Schonfeld,London,Data Analyst,0,"['spark', 'ambitious', 'sql', 'pandas', 'python', 'degree']",On-site,Internship,4300120106
+122,2026 Sector Data Analyst Summer Intern,Schonfeld,London,Data Analyst,0,"['spark', 'ambitious', 'sql', 'pandas', 'python', 'degree']",On-site,Internship,4300120106
+123,The Information Lab - Graduate Data Consulting Ana,The Information Lab,London,Data Analyst,0,"['passion', 'tableau', 'masters', 'data visualisation']",On-site,Full-time,4272886512
+124,The Information Lab - Graduate Data Consulting Ana,The Information Lab,London,Data Analyst,0,"['passion', 'tableau', 'masters', 'data visualisation']",On-site,Full-time,4272886512
+125,"Data Analyst, Consumer Revenue",Condé Nast,London,Data Analyst,0,"['ai', 'analytical', 'tableau', 'data analysis', 'excel', 'sql', 'python', 'c', 'degree', 'collaboration']",empty,Full-time,4295087844
+126,Data Analyst Project Intern (TikTok Shop-Supply Ch,TikTok,London,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'tableau', 'excel', 'sql', 'data visualisation', 'python', 'degree']",empty,Internship,4297868789
+127,2026 Data Science Analyst - Full Time Analyst - Gl,JPMorganChase,Greater London,Data Analyst,0,"['spark', 'analytical', 'machine learning', 'agile', 'aws', 'pytorch', 'r', 'sql', 'python', 'degree']",On-site,Full-time,4294389988
+128,Decision Scientist (Credit),Funding Circle UK,London,Data Analyst,0,"['analytical', 'data analysis', 'tableau', 'r', 'excel', 'sql', 'python', 'degree', 'collaboration']",Hybrid,Full-time,4301506500
+129,Data & Analytics Reporting Placement 2026- 27,Volkswagen Group UK Ltd,Milton Keynes,Data Analyst,0,"['analytical', 'degree']",Hybrid,Contract,4296449752
+130,"Data Analyst, Bloomsbury Digital Resources",Bloomsbury Publishing Plc,London Area,Data Analyst,40000.0,"['excel', 'tableau', 'problem solver', 'sql']",Hybrid,Full-time,4299121769
+131,2026 Early Career Data Analyst Graduate,AIG,London,Data Analyst,0,"['power bi', 'bi', 'analytical', 'excel', 'degree', 'collaboration']",On-site,Full-time,4300726090
+132,Data and Insights Analyst,Warwickshire County Cricket Club,Warwickshire,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'tableau', 'innovation']",On-site,Full-time,4286729263
+133,Data and Insights Analyst,Warwickshire County Cricket Club,Warwickshire,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'tableau', 'innovation']",On-site,Full-time,4286729263
+134,HR Systems Analyst,innocent drinks,London Area,Data Analyst,0,['innovation'],Hybrid,Full-time,4299040726
+135,HR Systems Analyst,innocent drinks,London Area,Data Analyst,0,['innovation'],Hybrid,Full-time,4299040726
+136,Data Analyst - Business Development,Knight Frank,London,Data Analyst,0,"['power bi', 'bi', 'analytical', 'tableau', 'excel', 'data visualisation', 'innovation', 'sql', 'collaboration']",On-site,Full-time,4293712910
+137,Data Analyst - Business Development,Knight Frank,London,Data Analyst,0,"['power bi', 'bi', 'analytical', 'tableau', 'excel', 'data visualisation', 'innovation', 'sql', 'collaboration']",On-site,Full-time,4293712910
+138,Analyst - Rapid Intelligence - Part Time - Weekend,Cision,United Kingdom,Data Analyst,0,"['analytical', 'degree', 'collaboration', 'innovation']",Remote,Part-time,4300047528
+139,Analyst - Rapid Intelligence - Part Time - Weekend,Cision,United Kingdom,Data Analyst,0,"['analytical', 'degree', 'collaboration', 'innovation']",Remote,Part-time,4300047528
+140,Data Analyst - Remote (UK),Dines,Harrow,Data Analyst,0,"['data analysis', 'problem solver', 'sql']",Remote,Full-time,4296479073
+141,Data Scientist,Dunelm,Leicester,Data Analyst,0,"['ambitious', 'analytical', 'machine learning', 'collaboration']",empty,Full-time,4289709461
+142,Data Analyst,Independent Forgings and Alloys Ltd,Sheffield,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'analytical', 'excel', 'sql']",On-site,Full-time,4301200035
+143,Data Analyst,Verto,London,Data Analyst,0,"['bi', 'power bi', 'tableau', 'data analysis', 'machine learning', 'sql', 'pandas', 'numpy', 'python']",Hybrid,Full-time,4298257320
+144,Data Analyst,Elsevier,Oxford,Data Analyst,0,"['tableau', 'analytical', 'relational databases', 'excel', 'sql']",empty,Full-time,4300712373
+145,Operations Data Analyst,Wolseley Group,Chesterfield,Data Analyst,0,"['bi', 'power bi', 'analytical', 'excel', 'sql']",On-site,Full-time,4297642104
+146,Data Analyst,Aquent,United Kingdom,Data Analyst,0,"['data analysis', 'analytical', 'sql', 'c', 'degree']",Remote,Temporary,4291630356
+147,Junior Data Analyst,Tradition,London Area,Data Analyst,0,"['data analysis', 'analytical', 'relational databases', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4286798882
+148,Data Analyst,LexisNexis Risk Solutions,City Of London,Data Analyst,0,"['data analysis', 'azure', 'sql', 'innovation', 'python']",empty,Full-time,4294051912
+149,Graduate Data Analyst,GRAYCE,London Area,Data Analyst,0,"['power bi', 'bi', 'passion', 'analytical', 'problem solver', 'data analysis', 'tableau', 'ambitious', 'r', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4288951806
+150,Intelligence Officer,Financial Conduct Authority,Leeds,Data Analyst,0,"['c', 'innovation']",Hybrid,Full-time,4299538248
+151,Data Scientist Associate,JPMorganChase,Bournemouth,Data Analyst,0,"['ai', 'analytical', 'llm', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'mlops', 'nlp', 'ml', 'sql', 'python', 'degree']",On-site,Full-time,4290278716
+152,Selections Analyst - Temporary (up to November 202,RNLI,United Kingdom,Data Analyst,37950.0,['excel'],Remote,Contract,4301770652
+153,Data Scientist,G-Research,London Area,Data Analyst,0,"['python', 'data analysis', 'degree', 'data visualisation']",Hybrid,Full-time,4268963580
+154,Data Operations Executive,TotalEnergies,Newcastle Upon Tyne,Data Analyst,24000,['excel'],On-site,Contract,4292153873
+155,Graduate Digital Analyst – Watford Gap,targetjobs UK,Watford,Data Analyst,0,"['power bi', 'bi', 'analytical', 'problem solver', 'data analysis', 'tableau', 'ambitious', 'aws', 'r', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4292463239
+156,Fixed-term Operational Oversight Administrator - D,MUFG Pension & Market Services,Leeds,Data Analyst,0,['excel'],Hybrid,Full-time,4301552812
+157,Fixed-term Operational Oversight Administrator - D,MUFG Pension & Market Services,Leeds,Data Analyst,0,['excel'],Hybrid,Full-time,4301552812
+158,"Subject Matter Expert - Data Science (Part-Time, F",RS Consult,London,Data Analyst,0,"['ai', 'passion', 'tensorflow', 'nlp', 'ml', 'degree', 'collaboration', 'masters']",Remote,Part-time,4292938426
+159,Data Science Associate,Metyis,London,Data Analyst,0,"['data analysis', 'analytical', 'matplotlib', 'r', 'excel', 'sql', 'pandas', 'python', 'degree']",empty,Full-time,4230627985
+160,Data Scientist - Public Sector,IBM,Manchester,Data Analyst,0,"['ai', 'data analysis', 'azure', 'aws', 'react', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml', 'python', 'sql', 'degree']",Hybrid,Full-time,4299233448
+161,Associate Data Processing Analyst,Omnicom Health,Bollington,Data Analyst,0,"['excel', 'analytical']",Hybrid,Full-time,4245549428
+162,Quality Checker - Data Enrichment & Validation,Deloitte,United Kingdom,Data Analyst,0,[],Remote,Full-time,4291562980
+163,Service Performance Analyst,G4S,Wideopen,Data Analyst,0,"['html', 'excel', 'mysql']",empty,Full-time,4087234983
+164,Data Analyst,STRABAG,Manchester,Data Analyst,0,"['bi', 'azure', 'power bi']",empty,Full-time,4301540357
+165,Data Analyst (Treasury),Revolut,United Kingdom,Data Analyst,0,"['python', 'degree', 'sql']",Remote,Full-time,4263118781
+166,Data Analyst,LexisNexis Risk Solutions,London Area,Data Analyst,0,"['data analysis', 'azure', 'sql', 'innovation', 'python']",Remote,Full-time,4292752457
+167,Business Insight Analyst,TopCashback UK,Stafford,Data Analyst,0,"['passion', 'tableau', 'analytical', 'excel', 'sql', 'degree']",Hybrid,Full-time,4297593004
+168,Business Intelligence Analyst,"Solera Holdings, LLC.",Leeds,Data Analyst,0,"['bi', 'power bi', 'data analysis', 'tableau', 'analytical', 'sql', 'innovation', 'degree']",empty,Full-time,4290114051
+169,Data Analyst,LiveRamp,London,Data Analyst,0,"['analytical', 'sql', 'python', 'degree', 'collaboration']",empty,Full-time,4296163790
+170,Post Graduate Data Scientist,University of Southampton Malaysia,Southampton,Data Analyst,0,"['python', 'sql', 'collaboration']",On-site,Full-time,4291600884
+171,Data Science Specialist - Fully Remote,Mercor,United Kingdom,Data Analyst,100.0,"['ai', 'data analysis', 'machine learning', 'pytorch', 'r', 'tensorflow', 'sql', 'python', 'degree', 'collaboration']",Remote,Contract,4299121882
+172,Data Analyst,Albany Beck,London Area,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'excel', 'innovation', 'collaboration']",Hybrid,Full-time,4289917780
+173,Data Analyst,MandM,Hereford,Data Analyst,0,"['bi', 'ai', 'analytical', 'sql', 'python']",Hybrid,Full-time,4289774427
+174,Data and Protocol Analyst,Dstl,Salisbury,Data Analyst,0,"['passion', 'data analysis', 'problem solver', 'python', 'c', 'degree']",Hybrid,Full-time,4299986142
+175,Senior data insight analyst,Breast Cancer Now,London Area,Data Analyst,0,"['power bi', 'ai', 'bi']",Hybrid,Full-time,4298885811
+176,Strategy & Insight Data Analyst Graduate (TikTok S,TikTok,London,Data Analyst,0,"['analytical', 'ambitious', 'sql', 'python', 'collaboration']",empty,Full-time,4273777933
+177,"Data, Automation & Predictive Sciences (Multiple R",GSK,Stevenage,Data Analyst,0,"['postgresql', 'ai', 'data analysis', 'machine learning', 'ambitious', 'agile', 'r', 'innovation', 'python', 'degree', 'masters']",On-site,Full-time,4300992044
+178,Experimentation Data Scientist (Associate) - Chase,JPMorganChase,Greater London,Data Analyst,0,"['analytical', 'data analysis', 'machine learning', 'sql', 'python']",On-site,Full-time,4301778103
+179,DNO - WHG Portfolio Reporting and Insights Analyst,UK Ministry of Defence,London,Data Analyst,0,"['power bi', 'bi', 'data analysis', 'ambitious', 'data visualisation', 'innovation']",Hybrid,Full-time,4292419180
+180,Insight Analyst,"Midland Credit Management, an Encore Capital Group",West Malling,Data Analyst,0,"['python', 'excel', 'degree', 'sql']",empty,Full-time,4293340153
+181,Business Performance & Research Ops Executive,Sainsbury's,London,Data Analyst,0,"['excel', 'passion', 'collaboration']",empty,Full-time,4298538850
+182,Business Performance & Research Ops Executive,Sainsbury's,London,Data Analyst,0,"['excel', 'passion', 'collaboration']",empty,Full-time,4298538850
+183,Voice Recording Project – EU Native Speakers Neede,DATAmundi,London,Data Analyst,0,['ai'],Remote,Contract,4291926525
+184,Voice Recording Project – EU Native Speakers Neede,DATAmundi,London,Data Analyst,0,['ai'],Remote,Contract,4291926525
+185,"Blackstone Credit and Insurance, Quant and Portfol",Blackstone,London,Data Analyst,0,"['analytical', 'degree', 'python', 'c', 'masters']",empty,Full-time,4287583428
+186,"Blackstone Credit and Insurance, Quant and Portfol",Blackstone,London,Data Analyst,0,"['analytical', 'degree', 'python', 'c', 'masters']",empty,Full-time,4287583428
+187,Statistician I (Technical) - Ideal Graduate level ,Abbott,Witney,Data Analyst,0,"['collaboration', 'r']",empty,Full-time,4302017103
+188,Statistician I (Technical) - Ideal Graduate level ,Abbott,Witney,Data Analyst,0,"['collaboration', 'r']",empty,Full-time,4302017103
+189,Data Analyst,Zoopla,London,Data Analyst,0,"['ai', 'tableau', 'machine learning', 'python', 'r', 'data visualisation', 'sql', 'innovation', 'ml']",Hybrid,Full-time,4294334364
+190,Data Analyst,Zoopla,London,Data Analyst,0,"['ai', 'tableau', 'machine learning', 'python', 'r', 'data visualisation', 'sql', 'innovation', 'ml']",Hybrid,Full-time,4294334364
+191,Graduate Digital Analyst - North West,GRAYCE,Manchester,Data Analyst,25000,"['power bi', 'bi', 'passion', 'analytical', 'problem solver', 'data analysis', 'tableau', 'ambitious', 'r', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4296450414
+192,Graduate Digital Analyst - North West,GRAYCE,Manchester,Data Analyst,25000,"['power bi', 'bi', 'passion', 'analytical', 'problem solver', 'data analysis', 'tableau', 'ambitious', 'r', 'excel', 'sql', 'python', 'degree']",On-site,Full-time,4296450414
+193,Senior Data Analyst,Oodle Car Finance,London,Data Analyst,0,"['bi', 'analytical', 'tableau', 'r', 'excel', 'sql', 'python', 'collaboration']",Hybrid,Full-time,4294135917
+194,Senior Data Analyst,Oodle Car Finance,London,Data Analyst,0,"['bi', 'analytical', 'tableau', 'r', 'excel', 'sql', 'python', 'collaboration']",Hybrid,Full-time,4294135917
+195,Senior Data Analyst,Rapha,London Area,Data Analyst,0,"['power bi', 'bi', 'ai', 'ambitious', 'excel', 'sql', 'pandas', 'python']",Hybrid,Full-time,4289793131
+196,Senior Data Analyst,Rapha,London Area,Data Analyst,0,"['power bi', 'bi', 'ai', 'ambitious', 'excel', 'sql', 'pandas', 'python']",Hybrid,Full-time,4289793131
+197,Data Scientist : Hybrid,TipTopJob,Belfast,Data Analyst,0,"['ai', 'data analysis', 'machine learning', 'agile', 'pytorch', 'tensorflow', 'sql', 'ml', 'python', 'docker']",Hybrid,Full-time,4290437802
+198,Data Analyst - Studios,Light & Wonder - iGaming,Chiswick,Data Analyst,0,"['passion', 'analytical', 'sql', 'python', 'degree']",Hybrid,Full-time,4292585607
+199,Post Graduate Data Scientist,University of Southampton,Southampton,Data Analyst,0,"['python', 'sql', 'collaboration']",On-site,Full-time,4290792340
+200,Junior Web Developer,The 10 Group,London,Software Engineer,0,"['html', 'css', 'web development']",empty,Part-time,4286246666
+201,Junior Frontend Developer,Artery Digital,Sheffield,Software Engineer,0,"['html', 'css', 'github']",empty,Part-time,4288614651
+202,Junior Software Engineer,AccessPay,Manchester,Software Engineer,35000.0,"['c#', 'ambitious', 'agile', 'react', 'sql']",Hybrid,Full-time,4299176792
+203,Summer Internship - Software Developer,targetjobs UK,Leeds,Software Engineer,0,"['degree', 'agile']",empty,Internship,4259925604
+204,Summer Intern Software Engineer,BAE Systems Digital Intelligence,Gloucester,Software Engineer,0,"['c#', 'degree', 'react']",Hybrid,Full-time,4301770809
+205,PHP Developer,J&T Business Consulting,London,Software Engineer,0,"['postgresql', 'relational databases', 'mysql', 'aws', 'typescript', 'html', 'github', 'css', 'ci/cd', 'docker', 'collaboration']",Remote,Full-time,4292669717
+206,WordPress Developer,WE ARE ARISE LTD,Sheffield,Software Engineer,0,"['problem solver', 'ambitious', 'html', 'excel', 'css']",30000.0,Full-time,4301167721
+207,Software Engineer,The Walt Disney Company,Manchester,Software Engineer,0,"['ai', 'passion', 'azure', 'agile', 'react', 'aws', 'typescript', 'html', 'css', 'innovation', 'collaboration']",On-site,Full-time,4296955189
+208,Software Engineer,The Walt Disney Company,Manchester,Software Engineer,0,"['ai', 'passion', 'azure', 'agile', 'react', 'aws', 'typescript', 'html', 'css', 'innovation', 'collaboration']",On-site,Full-time,4296955189
+209,PHP Laravel Developer - Fully Remote,CybeRim,Milton Keynes,Software Engineer,0,"['passion', 'mysql', 'html', 'sql', 'css']",Remote,Full-time,4294693181
+210,PHP Laravel Developer - Fully Remote,CybeRim,Milton Keynes,Software Engineer,0,"['passion', 'mysql', 'html', 'sql', 'css']",Remote,Full-time,4294693181
+211,Junior Data Engineer - Revenue Platform,Spotify,London,Software Engineer,0,['agile'],empty,Full-time,4296657850
+212,Junior Data Engineer - Revenue Platform,Spotify,London,Software Engineer,0,['agile'],empty,Full-time,4296657850
+213,Part-Time Software Engineering Intern UK (Full Sta,Princeton Biopartners,United Kingdom,Software Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'react', 'css', 'github', 'python', 'c', 'degree']",Remote,Contract,4289140015
+214,Part-Time Software Engineering Intern UK (Full Sta,Princeton Biopartners,United Kingdom,Software Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'react', 'css', 'github', 'python', 'c', 'degree']",Remote,Contract,4289140015
+215,Junior Software Developer,UK Ministry of Defence,Hereford,Software Engineer,0,"['passion', 'agile']",empty,Full-time,4299051006
+216,Junior Software Developer,UK Ministry of Defence,Hereford,Software Engineer,0,"['passion', 'agile']",empty,Full-time,4299051006
+217,Graduate Web Developer,ViVA Tech Talent,Cambridge,Software Engineer,0,"['passion', 'django', 'analytical', 'mysql', 'sql', 'web development', 'innovation', 'python', 'degree', 'docker']",Hybrid,Full-time,4297588039
+218,Graduate Software Engineer,Port of London Authority,London,Software Engineer,35300,"['relational databases', 'degree']",On-site,Full-time,4301725966
+219,Software Engineer - Remote,The Flex,Leeds,Software Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301525149
+220,Trainee Developer (IT),Northern Ireland Housing Executive,Belfast,Software Engineer,0,['collaboration'],On-site,Contract,4299350000
+221,Trainee Developer (IT),Northern Ireland Housing Executive,Belfast,Software Engineer,0,['collaboration'],On-site,Contract,4299350000
+222,Software Engineer,Ooni,Edinburgh,Software Engineer,0,"['passion', 'react', 'typescript', 'html', 'css', 'innovation']",Hybrid,Full-time,4289268462
+223,Junior Back-End Engineer,Atom Learning ,London,Software Engineer,0,"['machine learning', 'mysql', 'react', 'agile', 'typescript', 'python', 'degree', 'collaboration']",empty,Remote,4294058711
+224,Software Engineer - Manchester,Zopa Bank,Manchester,Software Engineer,0,"['ci/cd', 'agile', 'collaboration']",Hybrid,Full-time,4289780923
+225,PHP Laravel Developer - Fully Remote,CybeRim,Manchester,Software Engineer,0,"['passion', 'mysql', 'html', 'sql', 'css']",Remote,Full-time,4294687402
+226,Software Engineer - Remote,The Flex,Liverpool,Software Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301513585
+227,Graduate Software Engineer - Fully Remote,Rio Hondo College,Nottingham,Software Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4300979896
+228,Software Engineer (.NET),CreateFuture,Leeds,Software Engineer,0,"['django', 'c#', 'ambitious', 'aws', 'agile', 'typescript', 'python', 'ci/cd', 'collaboration']",empty,Full-time,4245095694
+229,Graduate Software Engineer,Logistex,Northamptonshire,Software Engineer,25000.0,"['c', 'passion']",Hybrid,Full-time,4286251212
+230,Software Engineer - GammaLabs,Gamma,Manchester,Software Engineer,0,"['aws', 'react', 'typescript', 'html', 'css', 'innovation', 'sql', 'collaboration']",Hybrid,Full-time,4293116325
+231,Software Engineering Graduate Programme,FDM Group,Leeds,Software Engineer,0,"['degree', 'aws', 'agile']",Hybrid,Full-time,4292741890
+232,Graduate Software Engineer| (SD1),Noon-The Social Learning Platform,London,Software Engineer,0,"['ai', 'aws', 'react', 'github', 'innovation']",Hybrid,Full-time,4293058900
+233,Graduate Software Engineer| (SD1),Noon-The Social Learning Platform,London,Software Engineer,0,"['ai', 'aws', 'react', 'github', 'innovation']",Hybrid,Full-time,4293058900
+234,Summer Intern Software Engineer,BAE Systems,Gloucester,Software Engineer,0,"['c#', 'degree', 'react']",Hybrid,Internship,4301796259
+235,Summer Intern Software Engineer,BAE Systems,Gloucester,Software Engineer,0,"['c#', 'degree', 'react']",Hybrid,Internship,4301796259
+236,Software developer (Liverpool/Hybrid),Sentric,Liverpool,Software Engineer,0,"['passion', 'agile', 'aws', 'typescript', 'html', 'css', 'sql', 'ci/cd', 'c', 'collaboration']",Hybrid,Full-time,4299261049
+237,Software developer (Liverpool/Hybrid),Sentric,Liverpool,Software Engineer,0,"['passion', 'agile', 'aws', 'typescript', 'html', 'css', 'sql', 'ci/cd', 'c', 'collaboration']",Hybrid,Full-time,4299261049
+238,"Software Engineer, Summer Intern Uk",Bending Spoons,Cambridge,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301380840
+239,"Software Engineer, Summer Intern Uk",Bending Spoons,Cambridge,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301380840
+240,Graduate Frontend Engineer (Mobile & Web),Suits Me,Manchester Area,Software Engineer,0,"['typescript', 'ci/cd', 'react', 'github']",On-site,Full-time,4296760721
+241,Graduate Frontend Engineer (Mobile & Web),Suits Me,Manchester Area,Software Engineer,0,"['typescript', 'ci/cd', 'react', 'github']",On-site,Full-time,4296760721
+242,Junior Software Developer,Certara,Sheffield,Software Engineer,0,"['c++', 'c#', 'sql', 'c', 'degree']",On-site,Contract,4301798601
+243,Junior Software Developer,Certara,Sheffield,Software Engineer,0,"['c++', 'c#', 'sql', 'c', 'degree']",On-site,Contract,4301798601
+244,Software Engineer,McLaren Racing,Woking,Software Engineer,0,"['data analysis', 'azure', 'agile', 'react', 'aws', 'r', 'typescript', 'gitlab', 'github', 'sql', 'web development', 'python', 'c', 'degree', 'docker']",Hybrid,Full-time,4300042601
+245,Software Engineer,McLaren Racing,Woking,Software Engineer,0,"['data analysis', 'azure', 'agile', 'react', 'aws', 'r', 'typescript', 'gitlab', 'github', 'sql', 'web development', 'python', 'c', 'degree', 'docker']",Hybrid,Full-time,4300042601
+246,Senior Software Engineer,Manchester City Football Club,Manchester,Software Engineer,0,"['azure', 'agile', 'typescript', 'python', 'ci/cd']",On-site,Full-time,4298921414
+247,Senior Software Engineer,Manchester City Football Club,Manchester,Software Engineer,0,"['azure', 'agile', 'typescript', 'python', 'ci/cd']",On-site,Full-time,4298921414
+248,Senior Software Engineer,Ooni,Edinburgh,Software Engineer,0,"['passion', 'react', 'typescript', 'html', 'css', 'innovation', 'c']",Hybrid,Full-time,4289269493
+249,Senior Software Engineer,Ooni,Edinburgh,Software Engineer,0,"['passion', 'react', 'typescript', 'html', 'css', 'innovation', 'c']",Hybrid,Full-time,4289269493
+250,Javascript Developer,Lloyds Banking Group,Manchester,Software Engineer,0,"['azure', 'aws', 'react', 'typescript', 'github', 'ci/cd', 'docker']",empty,Full-time,4299037236
+251,Graduate Software Engineer - Fully Remote in the U,Rio Hondo College,United Kingdom,Software Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4300984760
+252,Artificial Intelligence Intern,Hireshire,United Kingdom,Software Engineer,0,"['bi', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299548566
+253,Software Developer Graduate,"Robustelli ∙ Soucy ∙ Hussey, P.A.",Cambridge,Software Engineer,0,"['passion', 'c++', 'azure', 'agile', 'react', 'aws', 'typescript', 'html', 'sql', 'css', 'python', 'degree', 'collaboration']",Hybrid,Full-time,4289387317
+254,Software Engineer - Remote,The Flex,Birmingham,Software Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301528054
+255,Junior DevOps Engineer,Sparta Global,Leeds,Software Engineer,0,"['python', 'passion', 'collaboration', 'innovation']",empty,Full-time,4281948806
+256,Intermediate Software Engineer II (TypeScript),Goodlord,Sheffield,Software Engineer,0,"['typescript', 'bi', 'react']",empty,Full-time,4291937610
+257,Junior Full Stack Software Engineer,Corecom Technology Academy,Gloucester,Software Engineer,30000,"['passion', 'aws', 'react', 'agile', 'python', 'degree']",Hybrid,Full-time,4277387262
+258,Junior Full Stack Software Engineer,Corecom Technology Academy,Gloucester,Software Engineer,30000,"['passion', 'aws', 'react', 'agile', 'python', 'degree']",Hybrid,Full-time,4277387262
+259,Software Engineer - GammaLabs,Gamma,Manchester,Software Engineer,0,"['aws', 'react', 'typescript', 'html', 'css', 'innovation', 'sql', 'collaboration']",Hybrid,Full-time,4285872021
+260,Software Engineer - GammaLabs,Gamma,Manchester,Software Engineer,0,"['aws', 'react', 'typescript', 'html', 'css', 'innovation', 'sql', 'collaboration']",Hybrid,Full-time,4285872021
+261,Graduate Software Engineer,Logistex,Kettering,Software Engineer,25000.0,"['c', 'passion']",Hybrid,Contract,4295264416
+262,Graduate Software Engineer,Logistex,Kettering,Software Engineer,25000.0,"['c', 'passion']",Hybrid,Contract,4295264416
+263,Software Development Engineer I,Expedia Group,London,Software Engineer,0,"['passion', 'analytical', 'agile', 'innovation', 'degree']",On-site,Full-time,4299646312
+264,Software Development Engineer I,Expedia Group,London,Software Engineer,0,"['passion', 'analytical', 'agile', 'innovation', 'degree']",On-site,Full-time,4299646312
+265,Junior Embedded Software Engineer,"Mid-Way Supply, Inc.",Bristol,Software Engineer,0,['degree'],Hybrid,Full-time,4190708454
+266,Junior Embedded Software Engineer,"Mid-Way Supply, Inc.",Bristol,Software Engineer,0,['degree'],Hybrid,Full-time,4190708454
+267,Graduate/Junior Tools Programmer (Games),Blazing Griffin,Glasgow,Software Engineer,0,"['c#', 'passion', 'degree', 'python']",On-site,Part-time,4251172877
+268,Graduate/Junior Tools Programmer (Games),Blazing Griffin,Glasgow,Software Engineer,0,"['c#', 'passion', 'degree', 'python']",On-site,Part-time,4251172877
+269,Tech Accelerate Graduate Program - Software Engine,RELX,London,Software Engineer,0,"['ai', 'azure', 'aws', 'agile', 'html', 'sql', 'python', 'c']",empty,Full-time,4293805160
+270,Tech Accelerate Graduate Program - Software Engine,RELX,London,Software Engineer,0,"['ai', 'azure', 'aws', 'agile', 'html', 'sql', 'python', 'c']",empty,Full-time,4293805160
+271,"Software Engineer Intern, Developer Tools (2026) (",Figma,London,Software Engineer,0,"['ai', 'react', 'typescript', 'python', 'c', 'collaboration']",empty,Internship,4297193980
+272,"Software Engineer Intern, Developer Tools (2026) (",Figma,London,Software Engineer,0,"['ai', 'react', 'typescript', 'python', 'c', 'collaboration']",empty,Internship,4297193980
+273,"Software Engineer (C#, .NET, Azure)",ASOS.com,London,Software Engineer,0,"['c', 'agile', 'github', 'azure']",Hybrid,Full-time,4301696543
+274,"Software Engineer (C#, .NET, Azure)",ASOS.com,London,Software Engineer,0,"['c', 'agile', 'github', 'azure']",Hybrid,Full-time,4301696543
+275,iOS Developer Intern,NetMind.AI,London Area,Software Engineer,0,"['ai', 'c', 'llm']",On-site,Internship,4294110511
+276,Web Developer - Junior,UNIVERSAL WEB DESIGN,Colchester,Software Engineer,0,"['html', 'mysql', 'css', 'web development']",On-site,Full-time,4296059580
+277,WordPress Developer,Pleasant Valley Farm Equine Education Center,Bristol,Software Engineer,0,['collaboration'],Hybrid,Full-time,4291690887
+278,Junior Software Engineer,BlakBear,London Area,Software Engineer,32000.0,"['ai', 'data analysis', 'machine learning', 'ambitious', 'react', 'r', 'sql', 'innovation', 'python']",On-site,Full-time,4302007301
+279,HTML Coding Specialist - AI Trainer,Invisible Expert Marketplace,Wideopen,Software Engineer,0,"['html', 'ai']",Remote,Contract,4263904588
+280,Graduate Software Engineer - Fully Remote,Rio Hondo College,Hertford Heath,Software Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4297044063
+281,PHP Developer,CAVU,Manchester Area,Software Engineer,0,"['aws', 'github', 'innovation']",Hybrid,Full-time,4297891185
+282,Software Engineer - GammaLabs,Gamma,Newbury,Software Engineer,0,"['agile', 'sql', 'innovation', 'ci/cd', 'collaboration']",Hybrid,Full-time,4279891402
+283,Software Engineer - GammaLabs,Gamma,Newbury,Software Engineer,0,"['agile', 'sql', 'innovation', 'ci/cd', 'collaboration']",Hybrid,Full-time,4279891402
+284,Software Development Engineer I,Expedia Group,London,Software Engineer,0,"['degree', 'passion', 'analytical', 'agile']",On-site,Full-time,4299638434
+285,Software Development Engineer I,Expedia Group,London,Software Engineer,0,"['degree', 'passion', 'analytical', 'agile']",On-site,Full-time,4299638434
+286,Embedded Linux Software Engineer - fully remote,"Mid-Way Supply, Inc.",Manchester,Software Engineer,0,"['c', 'c++', 'r']",empty,Full-time,4282344050
+287,Embedded Linux Software Engineer - fully remote,"Mid-Way Supply, Inc.",Manchester,Software Engineer,0,"['c', 'c++', 'r']",empty,Full-time,4282344050
+288,"Software Engineer, Summer Intern Uk",Bending Spoons,London,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301600349
+289,"Software Engineer, Summer Intern Uk",Bending Spoons,London,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301600349
+290,Data and Technology Graduate Programme,EDF (UK),London,Software Engineer,0,"['degree', 'ai', 'agile', 'machine learning']",Hybrid,Full-time,4299209114
+291,Data and Technology Graduate Programme,EDF (UK),London,Software Engineer,0,"['degree', 'ai', 'agile', 'machine learning']",Hybrid,Full-time,4299209114
+292,Software Developer,Frontier Agriculture,Witham St Hughs,Software Engineer,0,"['passion', 'django', 'agile', 'typescript', 'sql', 'python']",Hybrid,Full-time,4294977289
+293,Software Developer,Frontier Agriculture,Witham St Hughs,Software Engineer,0,"['passion', 'django', 'agile', 'typescript', 'sql', 'python']",Hybrid,Full-time,4294977289
+294,Campus - Internship Programme - Undergraduate Tech,American Express,Burgess Hill,Software Engineer,0,"['machine learning', 'react', 'innovation', 'python', 'c', 'degree']",Hybrid,Internship,4301573716
+295,Campus - Internship Programme - Undergraduate Tech,American Express,Burgess Hill,Software Engineer,0,"['machine learning', 'react', 'innovation', 'python', 'c', 'degree']",Hybrid,Internship,4301573716
+296,Graduate Software Engineer,Mako,London,Software Engineer,0,"['python', 'c', 'c++', 'degree']",On-site,Contract,4294155827
+297,Graduate Software Engineer,Mako,London,Software Engineer,0,"['python', 'c', 'c++', 'degree']",On-site,Contract,4294155827
+298,2026 Technology Graduate Programme,Macquarie Group,London,Software Engineer,0,"['degree', 'collaboration']",Hybrid,Full-time,4291750579
+299,2026 Technology Graduate Programme,Macquarie Group,London,Software Engineer,0,"['degree', 'collaboration']",Hybrid,Full-time,4291750579
+300,Junior C# ASP.Net Web Developer,CybeRim,Northamptonshire,Software Engineer,0,"['asp.net', 'c#', 'html', 'sql', 'web development', 'css', 'c']",On-site,Full-time,4292800027
+301,Graduate Software Developer,targetjobs UK,London,Software Engineer,0,"['degree', 'passion', 'agile', 'collaboration']",On-site,Full-time,4251643217
+302,Junior Tester,Vivedia,Sheffield,Software Engineer,0,[],Hybrid,Full-time,4298402881
+303,Junior DevOps Engineer,Sparta Global,Manchester,Software Engineer,0,"['python', 'passion', 'collaboration', 'innovation']",empty,Full-time,4282343041
+304,QA Engineer,Zeelo,London,Software Engineer,0,"['ai', 'analytical', 'html', 'css', 'python', 'collaboration']",empty,Contract,4300512296
+305,Graduate Software Engineer - Fully Remote,Rio Hondo College,London,Software Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4297031195
+306,Graduate Developer,YourHippo LMS,Preston,Software Engineer,0,"['aws', 'web development']",Hybrid,Full-time,4077147915
+307,Software Engineer,Inflo,United Kingdom,Software Engineer,47500.0,"['azure', 'agile', 'excel', 'sql', 'innovation', 'degree', 'collaboration']",Remote,Full-time,4301757372
+308,Software Engineer,Inflo,United Kingdom,Software Engineer,47500.0,"['azure', 'agile', 'excel', 'sql', 'innovation', 'degree', 'collaboration']",Remote,Full-time,4301757372
+309,Software Engineer Intern,Meta,London,Software Engineer,0,"['python', 'c', 'degree', 'masters']",empty,Full-time,4299534674
+310,Software Engineer Intern,Meta,London,Software Engineer,0,"['python', 'c', 'degree', 'masters']",empty,Full-time,4299534674
+311,Graduate Software Engineer,Bending Spoons,Manchester,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Full-time,4298624677
+312,Graduate Software Engineer,Bending Spoons,Manchester,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Full-time,4298624677
+313,IT Developer,Bettys & Taylors of Harrogate,Harrogate,Software Engineer,0,"['passion', 'azure', 'sql', 'innovation', 'python', 'collaboration']",Hybrid,Full-time,4296234562
+314,IT Developer,Bettys & Taylors of Harrogate,Harrogate,Software Engineer,0,"['passion', 'azure', 'sql', 'innovation', 'python', 'collaboration']",Hybrid,Full-time,4296234562
+315,Graduate Software Developer,TPP,Leeds,Software Engineer,0,"['degree', 'ai', 'agile']",On-site,Full-time,4291086027
+316,Graduate Software Developer,TPP,Leeds,Software Engineer,0,"['degree', 'ai', 'agile']",On-site,Full-time,4291086027
+317,Software Engineer Intern - Summer 2026,XTX Markets,London Area,Software Engineer,0,"['agile', 'machine learning']",On-site,Internship,4292779589
+318,Software Engineer Intern - Summer 2026,XTX Markets,London Area,Software Engineer,0,"['agile', 'machine learning']",On-site,Internship,4292779589
+319,Junior Data Engineer - Financial Data Platform,Spotify,London,Software Engineer,0,"['spark', 'sql', 'analytical', 'collaboration']",empty,Full-time,4225329620
+320,Associate Software Engineer,Copper.co,London,Software Engineer,0,"['postgresql', 'relational databases', 'agile']",empty,Full-time,4278093093
+321,Campus - Internship Programme - Undergraduate Tech,American Express,London,Software Engineer,0,"['machine learning', 'react', 'innovation', 'python', 'c', 'degree']",Hybrid,Internship,4301571812
+322,Graduate Software Engineer 2025 - Platform,Suade,London,Software Engineer,0,"['agile', 'sql', 'python', 'ci/cd', 'degree', 'docker']",empty,Full-time,4300716478
+323,2026 BNY Summer Internship Program - Engineering D,BNY,Manchester,Software Engineer,0,"['ai', 'agile', 'css', 'python', 'degree']",On-site,Full-time,4301294215
+324,Software Engineering Graduate Programme,Babcock International Group,Rosyth,Software Engineer,0,"['ai', 'machine learning', 'agile', 'excel', 'degree']",empty,Full-time,4298561195
+325,Junior SQA Engineer,Brightstar Lottery,Salford,Software Engineer,0,"['passion', 'degree', 'collaboration', 'innovation']",Hybrid,Full-time,4296086971
+326,Data Scientist,BBC,Salford,Software Engineer,0,"['ai', 'machine learning', 'mlops', 'ml', 'python', 'c']",Hybrid,Full-time,4293948954
+327,Software Engineer - Remote,The Flex,Belfast,Software Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301518380
+328,SURGE - Junior Developer,IBM,London,Software Engineer,0,"['ai', 'passion', 'azure', 'aws', 'gitlab', 'innovation', 'ci/cd', 'degree', 'docker']",Hybrid,Full-time,4284793369
+329,Software Development Engineer,Bühler Group,London,Software Engineer,0,"['excel', 'c', 'collaboration', 'azure']",empty,Full-time,4291581669
+330,Salesforce Engineer I (Viator),Viator,London,Software Engineer,0,"['passion', 'agile', 'collaboration']",Remote,Full-time,4251527806
+331,Developer,Superdrug,Croydon,Software Engineer,0,"['degree', 'ci/cd', 'agile', 'azure']",empty,Full-time,4298746383
+332,"2026 Grad Program, Software Engineering",Bending Spoons,Edinburgh,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Full-time,4298629525
+333,"2026 Grad Program, Software Engineering",Bending Spoons,Edinburgh,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Full-time,4298629525
+334,Software Engineer,Sage,Newcastle Upon Tyne,Software Engineer,0,"['html', 'ai', 'sql']",Hybrid,Full-time,4298280515
+335,Software Engineer,Sage,Newcastle Upon Tyne,Software Engineer,0,"['html', 'ai', 'sql']",Hybrid,Full-time,4298280515
+336,Javascript Developer,Track24,London,Software Engineer,0,['react'],empty,Full-time,4296561429
+337,Javascript Developer,Track24,London,Software Engineer,0,['react'],empty,Full-time,4296561429
+338,Summer Intern Software Engineer,BAE Systems,Lancashire,Software Engineer,0,['degree'],Hybrid,Full-time,4300873268
+339,Summer Intern Software Engineer,BAE Systems,Lancashire,Software Engineer,0,['degree'],Hybrid,Full-time,4300873268
+340,Python Developer - Fully Remote,"Keller Williams Realty, Old Town Alexandria, VA",City Of London,Software Engineer,0,"['python', 'django', 'html', 'css']",Remote,Full-time,4288619402
+341,Python Developer - Fully Remote,"Keller Williams Realty, Old Town Alexandria, VA",City Of London,Software Engineer,0,"['python', 'django', 'html', 'css']",Remote,Full-time,4288619402
+342,Associate Cloud Engineer,Asda,Leeds,Software Engineer,0,"['ci/cd', 'azure']",Hybrid,Full-time,4298737910
+343,Graduate Software Engineer,O'Connor Sutton Cronin,Belfast,Software Engineer,0,"['ai', 'machine learning', 'azure', 'aws', 'react', 'typescript', 'html', 'css', 'ml', 'web development', 'sql', 'degree', 'collaboration']",Hybrid,Full-time,4295007415
+344,Backend Engineer - Subscriptions,Spotify,London,Software Engineer,0,['collaboration'],empty,Full-time,4297554804
+345,Engineering Software Industrial Placement,Mercedes-AMG PETRONAS Formula One Team,Brackley,Software Engineer,0,"['passion', 'analytical', 'r', 'python', 'degree', 'masters']",empty,Full-time,4301329565
+346,Junior/Mid Software Engineer,Mytos,London,Software Engineer,0,"['postgresql', 'aws', 'react', 'typescript', 'web development', 'innovation', 'python', 'c', 'collaboration']",empty,Full-time,4294813266
+347,Software Developer (Virtual Auctions),Cox Automotive Europe,Manchester,Software Engineer,0,"['azure', 'agile', 'react', 'aws', 'html', 'github', 'css', 'sql', 'c', 'docker']",Hybrid,Full-time,4296741158
+348,Associate Software Engineer,Ultromics,Oxford,Software Engineer,0,"['spark', 'ai', 'analytical', 'machine learning', 'c#', 'agile', 'c', 'degree']",Hybrid,Full-time,4296736042
+349,Technology Developer Summer Internship Programme 2,Barclays,Glasgow,Software Engineer,0,"['ai', 'passion', 'machine learning', 'collaboration']",empty,Internship,4299547523
+350,Junior Software Engineer,Heartfelt Technologies Ltd,Cambridge,Software Engineer,35000.0,"['ai', 'analytical', 'typescript', 'python', 'c', 'degree']",On-site,Full-time,4257681445
+351,Junior DevOps Engineer,Sparta Global,Newcastle Upon Tyne,Software Engineer,0,"['python', 'passion', 'collaboration', 'innovation']",empty,Full-time,4281947929
+352,Software Developer - Node JS,Club L London,Manchester,Software Engineer,0,"['bi', 'ambitious', 'aws', 'react', 'collaboration']",On-site,Full-time,4297031306
+353,Software Developer,Wellcome Sanger Institute,Hinxton,Software Engineer,0,"['python', 'gitlab', 'degree', 'react']",Hybrid,Full-time,4291798526
+354,DevOps Engineer,Accu,Holmfirth,Software Engineer,0,"['problem solver', 'aws', 'html', 'css', 'ci/cd']",empty,Full-time,4293219054
+355,Graduate Software Developer,Dorset Software,Edinburgh,Software Engineer,0,"['passion', 'degree']",On-site,Full-time,4264281905
+356,Full Stack Software Engineer,Octopus Energy,United Kingdom,Software Engineer,0,"['postgresql', 'ai', 'aws', 'react', 'typescript', 'python', 'degree']",Remote,Full-time,4293765420
+357,Frontend Developer (Shopify),IDHL,Leeds,Software Engineer,40500.0,"['html', 'ambitious', 'passion', 'css']",Hybrid,Full-time,4294571503
+358,Frontend Developer (Shopify),IDHL,Leeds,Software Engineer,40500.0,"['html', 'ambitious', 'passion', 'css']",Hybrid,Full-time,4294571503
+359,Mid/Senior Laravel Developer (Remote),Hilbert Investment Solutions,London,Software Engineer,0,"['azure', 'aws', 'mysql', 'react', 'sql', 'ci/cd', 'docker']",Remote,Full-time,4261759177
+360,Mid/Senior Laravel Developer (Remote),Hilbert Investment Solutions,London,Software Engineer,0,"['azure', 'aws', 'mysql', 'react', 'sql', 'ci/cd', 'docker']",Remote,Full-time,4261759177
+361,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Leeds,Software Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297039154
+362,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Leeds,Software Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297039154
+363,QA Engineer,dnata,Preston,Software Engineer,0,"['degree', 'analytical', 'agile']",empty,Full-time,4299153317
+364,QA Engineer,dnata,Preston,Software Engineer,0,"['degree', 'analytical', 'agile']",empty,Full-time,4299153317
+365,Senior Web Developer (Remote),African Development Choices,London,Software Engineer,0,"['html', 'passion', 'css', 'web development']",Remote,Volunteer,4296999214
+366,Senior Web Developer (Remote),African Development Choices,London,Software Engineer,0,"['html', 'passion', 'css', 'web development']",Remote,Volunteer,4296999214
+367,Software Engineer Intern,Aquatic Capital Management,London Area,Software Engineer,0,"['python', 'ambitious', 'c', 'machine learning']",On-site,Internship,4290849842
+368,Software Engineer Intern,Aquatic Capital Management,London Area,Software Engineer,0,"['python', 'ambitious', 'c', 'machine learning']",On-site,Internship,4290849842
+369,Graduate Software Engineer,BAE Systems,England,Software Engineer,0,"['degree', 'innovation']",On-site,Full-time,4301686848
+370,Graduate Software Engineer,BAE Systems,England,Software Engineer,0,"['degree', 'innovation']",On-site,Full-time,4301686848
+371,Software Engineering Intern (Data Platform) - Summ,XTX Markets,London Area,Software Engineer,0,"['typescript', 'machine learning']",On-site,Internship,4292779683
+372,Software Engineering Intern (Data Platform) - Summ,XTX Markets,London Area,Software Engineer,0,"['typescript', 'machine learning']",On-site,Internship,4292779683
+373,Expressions of interest (UK),Octopus Deploy,Greater London,Software Engineer,0,['agile'],Remote,Full-time,4196956685
+374,Expressions of interest (UK),Octopus Deploy,Greater London,Software Engineer,0,['agile'],Remote,Full-time,4196956685
+375,Backend Engineer – Remote,The Flex,Liverpool,Software Engineer,0,"['analytical', 'ambitious', 'aws', 'innovation', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301504967
+376,Embedded Systems Development,Celestia Technologies,Riccarton,Software Engineer,0,['c'],On-site,Full-time,4295316305
+377,Junior DevOps Engineer,Sparta Global,Liverpool,Software Engineer,0,"['python', 'passion', 'collaboration', 'innovation']",empty,Full-time,4281949665
+378,Software Developers & Programming Specialist - AI ,Invisible Expert Marketplace,Wideopen,Software Engineer,0,"['ai', 'degree', 'innovation']",Remote,Contract,4247398749
+379,Graduate Software Engineer,Bending Spoons,Edinburgh,Software Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Full-time,4298633240
+380,Web Application Developer,Walt Disney World,London,Software Engineer,0,"['asp.net', 'agile', 'html', 'excel', 'gitlab', 'css', 'innovation', 'sql', 'ci/cd', 'c']",On-site,Full-time,4296613127
+381,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Sheffield,Software Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297019985
+382,Go Developer,Perkbox,United Kingdom,Software Engineer,0,"['ai', 'passion', 'azure', 'aws', 'agile', 'mysql', 'react', 'ci/cd', 'docker']",Remote,Full-time,4298390655
+383,Go Developer,Perkbox,United Kingdom,Software Engineer,0,"['ai', 'passion', 'azure', 'aws', 'agile', 'mysql', 'react', 'ci/cd', 'docker']",Remote,Full-time,4298390655
+384,E-Commerce DevOps Engineer,FGH (Freemans Grattan Holdings),Bradford,Software Engineer,0,"['passion', 'problem solver', 'ambitious', 'agile', 'innovation', 'ci/cd', 'c']",Hybrid,Full-time,4295955777
+385,E-Commerce DevOps Engineer,FGH (Freemans Grattan Holdings),Bradford,Software Engineer,0,"['passion', 'problem solver', 'ambitious', 'agile', 'innovation', 'ci/cd', 'c']",Hybrid,Full-time,4295955777
+386,Dotnet Developer,Superdrug,London Area,Software Engineer,0,"['degree', 'ci/cd', 'agile', 'azure']",Hybrid,Full-time,4299553027
+387,Dotnet Developer,Superdrug,London Area,Software Engineer,0,"['degree', 'ci/cd', 'agile', 'azure']",Hybrid,Full-time,4299553027
+388,Software Graduate Scheme,AtkinsRéalis,West Midlands,Software Engineer,0,"['spark', 'passion', 'agile']",Hybrid,Full-time,4298397593
+389,Software Graduate Scheme,AtkinsRéalis,West Midlands,Software Engineer,0,"['spark', 'passion', 'agile']",Hybrid,Full-time,4298397593
+390,Embedded Software Engineer,Spire,Glasgow,Software Engineer,0,"['python', 'degree']",empty,Full-time,4255584864
+391,Embedded Software Engineer,Spire,Glasgow,Software Engineer,0,"['python', 'degree']",empty,Full-time,4255584864
+392,Gameplay Programmer Intern,Epic Games,Greater London,Software Engineer,0,"['c', 'c++', 'react']",On-site,Full-time,4286191036
+393,Gameplay Programmer Intern,Epic Games,Greater London,Software Engineer,0,"['c', 'c++', 'react']",On-site,Full-time,4286191036
+394,Graduate Software Engineer,Haystack,Greater Bristol Area,Software Engineer,33750.0,['degree'],Hybrid,Full-time,4301352609
+395,Graduate Software Engineer,Haystack,Greater Bristol Area,Software Engineer,33750.0,['degree'],Hybrid,Full-time,4301352609
+396,Summer Intern Software Engineer,BAE Systems,East Riding Of Yorkshire,Software Engineer,0,['degree'],Hybrid,Full-time,4300863763
+397,Associate Software Engineer - Energy,Utility Warehouse,London,Software Engineer,0,"['aws', 'react', 'agile', 'typescript', 'excel', 'python', 'collaboration']",Hybrid,Full-time,4299750978
+398,Work at Scarlet,Scarlet,London,Software Engineer,0,"['ai', 'innovation']",80000.0,Full-time,4278225418
+399,Firmware and Electronics Engineer,Paxton Access Ltd,Eastbourne,Software Engineer,45000.0,"['python', 'c', 'collaboration']",Remote,Full-time,4297132670
+400,"Junior Mid Full Stack Developer, AD WARRIOR",Guardian Jobs,Manchester,Software Engineer,0,"['passion', 'problem solver', 'relational databases', 'agile', 'mysql', 'html', 'css', 'web development', 'collaboration']",On-site,Full-time,4295114088
+401,Junior Software Engineer,Xiatech,London Area,Software Engineer,0,"['ai', 'passion', 'analytical', 'problem solver', 'aws', 'degree']",Hybrid,Full-time,4301746738
+402,Front End Developer Specialist,Invisible Expert Marketplace,Wideopen,Software Engineer,0,"['typescript', 'react']",Remote,Contract,4296663955
+403,Software Engineer (Intern),Naptha AI,London,Software Engineer,0,"['python', 'ai', 'ml']",empty,Remote,4151319483
+404,"Graduate Software Engineer - Projects, Linux SQL L",3Dnet,Leeds,Software Engineer,0,"['c', 'degree', 'sql']",On-site,Full-time,4300984773
+405,Software Engineer,Bede Gaming,Newcastle Upon Tyne,Software Engineer,0,"['azure', 'c#', 'typescript', 'sql', 'github', 'innovation', 'c']",Hybrid,Full-time,4297751168
+406,Senior Frontend Engineer – Usage Ingestion (m/f/d),ICE,United Kingdom,Software Engineer,0,"['aws', 'react', 'typescript', 'github', 'css', 'collaboration']",Remote,Full-time,4271002775
+407,Data Engineer,The New Inquiry,City Of London,Software Engineer,0,"['python', 'ambitious', 'sql', 'azure']",Hybrid,Full-time,4299492634
+408,Data Engineer,The New Inquiry,City Of London,Software Engineer,0,"['python', 'ambitious', 'sql', 'azure']",Hybrid,Full-time,4299492634
+409,Software Engineer (.NET/C#),Halfords,Greater Portsmouth Area,Software Engineer,0,"['postgresql', 'passion', 'azure', 'relational databases', 'agile', 'aws', 'innovation', 'c']",55000,Full-time,4298732815
+410,Software Engineer (.NET/C#),Halfords,Greater Portsmouth Area,Software Engineer,0,"['postgresql', 'passion', 'azure', 'relational databases', 'agile', 'aws', 'innovation', 'c']",55000,Full-time,4298732815
+411,Shopify Developer,That Works Agency - Shopify Plus Partner,United Kingdom,Software Engineer,0,['bi'],Remote,Full-time,4294106020
+412,Shopify Developer,That Works Agency - Shopify Plus Partner,United Kingdom,Software Engineer,0,['bi'],Remote,Full-time,4294106020
+413,Software Engineer - Rust,Nando's UK & IRE,London Area,Software Engineer,0,"['typescript', 'agile', 'react']",Hybrid,Full-time,4265420772
+414,Software Engineer - Rust,Nando's UK & IRE,London Area,Software Engineer,0,"['typescript', 'agile', 'react']",Hybrid,Full-time,4265420772
+415,Software Engineer .NET Cloud,Blatchford,Basingstoke,Software Engineer,0,"['asp.net', 'agile', 'r', 'html', 'sql', 'css', 'c', 'degree']",Hybrid,Full-time,4256036647
+416,Software Engineer .NET Cloud,Blatchford,Basingstoke,Software Engineer,0,"['asp.net', 'agile', 'r', 'html', 'sql', 'css', 'c', 'degree']",Hybrid,Full-time,4256036647
+417,Associate Programmer,Omnicom Health,Bollington,Software Engineer,0,"['analytical', 'html', 'css', 'web development', 'degree']",Hybrid,Full-time,4271434357
+418,Associate Programmer,Omnicom Health,Bollington,Software Engineer,0,"['analytical', 'html', 'css', 'web development', 'degree']",Hybrid,Full-time,4271434357
+419,Engineering Graduate Programme (Fullstack),LSEG,City Of London,Software Engineer,0,"['passion', 'agile', 'degree', 'innovation', 'python', 'c', 'masters']",Hybrid,Full-time,4300447380
+420,Engineering Graduate Programme (Fullstack),LSEG,City Of London,Software Engineer,0,"['passion', 'agile', 'degree', 'innovation', 'python', 'c', 'masters']",Hybrid,Full-time,4300447380
+421,Embedded Software Developer,Smartbox Assistive Technology,Bristol,Software Engineer,0,"['passion', 'innovation', 'python', 'c', 'collaboration']",Hybrid,Full-time,4295437803
+422,Embedded Software Developer,Smartbox Assistive Technology,Bristol,Software Engineer,0,"['passion', 'innovation', 'python', 'c', 'collaboration']",Hybrid,Full-time,4295437803
+423,"Hardware Internship Program - Edinburgh, On-site",Nethermind,Edinburgh,Software Engineer,0,"['innovation', 'machine learning', 'ml']",On-site,Full-time,4288908086
+424,"Hardware Internship Program - Edinburgh, On-site",Nethermind,Edinburgh,Software Engineer,0,"['innovation', 'machine learning', 'ml']",On-site,Full-time,4288908086
+425,Machine Learning Intern,Hireshire,United Kingdom,Data Scientist,0,"['bi', 'ai', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299548570
+426,Junior Data Engineer - Revenue Platform,Spotify,London,Data Scientist,0,['agile'],empty,Full-time,4296657850
+427,Data Analyst Internship,Stratx,London Area,Data Scientist,0,"['power bi', 'bi', 'data analysis', 'tableau', 'analytical', 'machine learning', 'azure', 'aws', 'excel', 'sql', 'pandas', 'numpy', 'python', 'data visualisation', 'degree']",Remote,Internship,4301689766
+428,Associate Data Scientist - Intern,Monzo Bank,London,Data Scientist,0,"['ai', 'passion', 'machine learning', 'sql', 'data visualisation', 'python', 'degree']",Hybrid,Full-time,4301319759
+429,Software Engineer,Michael Page,England,Data Scientist,55000.0,"['python', 'ai', 'aws', 'typescript']",Remote,Full-time,4299401630
+430,Machine Learning Internship,Speechmatics,London,Data Scientist,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'tensorflow', 'ml', 'innovation', 'python', 'degree']",Hybrid,Internship,4234288018
+431,Trainee Financial Accountant,PUMA Group,Manchester,Data Scientist,0,"['excel', 'passion']",empty,Full-time,4300195280
+432,Prompt Engineer (Remote),Lion Group,United Kingdom,Data Scientist,0,"['ai', 'analytical', 'llm', 'nlp', 'ml', 'python', 'degree']",Remote,Full-time,4300078462
+433,Prompt Engineer (Remote),Lion Group,United Kingdom,Data Scientist,0,"['ai', 'analytical', 'llm', 'nlp', 'ml', 'python', 'degree']",Remote,Full-time,4300078462
+434,Data Intelligence Graduate Scheme,AtkinsRéalis,Greater London,Data Scientist,0,"['spark', 'passion', 'agile']",Hybrid,Full-time,4298684579
+435,Data Intelligence Graduate Scheme,AtkinsRéalis,Greater London,Data Scientist,0,"['spark', 'passion', 'agile']",Hybrid,Full-time,4298684579
+436,Clinical Research Coordinator,Civia Health,Manchester,Data Scientist,0,"['degree', 'collaboration', 'innovation']",On-site,Full-time,4301387803
+437,Clinical Research Coordinator,Civia Health,Manchester,Data Scientist,0,"['degree', 'collaboration', 'innovation']",On-site,Full-time,4301387803
+438,"Founding AI Engineer, Fira",Fira,London,Data Scientist,100000.0,"['python', 'ai', 'llm', 'typescript']",On-site,Full-time,4259948230
+439,"Founding AI Engineer, Fira",Fira,London,Data Scientist,100000.0,"['python', 'ai', 'llm', 'typescript']",On-site,Full-time,4259948230
+440,Entry Level Grad Scheme,Pareto,London,Data Scientist,42500.0,['degree'],Remote,Full-time,4288788506
+441,Entry Level Grad Scheme,Pareto,London,Data Scientist,42500.0,['degree'],Remote,Full-time,4288788506
+442,Medical Communications Graduate Scheme,"Nucleus Global, an Inizio Company",Manchester,Data Scientist,0,"['passion', 'degree', 'innovation']",On-site,Full-time,4296472260
+443,Project Management Internship at Private Equity In,Private Equity Insights,London,Data Scientist,0,['analytical'],On-site,Contract,4068286265
+444,L'Oréal Summer Internship 2026 - Register Your Int,L'Oréal,London,Data Scientist,0,[],On-site,Full-time,4298397651
+445,Express your interest,Signal,London,Data Scientist,0,[],Hybrid,Full-time,4281967961
+446,Express your interest,Signal,London,Data Scientist,0,[],Hybrid,Full-time,4281967961
+447,2026 Graduate Talent Program - Wealth Management –,UBS,London,Data Scientist,0,"['ambitious', 'degree', 'collaboration', 'ai']",On-site,Full-time,4293499313
+448,2026 Graduate Talent Program - Wealth Management –,UBS,London,Data Scientist,0,"['ambitious', 'degree', 'collaboration', 'ai']",On-site,Full-time,4293499313
+449,Creative Internship,Print Magazine,London,Data Scientist,0,['spark'],Remote,Internship,4300914964
+450,Data Science Intern,WillHire,United Kingdom,Data Scientist,0,"['bi', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299538687
+451,"Software Engineer, Summer Intern Uk",Bending Spoons,London,Data Scientist,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301600349
+452,Data and Technology Graduate Programme,Women in Data®,London Area,Data Scientist,0,"['degree', 'ai', 'agile', 'machine learning']",Hybrid,Full-time,4299214676
+453,Intern / Apprentice,"NTT DATA, Inc.",Warrington,Data Scientist,0,"['ai', 'passion', 'analytical', 'r']",On-site,Full-time,4282284758
+454,Data & Analytics Graduate Programme,FDM Group,Leeds,Data Scientist,0,"['bi', 'sql', 'degree', 'machine learning']",Hybrid,Full-time,4292739890
+455,"Software Engineer Intern, Developer Tools (2026) (",Figma,London,Data Scientist,0,"['ai', 'react', 'typescript', 'python', 'c', 'collaboration']",empty,Internship,4297193980
+456,Communications & Marketing Officer,West Yorkshire Combined Authority,Leeds,Data Scientist,0,[],empty,Full-time,4292963585
+457,Data Entry – Document data capturing – Entry Level,UST,Nottingham,Data Scientist,0,[],empty,Full-time,4233421970
+458,Data Entry – Document data capturing – Entry Level,UST,Nottingham,Data Scientist,0,[],empty,Full-time,4233421970
+459,Clinical Research Coordinator,Civia Health,St Helens,Data Scientist,0,"['degree', 'collaboration', 'innovation']",On-site,Full-time,4301600538
+460,Clinical Research Coordinator,Civia Health,St Helens,Data Scientist,0,"['degree', 'collaboration', 'innovation']",On-site,Full-time,4301600538
+461,Supply Chain Graduate Scheme Year 2025,Mondelēz International,Birmingham,Data Scientist,0,"['bi', 'passion', 'problem solver', 'ambitious', 'agile', 'degree']",empty,Full-time,4299793397
+462,Supply Chain Graduate Scheme Year 2025,Mondelēz International,Birmingham,Data Scientist,0,"['bi', 'passion', 'problem solver', 'ambitious', 'agile', 'degree']",empty,Full-time,4299793397
+463,Chief Revenue Officer - Crypto Exchange,Park Brown International,EMEA,Data Scientist,0,[],Remote,Full-time,4301697787
+464,Chief Revenue Officer - Crypto Exchange,Park Brown International,EMEA,Data Scientist,0,[],Remote,Full-time,4301697787
+465,Complaints Advisor - 10th November 2025,Monzo Bank,London,Data Scientist,0,['ai'],Remote,Full-time,4293825957
+466,Complaints Advisor - 10th November 2025,Monzo Bank,London,Data Scientist,0,['ai'],Remote,Full-time,4293825957
+467,Delivery Consultant,Solirius Reply,London,Data Scientist,0,"['passion', 'ambitious', 'agile', 'excel', 'collaboration']",On-site,Full-time,4283413794
+468,Delivery Consultant,Solirius Reply,London,Data Scientist,0,"['passion', 'ambitious', 'agile', 'excel', 'collaboration']",On-site,Full-time,4283413794
+469,Library & Archives - Archivist (Harland & Wolff),National Museums NI,Holywood,Data Scientist,0,['r'],On-site,Full-time,4301902134
+470,Purchasing Manager,Leprino UK & EU,Magherafelt,Data Scientist,0,"['data analysis', 'degree']",On-site,Full-time,4212812652
+471,Graduate Business,Target Strategies,Manchester,Data Scientist,0,['ambitious'],On-site,Full-time,4300021044
+472,Clinical Trial Coordinator - Cambridge/Glasgow,Thermo Fisher Scientific,Bellshill,Data Scientist,0,"['excel', 'degree', 'innovation']",On-site,Full-time,4299983238
+473,Clinical Trial Coordinator - Cambridge/Glasgow,Thermo Fisher Scientific,Bellshill,Data Scientist,0,"['excel', 'degree', 'innovation']",On-site,Full-time,4299983238
+474,Laboratory Chemist,Thermulon,London,Data Scientist,33500.0,"['analytical', 'r']",On-site,Full-time,4291890557
+475,Data Scientist,BBC,Salford,Data Scientist,0,"['ai', 'machine learning', 'mlops', 'ml', 'python', 'c']",Hybrid,Full-time,4293948954
+476,Artificial Intelligence Intern,Hireshire,United Kingdom,Data Scientist,0,"['bi', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299548566
+477,Data Scientist - Platform & Partner Experience,Spotify,London,Data Scientist,0,"['analytical', 'sql', 'data visualisation', 'python', 'degree']",empty,Full-time,4302005879
+478,Data and Technology Graduate Programme,EDF (UK),London,Data Scientist,0,"['degree', 'ai', 'agile', 'machine learning']",Hybrid,Full-time,4299209114
+479,Graduate Data Scientist,United Utilities,Warrington,Data Scientist,0,"['analytical', 'machine learning', 'sql', 'innovation', 'data visualisation', 'python', 'degree', 'collaboration']",On-site,Full-time,4300889057
+480,Machine Learning Internship,Speechmatics,Cambridge,Data Scientist,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'tensorflow', 'ml', 'innovation', 'python', 'degree']",Hybrid,Internship,4234282821
+481,Data Scientist,Alpine Formula One Team,Enstone,Data Scientist,0,"['passion', 'machine learning', 'azure', 'pytorch', 'docker', 'pandas', 'numpy', 'github', 'python', 'c', 'degree', 'collaboration']",empty,Full-time,4301367451
+482,Graduate Software Engineer,Port of London Authority,Gravesend,Data Scientist,0,"['relational databases', 'degree']",On-site,Full-time,4301698103
+483,Graduate Software Engineer,Port of London Authority,Gravesend,Data Scientist,0,"['relational databases', 'degree']",On-site,Full-time,4301698103
+484,Associate Software Engineer - Intern,Monzo Bank,London,Data Scientist,0,"['ai', 'passion', 'aws', 'react', 'degree', 'docker']",On-site,Full-time,4301309975
+485,Associate Software Engineer - Intern,Monzo Bank,London,Data Scientist,0,"['ai', 'passion', 'aws', 'react', 'degree', 'docker']",On-site,Full-time,4301309975
+486,Graduate Trading Scheme,SmartestEnergy UK,London,Data Scientist,0,[],Hybrid,Full-time,4300857850
+487,Graduate Trading Scheme,SmartestEnergy UK,London,Data Scientist,0,[],Hybrid,Full-time,4300857850
+488,Bioinformatician / Senior Bioinformatician (Crossl,Cambridge Service Alliance,Cambridge,Data Scientist,0,"['ai', 'data analysis', 'r']",On-site,Full-time,4292994280
+489,Bioinformatician / Senior Bioinformatician (Crossl,Cambridge Service Alliance,Cambridge,Data Scientist,0,"['ai', 'data analysis', 'r']",On-site,Full-time,4292994280
+490,Volunteer Map/GIS consultant | Hackney Society,The Hackney Society,London,Data Scientist,0,"['data analysis', 'web development']",Remote,Volunteer,4295585493
+491,Volunteer Map/GIS consultant | Hackney Society,The Hackney Society,London,Data Scientist,0,"['data analysis', 'web development']",Remote,Volunteer,4295585493
+492,General Interest - UK-based positions,Portal Biotech,London,Data Scientist,0,[],Hybrid,Full-time,4268765498
+493,General Interest - UK-based positions,Portal Biotech,London,Data Scientist,0,[],Hybrid,Full-time,4268765498
+494,Procurement Manager,SoTalent,Greater London,Data Scientist,0,"['analytical', 'collaboration', 'innovation']",Hybrid,Full-time,4299970616
+495,Procurement Manager,SoTalent,Greater London,Data Scientist,0,"['analytical', 'collaboration', 'innovation']",Hybrid,Full-time,4299970616
+496,Student Placement – Multiple Roles - 2026/2027,Counter Terrorism Policing,London,Data Scientist,0,[],On-site,Full-time,4299763698
+497,Shell Graduate Programme 2026 - United Kingdom,Shell,London,Data Scientist,0,"['c', 'degree', 'passion']",On-site,Full-time,4298381440
+498,Marketing Programmes Analyst,Kia UK Limited,Walton-On-Thames,Data Scientist,0,"['excel', 'analytical']",Hybrid,Full-time,4297868234
+499,HALO Trust Intern,The HALO Trust,United Kingdom,Data Scientist,0,[],Remote,Internship,4300876720
+500,Graduate Software Engineer,Port of London Authority,London,Data Scientist,35300,"['relational databases', 'degree']",On-site,Full-time,4301725966
+501,Trading Assistant,Sainsbury's,Sheffield,Data Scientist,0,['passion'],empty,Part-time,4300311718
+502,College Graduates - Full-Time - Junior Quantitativ,Old Mission,London,Data Scientist,0,"['python', 'c', 'degree', 'r']",empty,Full-time,4266351976
+503,Business Development Graduate,Resolve Solutions,Manchester,Data Scientist,0,['ambitious'],On-site,Full-time,4300847142
+504,Life Events Advisor (Vulnerable Customers),Monzo Bank,United Kingdom,Data Scientist,0,[],Remote,Full-time,4297189400
+505,Web & Digital Media Officer,West Yorkshire Combined Authority,Leeds,Data Scientist,0,[],empty,Full-time,4297550427
+506,Board Trustee,DHL UK Foundation ,Greater London,Data Scientist,0,[],Hybrid,Volunteer,4300870405
+507,Summer Intern | Financial Economics (2026 Start),Compass Lexecon,London Area,Data Scientist,0,"['excel', 'analytical', 'degree', 'ai']",Hybrid,Internship,4300911555
+508,Summer Intern | Financial Economics (2026 Start),Compass Lexecon,London Area,Data Scientist,0,"['excel', 'analytical', 'degree', 'ai']",Hybrid,Internship,4300911555
+509,Trainee Traffic Operator,Maritime Transport Ltd,Wakefield,Data Scientist,0,[],On-site,Full-time,4297406290
+510,Trainee Traffic Operator,Maritime Transport Ltd,Wakefield,Data Scientist,0,[],On-site,Full-time,4297406290
+511,Technical Author,Send,London Area,Data Scientist,57500.0,"['c', 'passion', 'agile']",Hybrid,Full-time,4275625772
+512,Technical Author,Send,London Area,Data Scientist,57500.0,"['c', 'passion', 'agile']",Hybrid,Full-time,4275625772
+513,Graduate Roles,IRIS Software Group,Manchester Area,Data Scientist,0,['collaboration'],On-site,Full-time,4273346398
+514,Graduate Economic Analyst- Manchester - 2026 Gradu,Pegasus Group,Manchester,Data Scientist,0,"['passion', 'analytical', 'degree', 'innovation']",empty,Full-time,4301781458
+515,Junior Campaign Executive - Entry Level,Sage Solutions | Marketing Agency,Birmingham,Data Scientist,28750.0,['ambitious'],On-site,Full-time,4297538305
+516,Analytics Graduate Opportunity,Glencore UK,London Area,Data Scientist,0,"['analytical', 'data analysis', 'problem solver', 'excel', 'sql', 'innovation', 'python', 'degree']",On-site,Full-time,4298172818
+517,Red Bull Student Marketeer - Sheffield Hallam Univ,Red Bull,Sheffield,Data Scientist,0,[],On-site,Part-time,4251752489
+518,"Medical Laboratory Assistant, Biochemistry Departm",Health Services Laboratories,London,Data Scientist,0,"['analytical', 'innovation']",On-site,Contract,4301721647
+519,Product Cybersecurity Engineer,Johnson Controls,Belfast,Data Scientist,0,"['degree', 'sql']",Hybrid,Full-time,4256626576
+520,NATO Defence and Deterrence Policy,UK Ministry of Defence,London,Data Scientist,0,['c'],empty,Full-time,4295704105
+521,Entry Level Management,Rhino Bridge,Maidstone,Data Scientist,0,['collaboration'],On-site,Full-time,4300174003
+522,Network Engineer,Searchability®,Kent,Data Scientist,37500.0,"['ambitious', 'html', 'innovation', 'python', 'collaboration']",On-site,Full-time,4301520589
+523,Investment strategic AI partnerships Associate,Confidential Company,London Area,Data Scientist,0,"['ai', 'passion', 'analytical', 'collaboration']",Hybrid,Full-time,4292850842
+524,Analytical Scientist,Asymchem Group,Sandwich,Data Scientist,0,"['analytical', 'degree', 'r']",On-site,Full-time,4291566432
+525,AI/ML Intern,WillHire,United Kingdom,Data Scientist,0,"['bi', 'ai', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299536699
+526,Data Scientist (AI & ML),Rightmove,London,Data Scientist,0,"['ai', 'passion', 'machine learning', 'pytorch', 'tensorflow', 'sql', 'innovation', 'ml', 'python', 'data visualisation', 'degree']",Hybrid,Full-time,4247510122
+527,Data Analyst Intern,Pimlico Enterprises,United Kingdom,Data Scientist,0,"['power bi', 'bi', 'passion', 'data analysis', 'analytical', 'tableau', 'excel', 'sql']",Remote,Part-time,4294484365
+528,Junior Data Scientist,MarketCast,Reading,Data Scientist,0,"['tableau', 'machine learning', 'aws', 'agile', 'sql', 'pandas', 'python', 'degree']",Hybrid,Full-time,4294632629
+529,Junior Data Scientist,Verisk,Norwich,Data Scientist,0,"['passion', 'machine learning', 'sql', 'innovation', 'python', 'degree']",Hybrid,Full-time,4296430521
+530,Data Analyst Intern,Nexus,United Kingdom,Data Scientist,0,"['power bi', 'bi', 'data analysis', 'analytical', 'tableau', 'excel', 'sql']",Remote,Part-time,4293400822
+531,Associate Software Engineer (Python),Sky,Isleworth,Data Scientist,0,"['ai', 'llm', 'machine learning', 'agile', 'pytorch', 'r', 'tensorflow', 'nlp', 'ml', 'pandas', 'python', 'numpy', 'c', 'docker']",Hybrid,Full-time,4301555195
+532,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Sheffield,Data Scientist,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297019985
+533,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Sheffield,Data Scientist,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297019985
+534,Junior Data Engineer - Financial Data Platform,Spotify,London,Data Scientist,0,"['spark', 'sql', 'analytical', 'collaboration']",empty,Full-time,4225329620
+535,Junior Data Engineer - Financial Data Platform,Spotify,London,Data Scientist,0,"['spark', 'sql', 'analytical', 'collaboration']",empty,Full-time,4225329620
+536,Machine Learning Engineer,"City St George’s, University of London",Islington,Data Scientist,0,"['pytorch', 'tensorflow', 'innovation', 'python', 'collaboration']",On-site,Full-time,4300317747
+537,Machine Learning Engineer,"City St George’s, University of London",Islington,Data Scientist,0,"['pytorch', 'tensorflow', 'innovation', 'python', 'collaboration']",On-site,Full-time,4300317747
+538,"Software Engineer, Summer Intern Uk",Bending Spoons,United Kingdom,Data Scientist,0,"['python', 'ci/cd', 'ambitious', 'docker']",Remote,Internship,4301384790
+539,"Software Engineer, Summer Intern Uk",Bending Spoons,United Kingdom,Data Scientist,0,"['python', 'ci/cd', 'ambitious', 'docker']",Remote,Internship,4301384790
+540,Technology Data Intern,Creative Artists Agency,London,Data Scientist,0,"['passion', 'data analysis', 'analytical', 'machine learning', 'tableau', 'innovation', 'c', 'collaboration']",empty,Full-time,4301563462
+541,Technology Data Intern,Creative Artists Agency,London,Data Scientist,0,"['passion', 'data analysis', 'analytical', 'machine learning', 'tableau', 'innovation', 'c', 'collaboration']",empty,Full-time,4301563462
+542,Junior Software Engineer,BlakBear,London Area,Data Scientist,32000.0,"['ai', 'data analysis', 'machine learning', 'ambitious', 'react', 'r', 'sql', 'innovation', 'python']",On-site,Full-time,4302007301
+543,Junior Software Engineer,BlakBear,London Area,Data Scientist,32000.0,"['ai', 'data analysis', 'machine learning', 'ambitious', 'react', 'r', 'sql', 'innovation', 'python']",On-site,Full-time,4302007301
+544,Python Developer - Fully Remote,"Keller Williams Realty, Old Town Alexandria, VA",City Of London,Data Scientist,0,"['python', 'django', 'html', 'css']",Remote,Full-time,4288619402
+545,Python Developer - Fully Remote,"Keller Williams Realty, Old Town Alexandria, VA",City Of London,Data Scientist,0,"['python', 'django', 'html', 'css']",Remote,Full-time,4288619402
+546,Graduate Software Developer,TPP,Leeds,Data Scientist,0,"['degree', 'ai', 'agile']",On-site,Full-time,4291086027
+547,Graduate Software Developer,TPP,Leeds,Data Scientist,0,"['degree', 'ai', 'agile']",On-site,Full-time,4291086027
+548,Campus - Internship Programme - Undergraduate Tech,American Express,London,Data Scientist,0,"['machine learning', 'react', 'innovation', 'python', 'c', 'degree']",Hybrid,Internship,4301571812
+549,Software Engineer Intern - Summer 2026,XTX Markets,London Area,Data Scientist,0,"['agile', 'machine learning']",On-site,Internship,4292779589
+550,Software Engineering Intern,G-Research,London Area,Data Scientist,0,"['c', 'analytical']",On-site,Internship,4296237543
+551,Associate Engineer (Liverpool/Hybrid),Believe,Liverpool,Data Scientist,0,"['passion', 'aws', 'typescript', 'sql', 'web development', 'c', 'degree']",empty,Full-time,4297778163
+552,DevOps Intern,WillHire,United Kingdom,Data Scientist,0,"['ai', 'passion', 'analytical', 'azure', 'aws', 'gitlab', 'github', 'ml', 'python', 'ci/cd', 'docker']",Remote,Internship,4299588927
+553,Data Insight Analyst,Diabetes UK,London,Data Scientist,0,[],Hybrid,Full-time,4296874999
+554,Software Engineering Graduate Programme,FDM Group,Leeds,Data Scientist,0,"['degree', 'aws', 'agile']",Hybrid,Full-time,4292741890
+555,Software Development Engineer,American Express Global Business Travel,United Kingdom,Data Scientist,0,"['asp.net', 'azure', 'c#', 'agile', 'react', 'typescript', 'html', 'css', 'sql', 'ci/cd', 'c']",Remote,Full-time,4289659045
+556,Product Security Engineer (University Grad),Meta,London,Data Scientist,0,"['degree', 'masters', 'python']",empty,Full-time,4267802056
+557,"BCG X AI Engineer Internship, United Kingdom",Boston Consulting Group (BCG),London,Data Scientist,0,"['spark', 'ai', 'passion', 'problem solver', 'python', 'degree']",empty,Internship,4152198174
+558,"BCG X AI Engineer Internship, United Kingdom",Boston Consulting Group (BCG),London,Data Scientist,0,"['spark', 'ai', 'passion', 'problem solver', 'python', 'degree']",empty,Internship,4152198174
+559,"Intern, Quantum Solutions (PDEs)",PsiQuantum,Daresbury,Data Scientist,0,"['passion', 'analytical', 'degree', 'github']",empty,Internship,4255010052
+560,Summer Intern Security Consultant,BAE Systems Digital Intelligence,London,Data Scientist,0,['degree'],Hybrid,Full-time,4301775465
+561,CRM Associate,Lottie,London,Data Scientist,34000.0,"['ambitious', 'c', 'ai']",Hybrid,Full-time,4294673237
+562,Software Engineering Intern (Data Platform) - Summ,XTX Markets,London Area,Data Scientist,0,"['typescript', 'machine learning']",On-site,Internship,4292779683
+563,Software Engineering Intern (Data Platform) - Summ,XTX Markets,London Area,Data Scientist,0,"['typescript', 'machine learning']",On-site,Internship,4292779683
+564,Marketing Assistant,Bullseye Group Sheffield,Sheffield,Data Scientist,0,[],On-site,Full-time,4262224502
+565,Expressions of interest (UK),Octopus Deploy,Greater London,Data Scientist,0,['agile'],Remote,Full-time,4196956685
+566,Engineering Software Industrial Placement,Mercedes-AMG PETRONAS Formula One Team,Brackley,Data Scientist,0,"['passion', 'analytical', 'r', 'python', 'degree', 'masters']",empty,Full-time,4301329565
+567,Red Bull Student Marketeer Liverpool,Red Bull,Liverpool,Data Scientist,0,[],On-site,Part-time,4197397276
+568,Red Bull Student Marketeer Liverpool,Red Bull,Liverpool,Data Scientist,0,[],On-site,Part-time,4197397276
+569,2026 Summer Internship - GOTO (Technology) - Londo,UBS,London,Data Scientist,0,"['ai', 'passion', 'ambitious', 'degree', 'collaboration']",On-site,Full-time,4293700171
+570,2026 Summer Internship - GOTO (Technology) - Londo,UBS,London,Data Scientist,0,"['ai', 'passion', 'ambitious', 'degree', 'collaboration']",On-site,Full-time,4293700171
+571,Campus - Internship Programme - Undergraduate ICS ,American Express,Brighton,Data Scientist,0,"['passion', 'ambitious', 'excel', 'innovation', 'degree', 'collaboration']",Hybrid,Internship,4301587119
+572,Engineer - Entry Level RUST Developer,Magnite,Belfast,Data Scientist,0,"['passion', 'agile', 'innovation', 'c', 'degree', 'collaboration']",Hybrid,Full-time,4295707042
+573,E.ON Degree Apprenticeship Programme - Register yo,E.ON UK,Nottingham,Data Scientist,0,['degree'],Hybrid,Full-time,4299552368
+574,Analytical Lab Analyst,Imperial Brands PLC,Liverpool,Data Scientist,0,"['analytical', 'collaboration', 'innovation']",On-site,Full-time,4297501674
+575,Junior Web Developer,The 10 Group,London,Data Scientist,0,"['html', 'css', 'web development']",empty,Part-time,4286246666
+576,Data Scientist,UiPath,Manchester,Data Scientist,0,"['ai', 'passion', 'data analysis', 'machine learning', 'relational databases', 'r', 'sql', 'innovation', 'python']",empty,Full-time,4293686953
+577,Data Scientist,Cint,London,Data Scientist,0,"['spark', 'analytical', 'machine learning', 'sql', 'innovation', 'python', 'degree', 'collaboration']",Remote,Full-time,4282189218
+578,Graduate AI & Software Engineer,Reply,Manchester Area,Data Scientist,0,"['ai', 'machine learning', 'azure', 'aws', 'ml', 'degree']",Hybrid,Full-time,4285855876
+579,Computer Vision Specialist - AI Trainer,Invisible Expert Marketplace,Wideopen,Data Scientist,0,"['ai', 'analytical', 'degree']",Remote,Contract,4294905633
+580,Graduate Data Analyst (Water Demand),United Utilities,Warrington,Data Scientist,0,"['data analysis', 'analytical', 'azure', 'excel', 'sql', 'innovation', 'degree', 'masters']",On-site,Full-time,4300884285
+581,"Software Engineer, Summer Intern Uk",Bending Spoons,Cambridge,Data Scientist,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301380840
+582,Junior Machine Learning Engineer (6 Months Fixed T,RAPP,London,Data Scientist,0,"['ai', 'data analysis', 'machine learning', 'aws', 'sql', 'pandas', 'python', 'degree']",Hybrid,Full-time,4263268799
+583,Junior Machine Learning Engineer (6 Months Fixed T,RAPP,London,Data Scientist,0,"['ai', 'data analysis', 'machine learning', 'aws', 'sql', 'pandas', 'python', 'degree']",Hybrid,Full-time,4263268799
+584,Analytical Laboratory Opportunities,Almac Group,Craigavon,Data Scientist,0,"['analytical', 'degree']",Hybrid,Full-time,4298244874
+585,Analytical Laboratory Opportunities,Almac Group,Craigavon,Data Scientist,0,"['analytical', 'degree']",Hybrid,Full-time,4298244874
+586,Work at Scarlet,Scarlet,London,Data Scientist,0,"['ai', 'innovation']",80000.0,Full-time,4278225418
+587,Social Media Marketing Intern,MetBrains,United Kingdom,Data Scientist,0,['collaboration'],Remote,Internship,4297752830
+588,Trainee Insolvency Adminsitrator,Begbies Traynor Group,Leeds,Data Scientist,0,[],On-site,Full-time,4299351171
+589,Graduate Software Engineer,Sagentia Innovation,Cambridge,Data Scientist,0,"['c#', 'ambitious', 'agile', 'innovation', 'python', 'c', 'degree']",On-site,Full-time,4296457616
+590,Ensoft - Early in Career /Graduate Software Engine,Cisco,Harpenden,Data Scientist,0,"['passion', 'innovation']",empty,Full-time,4300916819
+591,Fellow,TIME,London,Data Scientist,0,"['c', 'degree', 'innovation']",Hybrid,Full-time,4295957293
+592,Network Analyst,Northern Gas Networks,Sunderland,Data Scientist,35700,"['ambitious', 'degree', 'collaboration']",On-site,Full-time,4299253470
+593,"Volunteer Copywriting, Website & Data Support Volu",Alzheimer's and Dementia Support Services,Northfleet,Data Scientist,0,['web development'],Remote,Volunteer,4282815863
+594,Senior Network Engineer - Runescape: Dragonwilds,Jagex,Cambridge,Data Scientist,0,"['passion', 'c++', 'c#', 'ambitious', 'python', 'collaboration']",Remote,Full-time,4296085791
+595,Intern- Digital Field Marketing,Marriott International,London,Data Scientist,0,"['excel', 'degree']",On-site,Internship,4301334326
+596,Register your interest in Supply Chain Opportuniti,Coca-Cola Europacific Partners,East Kilbride,Data Scientist,0,[],empty,Full-time,4300163393
+597,Audience Growth Strategist,Newsweek,United Kingdom,Data Scientist,0,"['ai', 'collaboration']",Remote,Full-time,4275975672
+598,Network Engineer - Remote,C42 Engineering,London,Data Scientist,0,"['passion', 'collaboration', 'azure']",Remote,Full-time,4293215345
+599,Chemist,Ecolab,Andover,Data Scientist,0,"['analytical', 'degree', 'r']",On-site,Full-time,4271026854
+600,Graduate Data Scientist,WHSmith,London Area,Data Scientist,0,"['power bi', 'bi', 'passion', 'analytical', 'tableau', 'machine learning', 'ambitious', 'r', 'sql', 'innovation', 'data visualisation', 'python', 'degree']",Hybrid,Full-time,4301236893
+601,Data Scientist,Cint,London,Data Scientist,0,"['spark', 'data analysis', 'analytical', 'machine learning', 'sql', 'innovation', 'python', 'degree', 'collaboration']",Remote,Full-time,4299767308
+602,Python Developer,Global,London,Data Scientist,0,"['passion', 'django', 'agile', 'aws', 'python', 'docker']",empty,Full-time,4289482678
+603,Bioinformatician / Senior Bioinformatician (Crossl,Minderoo Centre for Technology and Democracy,Cambridge,Data Scientist,0,"['ai', 'data analysis', 'r']",On-site,Full-time,4298723694
+604,Graduate/Junior Tools Programmer (Games),Blazing Griffin,Glasgow,Data Scientist,0,"['c#', 'passion', 'degree', 'python']",On-site,Part-time,4251172877
+605,WordPress Developer,Xterna ,Manchester,Data Scientist,0,"['ai', 'passion', 'html', 'css', 'web development', 'collaboration']",empty,Contract,4296645956
+606,Category Analyst,Greggs,Newcastle Upon Tyne,Data Scientist,28000,"['power bi', 'ai', 'passion', 'bi', 'analytical', 'r', 'excel', 'python', 'degree']",Hybrid,Full-time,4299536265
+607,Consulting Digital Careers - Graduate - Manchester,RSM UK,Manchester,Data Scientist,0,"['ai', 'passion', 'analytical', 'innovation', 'degree']",Hybrid,Full-time,4293544526
+608,Consulting Digital Careers - Graduate - Manchester,RSM UK,Manchester,Data Scientist,0,"['ai', 'passion', 'analytical', 'innovation', 'degree']",Hybrid,Full-time,4293544526
+609,Backend Engineer - Subscriptions,Spotify,London,Data Scientist,0,['collaboration'],empty,Full-time,4297554804
+610,Backend Engineer - Subscriptions,Spotify,London,Data Scientist,0,['collaboration'],empty,Full-time,4297554804
+611,Health Sciences Specialist – AI Trainer,Invisible Expert Marketplace,Wideopen,Data Scientist,0,"['ai', 'degree']",Remote,Contract,4225733975
+612,Health Sciences Specialist – AI Trainer,Invisible Expert Marketplace,Wideopen,Data Scientist,0,"['ai', 'degree']",Remote,Contract,4225733975
+613,Cofounder of a climatech startup - Engineer,Carbon13,United Kingdom,Data Scientist,0,[],Remote,Full-time,4232756225
+614,Cofounder of a climatech startup - Engineer,Carbon13,United Kingdom,Data Scientist,0,[],Remote,Full-time,4232756225
+615,IT Trackside Engineer,Aston Martin F1 Team,Silverstone,Data Scientist,0,"['sql', 'azure']",On-site,Full-time,4298595396
+616,"Graduate Analyst, Incident Response",S-RM,London,Data Scientist,0,[],Hybrid,Full-time,4260257056
+617,Trainee Trading Standards Officer (Apprentice) CDC,Doncaster Council,Doncaster,Data Scientist,0,['ambitious'],On-site,Full-time,4296445071
+618,Register Your Interest - Intern,Arm,Sheffield,Data Scientist,0,['degree'],Hybrid,Full-time,4289486185
+619,London Full Time Stock Controller,Louis Vuitton,London,Data Scientist,0,[],On-site,Full-time,4302010524
+620,Intern - IT,Panasonic Appliances Refrigeration Systems de Méxi,Newry Mourne And Down,Data Scientist,0,"['analytical', 'degree', 'innovation', 'r']",On-site,Full-time,4301690461
+621,PhD Peer Reviewer needed: Professor of Computer Sc,"Fengkai Group Co., Limited",United Kingdom,Data Scientist,200,"['analytical', 'degree']",Remote,Part-time,4295534862
+622,Clinical Research Coordinator,Civia Health,Tyne And Wear,Data Scientist,0,"['degree', 'collaboration', 'innovation']",On-site,Full-time,4296332675
+623,Clinical Research Coordinator,Civia Health,Tyne And Wear,Data Scientist,0,"['degree', 'collaboration', 'innovation']",On-site,Full-time,4296332675
+624,Product Development Technologist,Premier Foods,Worksop,Data Scientist,0,['degree'],On-site,Full-time,4278060886
+625,🚀 Quantitative Trader,Crypto Trading Startup,United Kingdom,Data Scientist,0,"['python', 'c', 'data analysis', 'innovation']",Remote,Contract,4284769343
+626,Software Engineer Intern (Winter 2026),Cohere,London,Data Scientist,0,"['ai', 'nlp', 'machine learning']",Remote,Internship,4297027675
+627,Software Engineer,McLaren Racing,Woking,Data Scientist,0,"['data analysis', 'azure', 'agile', 'react', 'aws', 'r', 'typescript', 'gitlab', 'github', 'sql', 'web development', 'python', 'c', 'degree', 'docker']",Hybrid,Full-time,4300042601
+628,KS5 Specialist Mathematics Tutor,MathsFlex Tutoring,United Kingdom,Data Scientist,0,"['excel', 'degree']",Remote,Part-time,4301782918
+629,Graduate Software Engineer,Bending Spoons,Manchester,Data Scientist,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Full-time,4298624677
+630,IT Operations Graduate Programme,FDM Group,Leeds,Data Scientist,0,['degree'],Hybrid,Full-time,4299530011
+631,Mainfreight Development Programme Manchester,Mainfreight Europe,Manchester,Data Scientist,0,['degree'],On-site,Full-time,4112790612
+632,Red Bull Student Marketeer - University of Leeds,Red Bull,Leeds,Data Scientist,0,[],On-site,Part-time,4168387365
+633,Red Bull Student Marketeer - University of Leeds,Red Bull,Leeds,Data Scientist,0,[],On-site,Part-time,4168387365
+634,Admin,VINCI Energies,Glasgow,Data Scientist,0,[],empty,Full-time,4298108117
+635,Admin,VINCI Energies,Glasgow,Data Scientist,0,[],empty,Full-time,4298108117
+636,Analytical Chemist,Kindeva Drug Delivery,Loughborough,Data Scientist,0,"['excel', 'analytical', 'degree']",On-site,Full-time,4294140035
+637,Payroll Manager,Chester Zoo,Chester,Data Scientist,0,"['ambitious', 'excel']",Hybrid,Full-time,4288228432
+638,Polymer Chemist,Systems Inc,Birmingham,Data Scientist,0,"['passion', 'analytical', 'degree']",On-site,Full-time,4282339991
+639,Campus - Internship Programme - Undergraduate GMNS,American Express,London,Data Scientist,0,"['analytical', 'agile', 'innovation']",Hybrid,Internship,4301582241
+640,Campus - Internship Programme - Undergraduate GMNS,American Express,London,Data Scientist,0,"['analytical', 'agile', 'innovation']",Hybrid,Internship,4301582241
+641,Process Engineer,Flexible Medical Packaging Limited,Lancaster,Data Scientist,0,[],On-site,Full-time,4296459619
+642,Microbiology Specialist – AI Trainer,Invisible Expert Marketplace,Wideopen,Data Scientist,0,['ai'],Remote,Contract,4277272588
+643,Journalist - Hull X 2 Positions,BBC,Kingston Upon Hull,Data Scientist,0,"['c', 'innovation']",On-site,Full-time,4299973630
+644,"CIMA Finance Graduate Programme, Arla - Leeds",Arla Foods,Leeds,Data Scientist,0,"['passion', 'analytical', 'innovation', 'degree', 'collaboration']",empty,Full-time,4294594543
+645,M&A Internship (m/f/d) 2026,Dansk Merchant Capital A/S,London,Data Scientist,0,"['excel', 'analytical', 'degree']",On-site,Internship,4297704097
+646,Vice-Chancellor,University of Bradford,Bradford,Data Scientist,0,"['agile', 'collaboration', 'innovation']",On-site,Full-time,4299407470
+647,Race Strategy and Race Engineering Industrial Plac,Mercedes-AMG PETRONAS Formula One Team,Brackley,Data Scientist,0,"['python', 'analytical', 'masters']",empty,Full-time,4301327640
+648,Remote Program Coordinator,Bloom with Narelle,London,Data Scientist,0,['spark'],empty,Remote,4291771383
+649,Remote Program Coordinator,Bloom with Narelle,London,Data Scientist,0,['spark'],empty,Remote,4291771383
+650,Junior Web Developer,The 10 Group,London,Machine Learning Engineer,0,"['html', 'css', 'web development']",empty,Part-time,4286246666
+651,Artificial Intelligence Intern,Hireshire,United Kingdom,Machine Learning Engineer,0,"['bi', 'power bi', 'analytical', 'data analysis', 'tableau', 'azure', 'matplotlib', 'aws', 'sql', 'ml', 'pandas', 'python', 'numpy', 'github', 'docker']",Remote,Internship,4299548566
+652,Data Scientist,BBC,Salford,Machine Learning Engineer,0,"['ai', 'machine learning', 'mlops', 'ml', 'python', 'c']",Hybrid,Full-time,4293948954
+653,AI Engineer,Tenth Revolution Group,United Kingdom,Machine Learning Engineer,55000.0,"['ai', 'azure', 'aws', 'ml', 'python']",Remote,Full-time,4299205284
+654,Junior Data Engineer - Revenue Platform,Spotify,London,Machine Learning Engineer,0,['agile'],empty,Full-time,4296657850
+655,(Contract) Computer Vision / Machine Learning Engi,Isla Health | B Corp™,United Kingdom,Machine Learning Engineer,0,"['ai', 'pytorch', 'tensorflow', 'ml', 'python']",Remote,Contract,4302003046
+656,Machine Learning Engineer,Latinx in AI (LXAI),York,Machine Learning Engineer,0,"['machine learning', 'azure', 'pandas', 'ml', 'python']",Hybrid,Full-time,4293099185
+657,Machine Learning Engineer,Kingfisher plc,London,Machine Learning Engineer,0,"['ai', 'data analysis', 'machine learning', 'matplotlib', 'agile', 'nlp', 'ml', 'sql', 'python', 'pandas']",Hybrid,Full-time,4295006925
+658,Machine Learning Engineer,"City St George’s, University of London",Islington,Machine Learning Engineer,0,"['pytorch', 'tensorflow', 'innovation', 'python', 'collaboration']",On-site,Full-time,4300317747
+659,Machine Learning Engineer - Sports AI,Hawk-Eye Innovations Ltd,Bristol,Machine Learning Engineer,0,"['machine learning', 'aws', 'react', 'pytorch', 'r', 'typescript', 'mlops', 'github', 'ml', 'python', 'ci/cd', 'docker', 'collaboration']",On-site,Full-time,4300980233
+660,AI Engineer,Natobotics ,Sheffield,Machine Learning Engineer,0,"['spark', 'ai', 'c++', 'analytical', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'nlp', 'ml', 'pandas', 'python', 'sql', 'degree']",On-site,Contract,4292634108
+661,Associate Software Engineer (Python),Sky,Isleworth,Machine Learning Engineer,0,"['ai', 'llm', 'machine learning', 'agile', 'pytorch', 'r', 'tensorflow', 'nlp', 'ml', 'pandas', 'python', 'numpy', 'c', 'docker']",Hybrid,Full-time,4301555195
+662,Machine Learning Engineer (AI Platform),OVO,United Kingdom,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'pytorch', 'tensorflow', 'excel', 'mlops', 'github', 'ml', 'python', 'collaboration']",Remote,Full-time,4294127587
+663,AI/ML Engineer,interactive investor,Manchester,Machine Learning Engineer,0,"['ai', 'machine learning', 'pytorch', 'typescript', 'mlops', 'ml', 'pandas', 'docker', 'collaboration', 'problem solver', 'azure', 'tensorflow', 'innovation', 'aws', 'r', 'python', 'c++', 'agile', 'numpy']",On-site,Contract,4300980918
+664,Machine Learning Engineer,Superduper,London,Machine Learning Engineer,0,"['problem solver', 'machine learning', 'aws', 'pytorch', 'tensorflow', 'mlops', 'nlp', 'innovation', 'ml', 'python', 'ci/cd', 'docker', 'collaboration']",Remote,Full-time,4278659550
+665,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Manchester,Machine Learning Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297035200
+666,Software Engineer,The Walt Disney Company,Manchester,Machine Learning Engineer,0,"['ai', 'passion', 'azure', 'agile', 'react', 'aws', 'typescript', 'html', 'css', 'innovation', 'collaboration']",On-site,Full-time,4296955189
+667,Applied AI Engineer,Fuse Energy,London,Machine Learning Engineer,0,"['ai', 'llm', 'machine learning', 'pytorch', 'tensorflow', 'nlp', 'ml', 'python']",Remote,Full-time,4279457680
+668,Graduate AI & Software Engineer,Reply,Manchester Area,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'aws', 'ml', 'degree']",Hybrid,Full-time,4285855876
+669,AI Engineer,Hastings Direct,East Sussex,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'ambitious', 'innovation', 'ml', 'python', 'ci/cd', 'collaboration']",Hybrid,Full-time,4301748913
+670,AI Engineer,Nourish Care,Bournemouth,Machine Learning Engineer,0,"['ai', 'azure', 'aws', 'ml', 'innovation', 'python']",empty,Full-time,4279280191
+671,AI Engineer,Xcede,United Kingdom,Machine Learning Engineer,45000.0,"['ai', 'llm', 'aws', 'mlops', 'python', 'degree']",Remote,Full-time,4288037254
+672,Machine Learning Engineer,WORKBLISS,United Kingdom,Machine Learning Engineer,0,"['ai', 'postgresql', 'machine learning', 'aws', 'pytorch', 'pandas', 'ml', 'nlp', 'python', 'docker']",Remote,Contract,4300331063
+673,Machine Learning Engineer,WORKBLISS,United Kingdom,Machine Learning Engineer,0,"['ai', 'postgresql', 'machine learning', 'aws', 'pytorch', 'pandas', 'ml', 'nlp', 'python', 'docker']",Remote,Contract,4300331063
+674,Machine Learning Engineer,Fathom,Bristol,Machine Learning Engineer,0,"['machine learning', 'pytorch', 'tensorflow', 'mlops', 'github', 'ml', 'python']",Hybrid,Full-time,4284168565
+675,Machine Learning Engineer - 3/4 Month Contract,Samsung Electronics UK,Staines-Upon-Thames,Machine Learning Engineer,0,"['ai', 'machine learning', 'pytorch', 'r', 'html', 'innovation', 'ml', 'python', 'numpy', 'c']",Hybrid,Full-time,4289783002
+676,Machine Learning Engineer,Leonardo,Bristol,Machine Learning Engineer,0,"['spark', 'ai', 'machine learning', 'pytorch', 'tensorflow', 'mlops', 'nlp', 'sql', 'innovation', 'python', 'ci/cd']",Hybrid,Full-time,4253786668
+677,Machine Learning Engineer - Sports AI,Hawk-Eye Innovations Ltd,London,Machine Learning Engineer,0,"['machine learning', 'aws', 'react', 'pytorch', 'r', 'typescript', 'mlops', 'github', 'ml', 'python', 'ci/cd', 'docker', 'collaboration']",On-site,Full-time,4300964802
+678,Artificial Intelligence Engineer,Dunbar Brown Group,United Kingdom,Machine Learning Engineer,0,"['python', 'ai', 'llm', 'azure']",Remote,Full-time,4290663740
+679,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Newcastle Upon Tyne,Machine Learning Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297037145
+680,Graduate AI & Machine Learning Engineer,Reply,London Area,Machine Learning Engineer,0,"['bi', 'ai', 'passion', 'machine learning', 'aws', 'pytorch', 'tensorflow', 'mlops', 'ml', 'python', 'degree']",Hybrid,Full-time,4288233461
+681,Software Engineer - Remote,The Flex,Liverpool,Machine Learning Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301513585
+682,Machine Learning Engineer,Jack and Jill,United Kingdom,Machine Learning Engineer,96000,"['ai', 'machine learning', 'aws', 'pytorch', 'tensorflow', 'mlops', 'sql', 'ml', 'python', 'collaboration']",Remote,Full-time,4288427530
+683,Machine Learning Engineer,Jack and Jill,United Kingdom,Machine Learning Engineer,96000,"['ai', 'machine learning', 'aws', 'pytorch', 'tensorflow', 'mlops', 'sql', 'ml', 'python', 'collaboration']",Remote,Full-time,4288427530
+684,Graduate AI Engineer,Scrumconnect Consulting,Staines-Upon-Thames,Machine Learning Engineer,0,"['ai', 'passion', 'data analysis', 'analytical', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'innovation', 'ml', 'python', 'c', 'degree']",Hybrid,Internship,4299269553
+685,Graduate AI Engineer,Scrumconnect Consulting,Staines-Upon-Thames,Machine Learning Engineer,0,"['ai', 'passion', 'data analysis', 'analytical', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'innovation', 'ml', 'python', 'c', 'degree']",Hybrid,Internship,4299269553
+686,Machine Learning Engineer,Corsearch,United Kingdom,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml']",Remote,Full-time,4263494985
+687,Machine Learning Engineer,Corsearch,United Kingdom,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml']",Remote,Full-time,4263494985
+688,Junior Machine Learning Engineer (6 Months Fixed T,RAPP,London,Machine Learning Engineer,0,"['ai', 'data analysis', 'machine learning', 'aws', 'sql', 'pandas', 'python', 'degree']",Hybrid,Full-time,4263268799
+689,Junior Machine Learning Engineer (6 Months Fixed T,RAPP,London,Machine Learning Engineer,0,"['ai', 'data analysis', 'machine learning', 'aws', 'sql', 'pandas', 'python', 'degree']",Hybrid,Full-time,4263268799
+690,ML Engineer,Barclays,London,Machine Learning Engineer,0,"['spark', 'ai', 'machine learning', 'agile', 'aws', 'ml', 'python', 'ci/cd', 'docker', 'collaboration']",empty,Full-time,4273815394
+691,ML Engineer,Barclays,London,Machine Learning Engineer,0,"['spark', 'ai', 'machine learning', 'agile', 'aws', 'ml', 'python', 'ci/cd', 'docker', 'collaboration']",empty,Full-time,4273815394
+692,Machine Learning and AI Engineer,NatureMetrics,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'tensorflow', 'mlops', 'innovation', 'ml', 'python', 'collaboration']",Hybrid,Full-time,4278960067
+693,Machine Learning and AI Engineer,NatureMetrics,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'tensorflow', 'mlops', 'innovation', 'ml', 'python', 'collaboration']",Hybrid,Full-time,4278960067
+694,Machine Learning Engineer,Baringa,London,Machine Learning Engineer,0,"['ai', 'llm', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'mlops', 'ml', 'innovation', 'python', 'ci/cd', 'degree', 'collaboration']",Hybrid,Full-time,4275437246
+695,Machine Learning Engineer,Baringa,London,Machine Learning Engineer,0,"['ai', 'llm', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'mlops', 'ml', 'innovation', 'python', 'ci/cd', 'degree', 'collaboration']",Hybrid,Full-time,4275437246
+696,Software Engineer - GammaLabs,Gamma,Manchester,Machine Learning Engineer,0,"['aws', 'react', 'typescript', 'html', 'css', 'innovation', 'sql', 'collaboration']",Hybrid,Full-time,4293116325
+697,AI & ML Engineer,Charlotte Tilbury Beauty,London,Machine Learning Engineer,0,"['ai', 'llm', 'machine learning', 'azure', 'aws', 'mlops', 'innovation', 'ml', 'python', 'ci/cd', 'degree']",Hybrid,Full-time,4297534427
+698,"Software Engineer, Summer Intern Uk",Bending Spoons,London,Machine Learning Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301600349
+699,ML/AI Engineer Internship – Long/Short Equities,Point72,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'sql', 'pandas', 'python', 'degree']",On-site,Full-time,4132531856
+700,Junior Software Engineer,AccessPay,Manchester,Machine Learning Engineer,35000.0,"['c#', 'ambitious', 'agile', 'react', 'sql']",Hybrid,Full-time,4299176792
+701,Artificial Intelligence Engineer,Tenth Revolution Group,England,Machine Learning Engineer,60000.0,"['power bi', 'ai', 'bi', 'machine learning', 'azure', 'agile', 'pytorch', 'ml', 'python']",Remote,Full-time,4297405113
+702,Machine Learning Engineer,Latinx in AI (LXAI),London,Machine Learning Engineer,0,"['machine learning', 'pytorch', 'ml', 'numpy', 'python', 'degree']",On-site,Full-time,4299326534
+703,Staff Machine Learning Engineer,Spotify,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'agile', 'pytorch', 'tensorflow', 'ml', 'python', 'collaboration']",empty,Full-time,4300879741
+704,Machine Learning Engineer - Sports AI,Hawk-Eye Innovations Ltd,Basingstoke,Machine Learning Engineer,0,"['machine learning', 'aws', 'react', 'pytorch', 'r', 'typescript', 'mlops', 'github', 'ml', 'python', 'ci/cd', 'docker', 'collaboration']",Hybrid,Full-time,4300961951
+705,AI Research Engineer,Bending Spoons,Oxford,Machine Learning Engineer,0,"['ai', 'ambitious']",Hybrid,Full-time,4301356112
+706,Junior Model Developer,hyperexponential,London,Machine Learning Engineer,0,"['python', 'ambitious', 'passion']",Hybrid,Full-time,4280354992
+707,Junior Mid Full Stack Developer,"Smiley & Co, Ltd.",Manchester,Machine Learning Engineer,0,"['passion', 'problem solver', 'relational databases', 'agile', 'mysql', 'html', 'css', 'web development', 'collaboration']",On-site,Full-time,4294691294
+708,Data Engineer Junior,SINGULIER,London,Machine Learning Engineer,0,"['python', 'ci/cd', 'sql']",Remote,Full-time,4278549311
+709,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Leeds,Machine Learning Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297039154
+710,Software Engineer - Remote,The Flex,Leeds,Machine Learning Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301525149
+711,Data & AI Engineer- Hybrid/ Fully Remote,NEOGEN RECRUITMENT SOLUTIONS LTD,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'aws', 'degree', 'sql', 'python', 'ci/cd', 'masters']",Remote,Full-time,4290978900
+712,"Machine Learning Engineer, Simulation",Waymo,London,Machine Learning Engineer,0,"['machine learning', 'ml']",empty,Full-time,4169031531
+713,Frontend Engineer,Just Eat Takeaway.com,London,Machine Learning Engineer,0,"['react', 'html', 'css', 'innovation', 'collaboration']",Hybrid,Full-time,4292441342
+714,Machine Learning Engineer,Octopus Energy,London,Machine Learning Engineer,0,"['ai', 'llm', 'mlops', 'nlp', 'ml', 'python']",Hybrid,Full-time,4299739086
+715,Machine Learning/Computer Vision,microTECH Global LTD,Cambridge,Machine Learning Engineer,0,"['machine learning', 'pytorch']",Hybrid,Full-time,4289759634
+716,Graduate Developer,YourHippo LMS,Preston,Machine Learning Engineer,0,"['aws', 'web development']",Hybrid,Full-time,4077147915
+717,SURGE - Junior Developer,IBM,London,Machine Learning Engineer,0,"['ai', 'passion', 'azure', 'aws', 'gitlab', 'innovation', 'ci/cd', 'degree', 'docker']",Hybrid,Full-time,4284793369
+718,Graduate Software Engineer,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,0,"['azure', 'aws', 'sql', 'python', 'c']",On-site,Full-time,4286719585
+719,Graduate Software Engineer,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,0,"['azure', 'aws', 'sql', 'python', 'c']",On-site,Full-time,4286719585
+720,Junior Software Engineer,BlakBear,London Area,Machine Learning Engineer,32000.0,"['ai', 'data analysis', 'machine learning', 'ambitious', 'react', 'r', 'sql', 'innovation', 'python']",On-site,Full-time,4302007301
+721,AI Engineer,Wordsmith AI,Edinburgh,Machine Learning Engineer,87500.0,"['python', 'ai', 'llm']",On-site,Full-time,4290718312
+722,Graduate Software Engineer,Logistex,Kettering,Machine Learning Engineer,25000.0,"['c', 'passion']",Hybrid,Contract,4295264416
+723,Associate Software Engineer - Intern,Monzo Bank,London,Machine Learning Engineer,0,"['ai', 'passion', 'aws', 'react', 'degree', 'docker']",On-site,Full-time,4301309975
+724,Rev-celerator Graduate Programme 2026: Python Soft,Revolut,United Kingdom,Machine Learning Engineer,0,"['python', 'ambitious', 'sql']",Remote,Full-time,4236897838
+725,AI / ML Engineer,Forge Holiday Group,Chester,Machine Learning Engineer,80000,"['spark', 'ai', 'machine learning', 'azure', 'pytorch', 'docker', 'tensorflow', 'mlops', 'sql', 'innovation', 'ml', 'python', 'github', 'collaboration']",Hybrid,Full-time,4298002090
+726,Machine Learning Engineer,Kaluza,Bristol,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'ci/cd', 'aws', 'agile', 'docker', 'mlops', 'pandas', 'ml', 'innovation', 'python', 'numpy', 'collaboration']",Hybrid,Full-time,4272185302
+727,Machine Vision Engineer,"Peak Technologies, Inc.",Manchester,Machine Learning Engineer,0,[],On-site,Full-time,4292573159
+728,AI Engineer,ioMosaic Corporation,Bath,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'mlops', 'nlp', 'ci/cd', 'collaboration']",empty,Full-time,4167258847
+729,Salesforce Engineer I (Viator),Tripadvisor,London,Machine Learning Engineer,0,"['passion', 'agile', 'collaboration']",Remote,Full-time,4288510029
+730,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Sheffield,Machine Learning Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297019985
+731,Python Developer (m/f/d),SEFE Marketing & Trading Ltd,London,Machine Learning Engineer,0,"['azure', 'relational databases', 'react', 'typescript', 'pandas', 'numpy', 'sql', 'python', 'collaboration']",Hybrid,Full-time,4291601401
+732,Graduate Software Engineer,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,0,"['azure', 'aws', 'sql', 'python', 'c']",On-site,Full-time,4292793359
+733,Graduate Software Engineer,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,0,"['azure', 'aws', 'sql', 'python', 'c']",On-site,Full-time,4292793359
+734,AI Engineer,Transparity,United Kingdom,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'c#', 'agile', 'pytorch', 'tensorflow', 'mlops', 'ml', 'innovation', 'python', 'degree']",Remote,Full-time,4209145194
+735,AI Engineer,Transparity,United Kingdom,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'c#', 'agile', 'pytorch', 'tensorflow', 'mlops', 'ml', 'innovation', 'python', 'degree']",Remote,Full-time,4209145194
+736,Machine Learning Engineer,WRK digital,York,Machine Learning Engineer,73500.0,"['machine learning', 'aws', 'docker', 'pytorch', 'tensorflow', 'scipy', 'pandas', 'ml', 'numpy', 'python', 'ci/cd', 'collaboration']",Hybrid,Full-time,4292945268
+737,"Software Engineer, Summer Intern Uk",Bending Spoons,United Kingdom,Machine Learning Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Remote,Internship,4301384790
+738,Graduate Software Engineer| (SD1),Noon-The Social Learning Platform,London,Machine Learning Engineer,0,"['ai', 'aws', 'react', 'github', 'innovation']",Hybrid,Full-time,4293058900
+739,Senior Software Engineer,Manchester City Football Club,Manchester,Machine Learning Engineer,0,"['azure', 'agile', 'typescript', 'python', 'ci/cd']",On-site,Full-time,4298921414
+740,Senior Software Engineer,Manchester City Football Club,Manchester,Machine Learning Engineer,0,"['azure', 'agile', 'typescript', 'python', 'ci/cd']",On-site,Full-time,4298921414
+741,ML Engineer,Pinnacle Pet UK,London,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'pytorch', 'tensorflow', 'mlops', 'sql', 'ml', 'python', 'docker']",Hybrid,Full-time,4263052832
+742,ML Engineer,Pinnacle Pet UK,London,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'pytorch', 'tensorflow', 'mlops', 'sql', 'ml', 'python', 'docker']",Hybrid,Full-time,4263052832
+743,Python Developer,Global,London,Machine Learning Engineer,0,"['passion', 'django', 'agile', 'aws', 'python', 'docker']",empty,Full-time,4289482678
+744,Automation & AI Engineer,Pax8,Bristol,Machine Learning Engineer,0,"['ai', 'passion', 'llm', 'azure', 'agile', 'innovation', 'python', 'collaboration']",Hybrid,Full-time,4280078462
+745,"Software Engineer Intern, Developer Tools (2026) (",Figma,London,Machine Learning Engineer,0,"['ai', 'react', 'typescript', 'python', 'c', 'collaboration']",empty,Internship,4297193980
+746,"Machine Learning Engineer, End-to-end Autonomy",Woven by Toyota,London,Machine Learning Engineer,0,"['ai', 'c++', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'innovation', 'ml', 'python', 'degree']",Hybrid,Full-time,4218286325
+747,Graduate/Junior Tools Programmer (Games),Blazing Griffin,Glasgow,Machine Learning Engineer,0,"['c#', 'passion', 'degree', 'python']",On-site,Part-time,4251172877
+748,Software Engineer Intern,Meta,London,Machine Learning Engineer,0,"['python', 'c', 'degree', 'masters']",empty,Full-time,4299534674
+749,Data Scientist II - Platform Developer Experience,Spotify,London,Machine Learning Engineer,0,"['bi', 'ai', 'tableau', 'data analysis', 'sql', 'innovation', 'python']",empty,Full-time,4297566330
+750,Junior Software Engineer Intern,Basira Intelligence,London Area,Machine Learning Engineer,0,"['ai', 'ambitious', 'r', 'github', 'numpy', 'ml', 'python']",Remote,Internship,4300332107
+751,Machine Learning Engineer,Epic Games,Greater London,Machine Learning Engineer,0,"['machine learning', 'agile', 'pytorch', 'numpy', 'ml', 'python', 'scipy']",On-site,Full-time,4221403665
+752,Machine Learning Engineer,Cleo,United Kingdom,Machine Learning Engineer,0,"['bi', 'ai', 'machine learning', 'docker', 'sql', 'ml', 'python', 'collaboration']",Remote,Full-time,4279808359
+753,Junior SQA Engineer,Brightstar Lottery,Salford,Machine Learning Engineer,0,"['passion', 'degree', 'collaboration', 'innovation']",Hybrid,Full-time,4296086971
+754,Machine Learning Engineer,Latinx in AI (LXAI),Belfast,Machine Learning Engineer,0,"['ai', 'passion', 'llm', 'machine learning', 'aws', 'nlp', 'ml', 'github', 'python', 'ci/cd', 'innovation']",On-site,Full-time,4291560949
+755,Junior Cloud Engineer,Trainline,London,Machine Learning Engineer,0,"['aws', 'typescript', 'github', 'python', 'c']",Hybrid,Full-time,4271609680
+756,Software Engineer - Remote,The Flex,Birmingham,Machine Learning Engineer,0,"['aws', 'react', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4301528054
+757,Machine Learning Engineer III,American Express Global Business Travel,London,Machine Learning Engineer,0,"['bi', 'llm', 'machine learning', 'aws', 'sql', 'ml', 'python', 'collaboration']",empty,Full-time,4258161573
+758,Machine Learning Engineer III,American Express Global Business Travel,London,Machine Learning Engineer,0,"['bi', 'llm', 'machine learning', 'aws', 'sql', 'ml', 'python', 'collaboration']",empty,Full-time,4258161573
+759,Machine Learning Engineer II,Zonda,United Kingdom,Machine Learning Engineer,0,"['ai', 'analytical', 'llm', 'machine learning', 'azure', 'aws', 'pytorch', 'nlp', 'ml', 'sql', 'python', 'degree', 'docker', 'masters']",Remote,Full-time,4278280429
+760,Machine Learning Engineer II,Zonda,United Kingdom,Machine Learning Engineer,0,"['ai', 'analytical', 'llm', 'machine learning', 'azure', 'aws', 'pytorch', 'nlp', 'ml', 'sql', 'python', 'degree', 'docker', 'masters']",Remote,Full-time,4278280429
+761,Graduate Software Engineer - Fully Remote,Rio Hondo College,Nottingham,Machine Learning Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4300979896
+762,Graduate Software Engineer - Fully Remote,Rio Hondo College,Nottingham,Machine Learning Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4300979896
+763,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Blackpool,Machine Learning Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297031210
+764,Data Engineer - Level 5 Apprenticeship,Graphics Unlimited (Vic) Pty Ltd,Blackpool,Machine Learning Engineer,0,"['python', 'aws', 'innovation']",Hybrid,Internship,4297031210
+765,Embedded Linux Software Engineer - fully remote,"Mid-Way Supply, Inc.",Manchester,Machine Learning Engineer,0,"['c', 'c++', 'r']",empty,Full-time,4282344050
+766,Embedded Linux Software Engineer - fully remote,"Mid-Way Supply, Inc.",Manchester,Machine Learning Engineer,0,"['c', 'c++', 'r']",empty,Full-time,4282344050
+767,AI Engineer,Nourish Care,Greater Bournemouth Area,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'aws', 'innovation', 'python']",Hybrid,Full-time,4279628289
+768,AI Engineer,Nourish Care,Greater Bournemouth Area,Machine Learning Engineer,0,"['ai', 'machine learning', 'azure', 'aws', 'innovation', 'python']",Hybrid,Full-time,4279628289
+769,Graduate Software Engineer - 2026 Cohort,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,0,"['azure', 'aws', 'sql', 'python', 'c']",On-site,Full-time,4296248059
+770,Graduate Software Engineer - 2026 Cohort,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,0,"['azure', 'aws', 'sql', 'python', 'c']",On-site,Full-time,4296248059
+771,Data Engineer,Southampton Football Club,Southampton,Machine Learning Engineer,0,"['data analysis', 'azure', 'aws', 'sql', 'python']",On-site,Full-time,4299562585
+772,Graduate Software Developer (AI and Cybersecurity),targetjobs UK,Knutsford,Machine Learning Engineer,0,"['ai', 'passion', 'analytical', 'ambitious', 'agile', 'aws', 'react', 'degree', 'collaboration']",empty,Full-time,4293861957
+773,Python Engineer,Nixor,United Kingdom,Machine Learning Engineer,0,"['passion', 'django', 'azure', 'relational databases', 'aws', 'docker', 'python', 'ci/cd', 'collaboration']",Remote,Full-time,4299983156
+774,"Software Engineer, Summer Intern Uk",Bending Spoons,Oxford,Machine Learning Engineer,0,"['python', 'ci/cd', 'ambitious', 'docker']",Hybrid,Internship,4301390683
+775,AI Research Engineer,Bending Spoons,London,Machine Learning Engineer,0,"['ai', 'ambitious']",Hybrid,Full-time,4301352145
+776,Machine Learning Engineer - Chat,Cleo,London Area,Machine Learning Engineer,0,"['bi', 'ai', 'machine learning', 'docker', 'sql', 'ml', 'python', 'collaboration']",Hybrid,Full-time,4197303615
+777,AI Engineer,Medpace,London,Machine Learning Engineer,0,"['ai', 'passion', 'analytical', 'llm', 'machine learning', 'pytorch', 'tensorflow', 'nlp', 'python', 'degree']",On-site,Full-time,4238499249
+778,QA Automation Engineer,Sporty Group,United Kingdom,Machine Learning Engineer,0,"['ai', 'relational databases', 'aws', 'mysql', 'innovation', 'python', 'docker']",Remote,Full-time,4092077015
+779,Junior DevOps Engineer,targetjobs UK,Croydon,Machine Learning Engineer,0,"['python', 'passion', 'collaboration', 'innovation']",empty,Full-time,4293861893
+780,Graduate Software Engineer,Oliver Bernard,Newcastle Upon Tyne,Machine Learning Engineer,35000.0,"['python', 'c', 'degree', 'sql']",On-site,Full-time,4297409674
+781,Machine Learning Engineer,Optimove,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'ci/cd', 'pytorch', 'tensorflow', 'scipy', 'nlp', 'ml', 'pandas', 'python', 'numpy', 'sql', 'docker']",empty,Full-time,4247471442
+782,Machine Learning Engineer,Iceberg,United Kingdom,Machine Learning Engineer,0,"['machine learning', 'ambitious', 'pytorch', 'tensorflow', 'mlops', 'pandas', 'ml', 'numpy', 'python', 'nlp', 'docker']",Remote,Full-time,4296223777
+783,Machine Learning Engineer,Iceberg,United Kingdom,Machine Learning Engineer,0,"['machine learning', 'ambitious', 'pytorch', 'tensorflow', 'mlops', 'pandas', 'ml', 'numpy', 'python', 'nlp', 'docker']",Remote,Full-time,4296223777
+784,Audio Machine Learning Engineer,Cisco,Glasgow,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'pytorch', 'python', 'masters']",empty,Full-time,4276987500
+785,Audio Machine Learning Engineer,Cisco,Glasgow,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'pytorch', 'python', 'masters']",empty,Full-time,4276987500
+786,Applied AI ML Associate,JPMorganChase,Glasgow,Machine Learning Engineer,0,"['ai', 'data analysis', 'llm', 'machine learning', 'scikit-learn', 'aws', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml', 'python', 'sql']",On-site,Full-time,4296465598
+787,Applied AI ML Associate,JPMorganChase,Glasgow,Machine Learning Engineer,0,"['ai', 'data analysis', 'llm', 'machine learning', 'scikit-learn', 'aws', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml', 'python', 'sql']",On-site,Full-time,4296465598
+788,AI Engineer,Gizmo,London Area,Machine Learning Engineer,0,"['ai', 'machine learning', 'typescript', 'python', 'degree']",Hybrid,Full-time,4291578091
+789,AI Engineer,Gizmo,London Area,Machine Learning Engineer,0,"['ai', 'machine learning', 'typescript', 'python', 'degree']",Hybrid,Full-time,4291578091
+790,Campus - Internship Programme - Undergraduate Tech,American Express,London,Machine Learning Engineer,0,"['machine learning', 'react', 'innovation', 'python', 'c', 'degree']",Hybrid,Internship,4301571812
+791,Campus - Internship Programme - Undergraduate Tech,American Express,London,Machine Learning Engineer,0,"['machine learning', 'react', 'innovation', 'python', 'c', 'degree']",Hybrid,Internship,4301571812
+792,Junior Infrastructure Engineer,B&M Retail,Liverpool,Machine Learning Engineer,0,[],On-site,Full-time,4299542453
+793,Junior Infrastructure Engineer,B&M Retail,Liverpool,Machine Learning Engineer,0,[],On-site,Full-time,4299542453
+794,Python Developer - Fully Remote,"Keller Williams Realty, Old Town Alexandria, VA",City Of London,Machine Learning Engineer,0,"['python', 'django', 'html', 'css']",Remote,Full-time,4288619402
+795,Machine Learning Engineer,NewDay,London,Machine Learning Engineer,0,"['aws', 'mlops', 'sql', 'ml', 'github', 'python', 'ci/cd', 'docker', 'collaboration']",Hybrid,Full-time,4295956742
+796,Analytics Engineer,Department for Education,Sheffield,Machine Learning Engineer,0,"['analytical', 'azure', 'agile', 'sql', 'python', 'degree']",Hybrid,Part-time,4296315983
+797,"Software Engineer (C#, .NET, Azure)",ASOS.com,London,Machine Learning Engineer,0,"['c', 'agile', 'github', 'azure']",Hybrid,Full-time,4301696543
+798,Machine Learning Operations Engineer,Somerset Bridge Group,Bristol,Machine Learning Engineer,0,"['machine learning', 'azure', 'agile', 'github', 'ml', 'docker']",Hybrid,Full-time,4267897511
+799,Development Support: AI/Gameplay,Rockstar Games,Leeds,Machine Learning Engineer,0,"['ai', 'passion', 'degree']",On-site,Full-time,4294896336
+800,Junior Frontend Developer,Artery Digital,Sheffield,Machine Learning Engineer,0,"['html', 'css', 'github']",empty,Part-time,4288614651
+801,Javascript Developer,Lloyds Banking Group,Manchester,Machine Learning Engineer,0,"['azure', 'aws', 'react', 'typescript', 'github', 'ci/cd', 'docker']",empty,Full-time,4299037236
+802,Machine Learning Engineer (Computer Vision & PalmC,Nethermind,Edinburgh,Machine Learning Engineer,0,"['c++', 'machine learning', 'pytorch', 'tensorflow', 'ml', 'innovation', 'python', 'degree']",On-site,Full-time,4296475333
+803,Data Scientist / Machine Learning Engineer,BSH UK & Ireland,Milton Keynes,Machine Learning Engineer,0,"['ai', 'machine learning', 'r', 'sql', 'ml', 'python', 'docker']",Hybrid,Full-time,4293777646
+804,AI Research Engineer,Bending Spoons,Warwick,Machine Learning Engineer,0,"['ai', 'ambitious']",Hybrid,Full-time,4301362053
+805,ML Engineer Specialist – AI Trainer,Invisible Expert Marketplace,Wideopen,Machine Learning Engineer,0,"['ai', 'machine learning', 'nlp', 'ml', 'python']",Remote,Contract,4301204634
+806,Software Engineer (Intern),Naptha AI,London,Machine Learning Engineer,0,"['python', 'ai', 'ml']",empty,Remote,4151319483
+807,"Applied AI, Forward Deployed Machine Learning Engi",Mistral AI,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'pytorch', 'mlops', 'innovation', 'python', 'degree']",On-site,Internship,4263007224
+808,"Applied AI, Forward Deployed Machine Learning Engi",Mistral AI,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'pytorch', 'mlops', 'innovation', 'python', 'degree']",On-site,Internship,4263007224
+809,Graduate Support & Python Engineer 2025,targetjobs UK,London,Machine Learning Engineer,0,"['gitlab', 'github', 'innovation', 'python', 'docker']",empty,Full-time,4267172675
+810,Full Stack Software Engineer,Octopus Energy,United Kingdom,Machine Learning Engineer,0,"['postgresql', 'ai', 'aws', 'react', 'typescript', 'python', 'degree']",Remote,Full-time,4293765420
+811,Junior Tester,Vivedia,Sheffield,Machine Learning Engineer,0,[],Hybrid,Full-time,4298402881
+812,Graduate Software Engineer,BAE Systems,Sheffield,Machine Learning Engineer,0,"['passion', 'degree']",Hybrid,Full-time,4300858916
+813,Machine Learning Engineer,Alloyed,Yarnton,Machine Learning Engineer,0,"['passion', 'problem solver', 'machine learning', 'azure', 'agile', 'aws', 'mlops', 'innovation', 'python', 'ci/cd', 'degree', 'docker', 'collaboration']",On-site,Full-time,4297518208
+814,Audio Machine Learning Engineer,Cisco,Glasgow,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'pytorch', 'python', 'masters']",empty,Full-time,4275616278
+815,Data Engineer,Betfred,Manchester,Machine Learning Engineer,0,"['analytical', 'machine learning', 'aws', 'agile', 'sql', 'innovation', 'python']",On-site,Contract,4293417669
+816,Graduate Software Engineer - Fully Remote,Rio Hondo College,Hertford Heath,Machine Learning Engineer,0,"['passion', 'problem solver', 'azure', 'agile', 'sql', 'css', 'c']",Remote,Full-time,4297044063
+817,AI / ML Engineer,Forge Holiday Group,United Kingdom,Machine Learning Engineer,80000,"['spark', 'ai', 'machine learning', 'azure', 'pytorch', 'docker', 'tensorflow', 'mlops', 'sql', 'innovation', 'ml', 'python', 'github', 'collaboration']",Remote,Full-time,4299603435
+818,AI Engineer,causaLens,Hammersmith,Machine Learning Engineer,0,['ai'],Hybrid,Full-time,4289939006
+819,Python Developer - Operations,TreasurySpring,London Area,Machine Learning Engineer,0,"['postgresql', 'aws', 'react', 'typescript', 'sql', 'python', 'degree', 'docker']",Hybrid,Full-time,4275576958
+820,Graduate Web Developer,ViVA Tech Talent,Cambridge,Machine Learning Engineer,0,"['passion', 'django', 'analytical', 'mysql', 'sql', 'web development', 'innovation', 'python', 'degree', 'docker']",Hybrid,Full-time,4297588039
+821,Senior Computer Vision /Machine Learning Engineer ,Dandy,United Kingdom,Machine Learning Engineer,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'mlops', 'innovation', 'python', 'masters']",Remote,Full-time,4297663934
+822,"Agentic AI Engineer (UK, BE, PL)",CluePoints,Greater Leeds Area,Machine Learning Engineer,0,"['bi', 'ai', 'analytical', 'llm', 'machine learning', 'ambitious', 'r', 'nlp', 'innovation', 'python']",Remote,Full-time,4301369539
+823,Artificial Intelligence Engineer,Aptendo,EMEA,Machine Learning Engineer,0,"['spark', 'ai', 'analytical', 'machine learning', 'azure', 'aws', 'pytorch', 'r', 'tensorflow', 'mlops', 'nlp', 'ml', 'python', 'degree']",Remote,Contract,4290140712
+824,Associate Cloud Engineer,Asda,Leeds,Machine Learning Engineer,0,"['ci/cd', 'azure']",Hybrid,Full-time,4298737910
+825,Junior Python Developer,OSCAR ASSOCIATES (UK) LIMITED,London,Machine Learning Engineer,0,"['spark', 'postgresql', 'azure', 'aws', 'react', 'typescript', 'sql', 'python', 'docker']",Hybrid,Full-time,4284019926
+826,AI Research Engineer,Bending Spoons,Cambridge,Machine Learning Engineer,0,"['ai', 'ambitious']",Hybrid,Full-time,4301362052
+827,ML (Machine Learning) Engineer,BAE Systems Digital Intelligence,London,Machine Learning Engineer,0,"['ai', 'data analysis', 'machine learning', 'azure', 'aws', 'mlops', 'innovation', 'ml', 'python', 'ci/cd', 'c', 'docker']",Hybrid,Full-time,4216760999
+828,Data Engineer,Lloyds Banking Group,Leeds,Machine Learning Engineer,50450.0,"['python', 'passion', 'agile', 'sql']",Hybrid,Full-time,4298786289
+829,Junior Developer,Nottinghamshire Police,Nottinghamshire,Machine Learning Engineer,38750.0,"['html', 'sql', 'c', 'css']",On-site,Full-time,4301661194
+830,Machine Learning Engineer,Ravelin Technology,London,Machine Learning Engineer,0,"['spark', 'machine learning', 'pytorch', 'tensorflow', 'mlops', 'ml', 'c', 'collaboration']",Remote,Full-time,4291610625
+831,Data Engineer,Medical Protection Society,Leeds,Machine Learning Engineer,47500.0,"['sql', 'azure']",Hybrid,Full-time,4297157638
+832,AI Engineer,Talent,Edinburgh,Machine Learning Engineer,543.0,"['ai', 'llm', 'machine learning', 'agile', 'aws', 'pytorch', 'pandas', 'ml', 'numpy', 'python']",Hybrid,Part-time,4294826436
+833,"Software Engineer II, Applied Machine Learning",Google,London,Machine Learning Engineer,0,"['ai', 'c++', 'machine learning', 'ml', 'innovation', 'python', 'c', 'degree']",On-site,Full-time,4293848855
+834,Machine Learning Engineer - UK,Prima,London,Machine Learning Engineer,0,"['machine learning', 'aws', 'ml', 'innovation', 'python', 'collaboration']",Remote,Full-time,4278525494
+835,AI Product & Research Engineer,Capital.com,London,Machine Learning Engineer,0,"['ai', 'postgresql', 'llm', 'typescript', 'gitlab', 'mlops', 'github', 'python', 'ci/cd', 'degree', 'docker', 'collaboration']",Hybrid,Full-time,4292160071
+836,AI Product & Research Engineer,Capital.com,London,Machine Learning Engineer,0,"['ai', 'postgresql', 'llm', 'typescript', 'gitlab', 'mlops', 'github', 'python', 'ci/cd', 'degree', 'docker', 'collaboration']",Hybrid,Full-time,4292160071
+837,Machine Learning Engineer,Snap Inc.,London,Machine Learning Engineer,0,"['passion', 'machine learning', 'pytorch', 'tensorflow', 'ml', 'python', 'c', 'degree', 'collaboration']",empty,Full-time,4279484211
+838,Machine Learning Engineer,Snap Inc.,London,Machine Learning Engineer,0,"['passion', 'machine learning', 'pytorch', 'tensorflow', 'ml', 'python', 'c', 'degree', 'collaboration']",empty,Full-time,4279484211
+839,Junior Cloud Engineer,Computacenter,England,Machine Learning Engineer,0,"['azure', 'agile', 'gitlab', 'github', 'ci/cd']",Hybrid,Full-time,4288940543
+840,Junior Cloud Engineer,Computacenter,England,Machine Learning Engineer,0,"['azure', 'agile', 'gitlab', 'github', 'ci/cd']",Hybrid,Full-time,4288940543
+841,Python Engineer (Remote),Veeva Systems,United Kingdom,Machine Learning Engineer,0,"['ai', 'postgresql', 'django', 'machine learning', 'mysql', 'react', 'aws', 'html', 'css', 'python', 'degree']",Remote,Full-time,4146763157
+842,Python Engineer (Remote),Veeva Systems,United Kingdom,Machine Learning Engineer,0,"['ai', 'postgresql', 'django', 'machine learning', 'mysql', 'react', 'aws', 'html', 'css', 'python', 'degree']",Remote,Full-time,4146763157
+843,Associate Analytics Engineer,Tesco Technology,Welwyn Garden City,Machine Learning Engineer,0,"['bi', 'passion', 'analytical', 'azure', 'sql', 'collaboration']",empty,Full-time,4300240004
+844,Associate Analytics Engineer,Tesco Technology,Welwyn Garden City,Machine Learning Engineer,0,"['bi', 'passion', 'analytical', 'azure', 'sql', 'collaboration']",empty,Full-time,4300240004
+845,Software Engineer,Inflo,United Kingdom,Machine Learning Engineer,47500.0,"['azure', 'agile', 'excel', 'sql', 'innovation', 'degree', 'collaboration']",Remote,Full-time,4301757372
+846,Software Engineer - AI/ML,Marigold,United Kingdom,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'mysql', 'aws', 'agile', 'ml', 'python', 'ci/cd', 'degree', 'docker']",Remote,Full-time,4299586172
+847,Embedded Software Engineer,Dstl,Salisbury,Machine Learning Engineer,0,"['c', 'c++', 'degree']",Hybrid,Full-time,4299990247
+848,ML Research Engineer,Gensyn,United Kingdom,Machine Learning Engineer,0,"['analytical', 'machine learning', 'ml']",Remote,Full-time,4292600538
+849,Machine Learning Engineer - Autonomy,Wayve,London,Machine Learning Engineer,0,"['ai', 'c++', 'pytorch', 'ml', 'innovation', 'python', 'collaboration']",Hybrid,Full-time,4273895928
+850,Machine Learning Engineer,Thinkways Software Technologies Pvt. Ltd.,Manchester,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'aws', 'r', 'mlops', 'ml', 'python', 'docker']",Hybrid,Full-time,4294692176
+851,Machine Learning & Coding Expert (SME),Invisible Expert Marketplace,Wideopen,Machine Learning Engineer,0,"['ai', 'machine learning', 'pytorch', 'tensorflow', 'mlops', 'nlp', 'ml', 'python', 'c']",Remote,Contract,4284022113
+852,Machine Learning Engineer,Moneyhub,United Kingdom,Machine Learning Engineer,0,"['analytical', 'machine learning', 'mlops', 'innovation', 'ml', 'python', 'c', 'degree', 'docker']",Remote,Full-time,4298914760
+853,Machine Learning Engineer,Proximie,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'pytorch', 'tensorflow', 'mlops', 'innovation', 'python', 'masters', 'collaboration']",Hybrid,Full-time,4207400192
+854,Junior Engineer (Data),Aberdeen,Edinburgh,Machine Learning Engineer,0,"['bi', 'ai', 'power bi', 'azure', 'agile', 'sql', 'innovation', 'python', 'ci/cd', 'collaboration']",Hybrid,Full-time,4296490542
+855,Machine Learning Engineer,PhysicsX,City Of London,Machine Learning Engineer,0,"['ai', 'problem solver', 'machine learning', 'excel', 'innovation', 'ml', 'masters']",Hybrid,Full-time,4289837208
+856,Machine Learning Engineer (Large Systems),Graphcore,Bristol,Machine Learning Engineer,0,"['ai', 'c++', 'machine learning', 'pytorch', 'mlops', 'ml', 'python', 'c']",empty,Full-time,4195238741
+857,Machine Learning Engineer,Markerstudy Group,Manchester,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'aws', 'r', 'mlops', 'ml', 'python', 'docker']",Hybrid,Full-time,4293104779
+858,Machine Learning Engineer,Markerstudy Group,Manchester,Machine Learning Engineer,0,"['ai', 'passion', 'machine learning', 'azure', 'aws', 'r', 'mlops', 'ml', 'python', 'docker']",Hybrid,Full-time,4293104779
+859,"Machine Learning Engineer, Enterprise",Scale AI,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'aws', 'pytorch', 'tensorflow', 'nlp', 'ml', 'python', 'masters']",empty,Full-time,4291284300
+860,"Machine Learning Engineer, Enterprise",Scale AI,London,Machine Learning Engineer,0,"['ai', 'machine learning', 'aws', 'pytorch', 'tensorflow', 'nlp', 'ml', 'python', 'masters']",empty,Full-time,4291284300
+861,Data Engineer,HomeServe EMEA,Leeds,Machine Learning Engineer,60000.0,"['spark', 'bi', 'ai', 'analytical', 'aws', 'r', 'excel', 'sql', 'innovation', 'ml', 'python', 'degree', 'docker']",Hybrid,Full-time,4279459459
+862,Data Engineer,HomeServe EMEA,Leeds,Machine Learning Engineer,60000.0,"['spark', 'bi', 'ai', 'analytical', 'aws', 'r', 'excel', 'sql', 'innovation', 'ml', 'python', 'degree', 'docker']",Hybrid,Full-time,4279459459
+863,Machine Learning Engineer,Corsearch,London,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml']",empty,Full-time,4297178576
+864,Machine Learning Engineer,Corsearch,London,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'pytorch', 'tensorflow', 'nlp', 'innovation', 'ml']",empty,Full-time,4297178576
+865,Junior Web Developer,WRD,Godalming,Machine Learning Engineer,0,"['passion', 'analytical', 'html', 'excel', 'css', 'web development']",Hybrid,Contract,4296121184
+866,Junior Web Developer,WRD,Godalming,Machine Learning Engineer,0,"['passion', 'analytical', 'html', 'excel', 'css', 'web development']",Hybrid,Contract,4296121184
+867,UK Backend Engineer,Hagerty,United Kingdom,Machine Learning Engineer,0,"['passion', 'azure', 'aws', 'ci/cd', 'c', 'collaboration']",Remote,Full-time,4288798593
+868,UK Backend Engineer,Hagerty,United Kingdom,Machine Learning Engineer,0,"['passion', 'azure', 'aws', 'ci/cd', 'c', 'collaboration']",Remote,Full-time,4288798593
+869,Machine Learning Engineer,auryx,Cambridge,Machine Learning Engineer,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'tensorflow', 'ml', 'python', 'degree', 'collaboration']",Hybrid,Full-time,4298597863
+870,Machine Learning Engineer,auryx,Cambridge,Machine Learning Engineer,0,"['ai', 'machine learning', 'ambitious', 'pytorch', 'tensorflow', 'ml', 'python', 'degree', 'collaboration']",Hybrid,Full-time,4298597863
+871,Artificial Intelligence Engineer,Digital Waffle,United Kingdom,Machine Learning Engineer,100.0,"['spark', 'ai', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'mlops', 'sql', 'innovation', 'ml', 'python', 'degree']",Remote,Contract,4301697180
+872,Artificial Intelligence Engineer,Digital Waffle,United Kingdom,Machine Learning Engineer,100.0,"['spark', 'ai', 'machine learning', 'azure', 'aws', 'pytorch', 'tensorflow', 'mlops', 'sql', 'innovation', 'ml', 'python', 'degree']",Remote,Contract,4301697180
+873,Software Engineer - Machine Learning,Duku AI,London,Machine Learning Engineer,0,"['python', 'ai', 'llm', 'typescript']",On-site,Full-time,4299578351
+874,AI Engineer,DRW,London,Machine Learning Engineer,0,"['ai', 'analytical', 'machine learning', 'pytorch', 'tensorflow', 'mlops', 'innovation', 'ml', 'python', 'degree', 'collaboration']",On-site,Full-time,4142651542
